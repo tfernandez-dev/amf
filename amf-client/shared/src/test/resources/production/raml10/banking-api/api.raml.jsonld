@@ -11,23 +11,23 @@
       {
         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api",
         "@type": [
-          "http://schema.org/WebAPI",
+          "http://a.ml/vocabularies/apiContract#WebAPI",
           "http://a.ml/vocabularies/document#RootDomainElement",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ACME Banking HTTP API"
           }
         ],
-        "http://a.ml/vocabularies/http#server": [
+        "http://a.ml/vocabularies/apiContract#server": [
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/acme-banking.com%2Fapis",
             "@type": [
-              "http://a.ml/vocabularies/http#Server",
+              "http://a.ml/vocabularies/apiContract#Server",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#url": [
+            "http://a.ml/vocabularies/apiContract#url": [
               {
                 "@value": "acme-banking.com/apis"
               }
@@ -42,7 +42,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#url"
+                        "@value": "http://a.ml/vocabularies/apiContract#url"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -70,34 +70,34 @@
             ]
           }
         ],
-        "http://a.ml/vocabularies/http#accepts": [
+        "http://a.ml/vocabularies/apiContract#accepts": [
           {
             "@value": "application/json"
           }
         ],
-        "http://a.ml/vocabularies/http#contentType": [
+        "http://a.ml/vocabularies/apiContract#contentType": [
           {
             "@value": "application/json"
           }
         ],
-        "http://schema.org/version": [
+        "http://a.ml/vocabularies/core#version": [
           {
             "@value": "1.0"
           }
         ],
-        "http://a.ml/vocabularies/http#endpoint": [
+        "http://a.ml/vocabularies/apiContract#endpoint": [
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "Customer Resource"
               }
@@ -112,7 +112,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://schema.org/name"
+                        "@value": "http://a.ml/vocabularies/core#name"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -140,46 +140,46 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcorporate",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/corporate"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcorporate/post",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Customer data created correctly for an Organization"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#expects": [
+                "http://a.ml/vocabularies/apiContract#expects": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcorporate/post/request",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Request",
+                      "http://a.ml/vocabularies/apiContract#Request",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcorporate/post/request/default",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcorporate/post/request/default/body",
                             "@type": [
@@ -276,7 +276,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -326,7 +326,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -392,46 +392,46 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcommercial",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/commercial"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcommercial/post",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Customer data created correctly for a Person"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#expects": [
+                "http://a.ml/vocabularies/apiContract#expects": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcommercial/post/request",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Request",
+                      "http://a.ml/vocabularies/apiContract#Request",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcommercial/post/request/default",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2Fcommercial/post/request/default/body",
                             "@type": [
@@ -528,7 +528,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -578,7 +578,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -644,61 +644,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns Customer data"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/get/200/application%2Fjson/schema",
                             "@type": [
@@ -879,7 +879,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -913,7 +913,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.partial"
                       }
@@ -948,7 +948,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -996,7 +996,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1020,7 +1020,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1034,34 +1034,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -1131,7 +1131,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#parameter"
+                        "@value": "http://a.ml/vocabularies/apiContract#parameter"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1159,61 +1159,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/accounts"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns a collection accounts"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/get/200/application%2Fjson/array/schema",
                             "@type": [
@@ -1396,7 +1396,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1430,7 +1430,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.pageable"
                       }
@@ -1465,7 +1465,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1497,7 +1497,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.sortable"
                       }
@@ -1532,7 +1532,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1580,7 +1580,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1604,7 +1604,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1620,39 +1620,39 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/post",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Requests the creation of a new BankAccount"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#expects": [
+                "http://a.ml/vocabularies/apiContract#expects": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/post/request",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Request",
+                      "http://a.ml/vocabularies/apiContract#Request",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/post/request/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/post/request/application%2Fjson/schema",
                             "@type": [
@@ -1833,7 +1833,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1883,7 +1883,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1909,34 +1909,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -2036,61 +2036,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/accounts/{account_id}"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns BankAccount data"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/get/200/application%2Fjson/schema",
                             "@type": [
@@ -2271,7 +2271,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2305,7 +2305,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.partial"
                       }
@@ -2340,7 +2340,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2388,7 +2388,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2412,7 +2412,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2428,15 +2428,15 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/delete",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "delete"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Removes a BankAccount from the system"
                   }
@@ -2451,7 +2451,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2477,34 +2477,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -2566,30 +2566,30 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/parameter/account_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "account_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "account_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts%2F%7Baccount_id%7D/parameter/account_id/scalar/schema",
                     "@type": [
@@ -2659,7 +2659,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#parameter"
+                        "@value": "http://a.ml/vocabularies/apiContract#parameter"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2687,61 +2687,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/loans"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns a collection accounts"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/get/200/application%2Fjson/array/schema",
                             "@type": [
@@ -2924,7 +2924,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2958,7 +2958,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.pageable"
                       }
@@ -2993,7 +2993,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3025,7 +3025,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.sortable"
                       }
@@ -3060,7 +3060,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3092,7 +3092,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "contentCacheable"
                       }
@@ -3127,7 +3127,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3175,7 +3175,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3199,7 +3199,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3215,39 +3215,39 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/post",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Requests the creation of a new Loan"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#expects": [
+                "http://a.ml/vocabularies/apiContract#expects": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/post/request",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Request",
+                      "http://a.ml/vocabularies/apiContract#Request",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/post/request/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/post/request/application%2Fjson/schema",
                             "@type": [
@@ -3428,7 +3428,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3478,7 +3478,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3504,34 +3504,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -3631,61 +3631,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/loans/{loan_id}"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns Loan data"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/get/200/application%2Fjson/schema",
                             "@type": [
@@ -3866,7 +3866,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3900,7 +3900,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.partial"
                       }
@@ -3935,7 +3935,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3983,7 +3983,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4007,7 +4007,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4021,34 +4021,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -4110,30 +4110,30 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/parameter/loan_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "loan_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "loan_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2F%7Bloan_id%7D/parameter/loan_id/scalar/schema",
                     "@type": [
@@ -4203,7 +4203,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#parameter"
+                        "@value": "http://a.ml/vocabularies/apiContract#parameter"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4231,56 +4231,56 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2Fschedule",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/loans/schedule"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2Fschedule/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns the repayments schedule for a Loan"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2Fschedule/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2Fschedule/get/200/default",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2Fschedule/get/200/default/body",
                             "@type": [
@@ -4377,7 +4377,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4413,7 +4413,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4437,7 +4437,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4451,34 +4451,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2Fschedule/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Floans%2Fschedule/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -4578,42 +4578,42 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/cards"
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -4713,61 +4713,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/cards/debit"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns a collection of cards"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/get/200/application%2Fjson/array/schema",
                             "@type": [
@@ -4950,7 +4950,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4984,7 +4984,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.pageable"
                       }
@@ -5019,7 +5019,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5051,7 +5051,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.sortable"
                       }
@@ -5086,7 +5086,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5134,7 +5134,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5158,7 +5158,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5174,39 +5174,39 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/post",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Requests the creation of a new DebitCard"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#expects": [
+                "http://a.ml/vocabularies/apiContract#expects": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/post/request",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Request",
+                      "http://a.ml/vocabularies/apiContract#Request",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/post/request/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/post/request/application%2Fjson/schema",
                             "@type": [
@@ -5387,7 +5387,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5437,7 +5437,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5463,34 +5463,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -5590,61 +5590,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/cards/debit/{card_id}"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns DebitCard data"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/get/200/application%2Fjson/schema",
                             "@type": [
@@ -5825,7 +5825,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5859,7 +5859,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.partial"
                       }
@@ -5894,7 +5894,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5942,7 +5942,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5966,7 +5966,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5982,15 +5982,15 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/delete",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "delete"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Removes a DebitCard from the system"
                   }
@@ -6005,7 +6005,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6031,34 +6031,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -6120,30 +6120,30 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/parameter/card_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "card_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "card_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit%2F%7Bcard_id%7D/parameter/card_id/scalar/schema",
                     "@type": [
@@ -6213,7 +6213,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#parameter"
+                        "@value": "http://a.ml/vocabularies/apiContract#parameter"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6241,61 +6241,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/cards/credit"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns a collection accounts"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/get/200/application%2Fjson/array/schema",
                             "@type": [
@@ -6478,7 +6478,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6512,7 +6512,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.pageable"
                       }
@@ -6547,7 +6547,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6579,7 +6579,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.sortable"
                       }
@@ -6614,7 +6614,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6646,7 +6646,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "contentCacheable"
                       }
@@ -6681,7 +6681,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6729,7 +6729,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6753,7 +6753,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6769,39 +6769,39 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/post",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Requests the creation of a new CreditCard"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#expects": [
+                "http://a.ml/vocabularies/apiContract#expects": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/post/request",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Request",
+                      "http://a.ml/vocabularies/apiContract#Request",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/post/request/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/post/request/application%2Fjson/schema",
                             "@type": [
@@ -6982,7 +6982,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7032,7 +7032,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7058,34 +7058,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -7185,61 +7185,61 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/customers/{customer_id}/cards/credit/{card_id}"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Returns DebitCard data"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/get/200/application%2Fjson/schema",
                             "@type": [
@@ -7420,7 +7420,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://a.ml/vocabularies/http#payload"
+                                "@value": "http://a.ml/vocabularies/apiContract#payload"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7454,7 +7454,7 @@
                       "http://a.ml/vocabularies/document#ParametrizedDeclaration",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "traits.partial"
                       }
@@ -7489,7 +7489,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/name"
+                                "@value": "http://a.ml/vocabularies/core#name"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7537,7 +7537,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7561,7 +7561,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7577,15 +7577,15 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/delete",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "delete"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Removes a CreditCard from the system"
                   }
@@ -7600,7 +7600,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7626,34 +7626,34 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/parameter/customer_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "customer_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -7715,30 +7715,30 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/parameter/card_id",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "card_id"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "card_id"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fcredit%2F%7Bcard_id%7D/parameter/card_id/scalar/schema",
                     "@type": [
@@ -7808,7 +7808,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#parameter"
+                        "@value": "http://a.ml/vocabularies/apiContract#parameter"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7841,7 +7841,7 @@
               "http://a.ml/vocabularies/security#ParametrizedSecurityScheme",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/security#name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "oauth2_0"
               }
@@ -7853,7 +7853,7 @@
                   "http://a.ml/vocabularies/security#SecurityScheme",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "oauth2_0"
                   }
@@ -7940,7 +7940,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/http#contentType"
+                    "@value": "http://a.ml/vocabularies/apiContract#contentType"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7952,7 +7952,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/http#accepts"
+                    "@value": "http://a.ml/vocabularies/apiContract#accepts"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7978,7 +7978,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/http#contentType"
+                    "@value": "http://a.ml/vocabularies/apiContract#contentType"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7990,7 +7990,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/http#server"
+                    "@value": "http://a.ml/vocabularies/apiContract#server"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -8014,7 +8014,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://schema.org/name"
+                    "@value": "http://a.ml/vocabularies/core#name"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -8026,7 +8026,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/http#accepts"
+                    "@value": "http://a.ml/vocabularies/apiContract#accepts"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -8038,7 +8038,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://schema.org/version"
+                    "@value": "http://a.ml/vocabularies/core#version"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -8082,7 +8082,7 @@
               "http://a.ml/vocabularies/document#AbstractDeclaration",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "trait"
               }
@@ -9522,7 +9522,7 @@
               "http://a.ml/vocabularies/document#AbstractDeclaration",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "pageable"
               }
@@ -9567,7 +9567,7 @@
               "http://a.ml/vocabularies/document#AbstractDeclaration",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "sortable"
               }
@@ -9612,7 +9612,7 @@
               "http://a.ml/vocabularies/document#AbstractDeclaration",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "contentCacheable"
               }
@@ -9657,7 +9657,7 @@
               "http://a.ml/vocabularies/document#AbstractDeclaration",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "partial"
               }
@@ -9712,7 +9712,7 @@
                   "http://a.ml/vocabularies/document#AbstractDeclaration",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "trait"
                   }
@@ -10063,7 +10063,7 @@
                   "http://a.ml/vocabularies/document#AbstractDeclaration",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "trait"
                   }
@@ -11102,7 +11102,7 @@
                   "http://a.ml/vocabularies/document#AbstractDeclaration",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "trait"
                   }
@@ -11512,7 +11512,7 @@
                   "http://a.ml/vocabularies/document#AbstractDeclaration",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "trait"
                   }
@@ -13012,44 +13012,44 @@
                 "@value": "OAuth 2.0"
               }
             ],
-            "http://schema.org/description": [
+            "http://a.ml/vocabularies/core#description": [
               {
                 "@value": "ACME Banking API supports OAuth 2.0 security policy for methods that involve updating existing data"
               }
             ],
-            "http://a.ml/vocabularies/http#header": [
+            "http://a.ml/vocabularies/apiContract#header": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#/fragment/parameter/Authorization",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "Authorization"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "Authorization"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Used to send a valid OAuth 2 access token. Do not use with the \"access_token\" query string parameter.\n"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "header"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#/fragment/parameter/Authorization/scalar/schema",
                     "@type": [
@@ -13069,7 +13069,7 @@
                         "@value": "schema"
                       }
                     ],
-                    "http://schema.org/description": [
+                    "http://a.ml/vocabularies/core#description": [
                       {
                         "@value": "Used to send a valid OAuth 2 access token. Do not use with the \"access_token\" query string parameter.\n"
                       }
@@ -13098,7 +13098,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/description"
+                                "@value": "http://a.ml/vocabularies/core#description"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13146,7 +13146,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/http#schema"
+                            "@value": "http://a.ml/vocabularies/apiContract#schema"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13170,7 +13170,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13184,39 +13184,39 @@
                 ]
               }
             ],
-            "http://a.ml/vocabularies/http#parameter": [
+            "http://a.ml/vocabularies/apiContract#parameter": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#/fragment/parameter/access_token",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Parameter",
+                  "http://a.ml/vocabularies/apiContract#Parameter",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "access_token"
                   }
                 ],
-                "http://a.ml/vocabularies/http#paramName": [
+                "http://a.ml/vocabularies/apiContract#paramName": [
                   {
                     "@value": "access_token"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Used to send a valid OAuth 2 access token. Do not use together with the \"Authorization\" header\n"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#required": [
+                "http://a.ml/vocabularies/apiContract#required": [
                   {
                     "@value": true
                   }
                 ],
-                "http://a.ml/vocabularies/http#binding": [
+                "http://a.ml/vocabularies/apiContract#binding": [
                   {
                     "@value": "query"
                   }
                 ],
-                "http://a.ml/vocabularies/http#schema": [
+                "http://a.ml/vocabularies/apiContract#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#/fragment/parameter/access_token/scalar/schema",
                     "@type": [
@@ -13236,7 +13236,7 @@
                         "@value": "schema"
                       }
                     ],
-                    "http://schema.org/description": [
+                    "http://a.ml/vocabularies/core#description": [
                       {
                         "@value": "Used to send a valid OAuth 2 access token. Do not use together with the \"Authorization\" header\n"
                       }
@@ -13265,7 +13265,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/description"
+                                "@value": "http://a.ml/vocabularies/core#description"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13313,7 +13313,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/http#schema"
+                            "@value": "http://a.ml/vocabularies/apiContract#schema"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13337,7 +13337,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13351,24 +13351,24 @@
                 ]
               }
             ],
-            "http://www.w3.org/ns/hydra/core#response": [
+            "http://a.ml/vocabularies/apiContract#response": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#/fragment/401",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Response",
+                  "http://a.ml/vocabularies/apiContract#Response",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "401"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Bad or expired token. This can happen if the API consumer uses a revoked or expired access token. To fix, you should re-authenticate the user.\n"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#statusCode": [
+                "http://a.ml/vocabularies/apiContract#statusCode": [
                   {
                     "@value": "401"
                   }
@@ -13383,7 +13383,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13411,20 +13411,20 @@
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#/fragment/403",
                 "@type": [
-                  "http://a.ml/vocabularies/http#Response",
+                  "http://a.ml/vocabularies/apiContract#Response",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "403"
                   }
                 ],
-                "http://schema.org/description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won't help here.\n"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#statusCode": [
+                "http://a.ml/vocabularies/apiContract#statusCode": [
                   {
                     "@value": "403"
                   }
@@ -13439,7 +13439,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13584,7 +13584,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#parameter"
+                        "@value": "http://a.ml/vocabularies/apiContract#parameter"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13596,7 +13596,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://schema.org/description"
+                        "@value": "http://a.ml/vocabularies/core#description"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13632,7 +13632,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/http#header"
+                        "@value": "http://a.ml/vocabularies/apiContract#header"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13644,7 +13644,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://www.w3.org/ns/hydra/core#response"
+                        "@value": "http://a.ml/vocabularies/apiContract#response"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -30033,7 +30033,7 @@
           "http://a.ml/vocabularies/document#AbstractDeclaration",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "contentCacheable"
           }
@@ -30077,7 +30077,7 @@
           "http://a.ml/vocabularies/security#SecurityScheme",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://a.ml/vocabularies/security#name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "oauth2_0"
           }

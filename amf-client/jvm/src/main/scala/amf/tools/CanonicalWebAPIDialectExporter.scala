@@ -26,7 +26,8 @@ object CanonicalWebAPIDialectExporter {
   val WELL_KNOWN_VOCABULARIES = Map[String,String](
     "http://a.ml/vocabularies/document#" -> "../vocabularies/aml_doc.yaml",
     "http://a.ml/vocabularies/data#" -> "../vocabularies/data_model.yaml",
-    "http://a.ml/vocabularies/http#" -> "../vocabularies/http.yaml",
+    "http://a.ml/vocabularies/apiContract#" -> "../vocabularies/api_contract.yaml",
+    "http://a.ml/vocabularies/core#" -> "../vocabularies/core.yaml",
     "http://a.ml/vocabularies/meta#" -> "../vocabularies/meta.yaml",
     "http://a.ml/vocabularies/security#" -> "../vocabularies/security.yaml",
     "http://a.ml/vocabularies/shapes#" -> "../vocabularies/shapes.yaml"
@@ -256,9 +257,9 @@ object CanonicalWebAPIDialectExporter {
 
         stringBuilder.append(s"    mapping:\n")
 
-        if (dialectNodeMapping.classTerm == (Namespace.Http + "EndPoint").iri()) {
+        if (dialectNodeMapping.classTerm == (Namespace.ApiContract + "EndPoint").iri()) {
           stringBuilder.append(endPointExtends + "\n")
-        } else if (dialectNodeMapping.classTerm == (Namespace.Hydra + "Operation").iri()) {
+        } else if (dialectNodeMapping.classTerm == (Namespace.ApiContract + "Operation").iri()) {
           stringBuilder.append(operationExtends + "\n")
         }
 

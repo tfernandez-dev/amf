@@ -1,0 +1,235 @@
+#%Vocabulary 1.0
+base: http://a.ml/vocabularies/apiContract#
+usage: API contract vocabulary
+uses:
+  security: security.yaml
+  data: data_model.yaml
+  doc: aml_doc.yaml
+  meta: meta.yaml
+  core: core.yaml
+external:
+  shacl: http://www.w3.org/ns/shacl#
+classTerms:
+  Response:
+    displayName: Response
+    description: Response information for an operation
+  Request:
+    displayName: Request
+    description: Request information for an operation
+  EndPoint:
+    displayName: EndPoint
+    description: EndPoint in the API holding a number of executable operations
+  Tag:
+    displayName: Tag
+    description: Categorical information provided by some API spec format. Tags are extensions to the model supported directly in the input API spec format.
+  DomainExtension:
+    displayName: Domain Extension
+    description: |-
+      Extension to the model being parsed from RAML annotation or OpenAPI extensions
+      They must be a DomainPropertySchema (only in RAML) defining them.
+      The DomainPropertySchema might have an associated Data Shape that must validate the extension nested graph.
+      They are parsed as RDF graphs using a default transformation from a set of nested records into RDF.
+  IriTemplateMapping:
+    displayName: Iri Template
+  WebAPI:
+    displayName: Web API
+    description: Top level element describing a HTTP API
+  Example:
+    displayName: Example
+    description: Example value for a schema inside an API
+    extends: doc.ExternalSource
+  Callback:
+    displayName: Callback
+    description: Model defining the information for a HTTP callback/ webhook
+  Parameter:
+    displayName: Parameter
+    description: Piece of data required or returned by an Operation
+  TemplatedLink:
+    displayName: Templated Link
+    description: Templated link containing URL template and variables mapping
+  Operation:
+    displayName: Operation
+    description: Action that can be executed using a particular HTTP invocation
+  Encoding:
+    displayName: Encoding
+  ShapeExtension:
+    displayName: Shape Extension
+    description: Custom extensions for a data shape definition inside an API definition
+  Payload:
+    displayName: Payload
+    description: Encoded payload using certain media-type
+  Server:
+    displayName: Server
+    description: Information about the network accessible locations where the API is available
+  NamedExamples:
+    displayName: Examples
+    description: Wrapper for a list of examples
+propertyTerms:
+  accepts:
+    displayName: accepts
+    description: Media-types accepted in a API request
+    range: string
+  allowEmptyValue:
+    displayName: allow empty value
+    description: Parameter can be passed without value
+    range: boolean
+  allowReserved:
+    displayName: allow reserved
+    range: boolean
+  binding:
+    displayName: binding
+    description: Part of the Request model where the parameter can be encoded (header, path, query param, etc.)
+    range: string
+  callback:
+    displayName: callback
+    description: associated callbacks
+    range: Callback
+  contentType:
+    displayName: content type
+    range: string
+  cookieParameter:
+    displayName: cookie parameter
+    range: Parameter
+  encoding:
+    displayName: encoding
+    range: Encoding
+  endpoint:
+    displayName: endpoint
+    description: Endpoint targeted by the callback
+    range: EndPoint
+  examples:
+    displayName: examples
+    description: Examples for a particular domain element
+    range: NamedExamples
+  expects:
+    displayName: expects
+    description: Request information required by the operation
+    range: Request
+  explode:
+    displayName: explode
+    range: boolean
+  expression:
+    displayName: expression
+    description: structural location of the information to fulfill the callback
+    range: string
+  guiSummary:
+    displayName: gui summary
+    description: Human readable description of the operation
+    extends: description
+    range: string
+  header:
+    displayName: header
+    range: Parameter
+  link:
+    displayName: links
+    description: Structural definition of links on the source data shape AST
+    range: TemplatedLink
+  linkExpression:
+    displayName: link expression
+    description: OAS 3 link expression
+    range: string
+  mapping:
+    displayName: mapping
+    description: Variable mapping for the URL template
+    range: IriTemplateMapping
+  mediaType:
+    displayName: media type
+    description: Media types supported in the payload
+    range: string
+  method:
+    displayName: method
+    description: HTTP method required to invoke the operation
+    range: string
+  operationId:
+    displayName: operation ID
+    description: Identifier of the target operation
+    range: string
+  paramName:
+    displayName: param name
+    description: Name of a parameter
+    extends: name
+    range: string
+  parameter:
+    displayName: parameter
+    description: Additional data required or returned by an operation
+    range: Parameter
+  path:
+    displayName: path
+    description: Path template for an endpoint
+    range: string
+  payload:
+    displayName: payload
+    description: Main payload data required or returned by an operation
+    range: Payload
+  propertyName:
+    displayName: property name
+    range: string
+  queryString:
+    displayName: query string
+    description: Query string associated to this security scheme
+    range: shacl.Shape
+  requestBody:
+    displayName: request body
+    range: string
+  required:
+    displayName: required
+    description: Marks the parameter as required
+    range: boolean
+  returns:
+    displayName: returns
+    description: Response data returned by the operation
+    range: Response
+  schema:
+    displayName: schema
+    description: Schema associated to this payload
+    range: shacl.Shape
+  scheme:
+    displayName: scheme
+    description: URI scheme for the API protocol
+    range: string
+  server:
+    displayName: servers
+    description: Specific information about the server where the endpoint is accessible
+    range: Server
+  statusCode:
+    displayName: status code
+    description: HTTP status code returned by a response
+    range: string
+  style:
+    displayName: style
+    range: string
+  supportedOperation:
+    displayName: supported operation
+    description: Operations supported by an endpoint
+    range: Operation
+  tag:
+    displayName: tag
+    description: Additionally custom tagged information
+    range: string
+  template:
+    displayName: template
+    description: URL template for a templated link
+    range: string
+  uriParameter:
+    displayName: uri parameter
+    range: Parameter
+  url:
+    displayName: url
+    description: URL (potentially a template) for the server
+    range: string
+  variable:
+    displayName: variable
+    description: Variable defined inside an URL tempplate
+    range: string
+  shacl.raw:
+    displayName: raw
+    description: Raw textual information that cannot be processed for the current model semantics.
+    range: string
+  response:
+    displayName: response
+    description: Response associated to this security scheme
+    range: Response
+  uriTemplate:
+    displayName: uriTemplate
+    description: URI template that will be used to generate the URI of the parsed nodeds in the graph
+    range: string

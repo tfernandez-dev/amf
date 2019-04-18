@@ -469,8 +469,8 @@ trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps {
       val classes    = declarations.collect { case term: ClassTerm    => term }
       val properties = declarations.collect { case prop: PropertyTerm => prop }
 
-      assert(classes.size == 19)
-      assert(properties.size == 28)
+      assert(classes.size == 18)
+      assert(properties.size == 24)
     }
   }
 
@@ -571,7 +571,7 @@ trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps {
     } yield {
       e shouldBe a[LimitReachedException]
 
-      buffer.toString() should endWith("http://a.ml/vocabularies/document#RootDomainElement\",\n")
+      buffer.toString() should include("http://a.ml/vocabularies/document#RootDomainElement")
     }
   }
 
@@ -588,7 +588,7 @@ trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps {
       unit <- new RamlParser().parseStringAsync(input).asFuture
       e    <- new AmfGraphRenderer().generateToBuilder(unit, builder).asFuture
     } yield {
-      builder.result.toString should include("\"http://schema.org/version\"")
+      builder.result.toString should include("\"http://a.ml/vocabularies/core#version\"")
     }
   }
 
@@ -1088,9 +1088,9 @@ trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps {
     val webApi = unit.asInstanceOf[Document].encodes.asInstanceOf[WebApi]
     webApi.description.remove()
     val operation: Operation = webApi.endPoints.asSeq.head.operations.asSeq.head
-    operation.graph().remove("http://www.w3.org/ns/hydra/core#returns")
+    operation.graph().remove("http://a.ml/vocabularies/apiContract#returns")
 
-    webApi.graph().remove("http://schema.org/license")
+    webApi.graph().remove("http://a.ml/vocabularies/core#license")
     unit
   }
 

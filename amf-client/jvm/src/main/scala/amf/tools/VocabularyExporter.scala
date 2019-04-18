@@ -27,21 +27,22 @@ case class VocabPropertyTerm(id: String,
 
 object VocabularyExporter {
 
-  val conflictive = Seq((Namespace.Document + "RootDomainElement").iri())
+  val conflictive = Seq((Namespace.Document + "RootDomainElement").iri(), (Namespace.Document + "DomainElement").iri(), (Namespace.Document + "Linkable").iri())
 
   val blacklist: Map[ModelVocabulary, Seq[ModelVocabulary]] = Map(
     ModelVocabularies.AmlDoc -> Seq(ModelVocabularies.Security,
                                     ModelVocabularies.Data,
-                                    ModelVocabularies.Http,
+                                    ModelVocabularies.ApiContract,
                                     ModelVocabularies.Shapes),
-    ModelVocabularies.Security -> Seq(ModelVocabularies.Http)
+    ModelVocabularies.Security -> Seq(ModelVocabularies.ApiContract)
   )
 
-  val reflectionsCoreDoc    = new Reflections("amf.core.metamodel.document", new SubTypesScanner(false))
-  val reflectionsCoreDomain = new Reflections("amf.core.metamodel.domain", new SubTypesScanner(false))
-  val reflectionsWebApi     = new Reflections("amf.plugins.domain.webapi.metamodel", new SubTypesScanner(false))
-  val reflectionsTemplates  = new Reflections("amf.plugins.domain.webapi.metamodel.templates", new SubTypesScanner(false))
-  val reflectionsShapes     = new Reflections("amf.plugins.domain.shapes.metamodel", new SubTypesScanner(false))
+  val reflectionsCoreDoc      = new Reflections("amf.core.metamodel.document", new SubTypesScanner(false))
+  val reflectionsCoreDomain   = new Reflections("amf.core.metamodel.domain", new SubTypesScanner(false))
+  val reflectionsWebApi       = new Reflections("amf.plugins.domain.webapi.metamodel", new SubTypesScanner(false))
+  val reflectionsTemplates    = new Reflections("amf.plugins.domain.webapi.metamodel.templates", new SubTypesScanner(false))
+  val reflectionsShapes       = new Reflections("amf.plugins.domain.shapes.metamodel", new SubTypesScanner(false))
+  val reflectionsVocabularies = new Reflections("amf.plugins.document.vocabularies.metamodel.domain", new SubTypesScanner(false))
 
   var files: Map[String, VocabularyFile]         = Map()
   var classToFile: Map[String, String]           = Map()
@@ -54,6 +55,7 @@ object VocabularyExporter {
     }
   }
 
+  val emitProperties = false
   def notBlacklisted(klasses: Seq[String], vocabulary: ModelVocabulary) = {
     val vocabBlacklist: Seq[ModelVocabulary] = blacklist.getOrElse(vocabulary, Seq())
     val res = klasses.filter { klassName =>
@@ -162,7 +164,7 @@ object VocabularyExporter {
                     }
                                    */
                                   val exclusiveProperties = notBlacklisted(classTerm.properties, vocabulary)
-                                  if (exclusiveProperties.nonEmpty) {
+                                  if (emitProperties && exclusiveProperties.nonEmpty) {
                                     b.entry("properties", b => {
                                       b.list { l =>
                                         exclusiveProperties.foreach { p =>
@@ -433,6 +435,7 @@ object VocabularyExporter {
     metaObjects(reflectionsWebApi, parseMetaObject)
     metaObjects(reflectionsShapes, parseMetaObject)
     metaObjects(reflectionsTemplates, parseMetaObject)
+    metaObjects(reflectionsVocabularies, parseMetaObject)
 
     // review
     println(s"*** Parsed classes: ${classes.keys.toSeq.size}")
@@ -442,7 +445,8 @@ object VocabularyExporter {
     //properties.keys.toSeq.sorted.foreach(k => println(s" - ${k}"))
 
     Seq(ModelVocabularies.AmlDoc,
-        ModelVocabularies.Http,
+        ModelVocabularies.ApiContract,
+        ModelVocabularies.Core,
         ModelVocabularies.Data,
         ModelVocabularies.Shapes,
         ModelVocabularies.Security,

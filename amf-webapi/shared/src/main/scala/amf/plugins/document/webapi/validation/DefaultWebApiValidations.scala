@@ -227,8 +227,8 @@ object JsCustomValidations {
       """.stripMargin,
     "pathParameterRequiredProperty" ->
       """|function(parameter) {
-         |  var binding = parameter["http:binding"];
-         |  var requiredValue = parameter["hydra:required"];
+         |  var binding = parameter["apiContract:binding"];
+         |  var requiredValue = parameter["apiContract:required"];
          |  if (binding == 'path' && requiredValue != 'true') {
          |    return false;
          |  }

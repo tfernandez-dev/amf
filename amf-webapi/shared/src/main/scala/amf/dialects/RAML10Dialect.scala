@@ -707,9 +707,9 @@ object RAML10Dialect {
     d.withExternals(Seq(
 
       External()
-        .withId(DialectLocation + "#/externals/schema-org")
-        .withAlias("schema-org")
-        .withBase(Namespace.Schema.base),
+        .withId(DialectLocation + "#/externals/core")
+        .withAlias("core")
+        .withBase(Namespace.Core.base),
 
       External()
         .withId(DialectLocation + "#/externals/shacl")
@@ -717,9 +717,9 @@ object RAML10Dialect {
         .withBase(Namespace.Shacl.base),
 
       External()
-        .withId(DialectLocation + "#/externals/hydra")
-        .withAlias("hydra")
-        .withBase(Namespace.Hydra.base),
+        .withId(DialectLocation + "#/externals/apiContract")
+        .withAlias("apiContract")
+        .withBase(Namespace.ApiContract.base),
 
       External()
         .withId(DialectLocation + "#/externals/meta")
@@ -735,7 +735,8 @@ object RAML10Dialect {
 
     val vocabularies = Seq(
       ModelVocabularies.AmlDoc,
-      ModelVocabularies.Http,
+      ModelVocabularies.ApiContract,
+      ModelVocabularies.Core,
       ModelVocabularies.Shapes,
       ModelVocabularies.Meta,
       ModelVocabularies.Security

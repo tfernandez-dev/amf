@@ -3,10 +3,11 @@ base: http://a.ml/vocabularies/shapes#
 usage: Vocabulary defining data shapes, used as an extension to SHACL
 uses:
   doc: aml_doc.yaml
+  core: core.yaml
+  apiContract: api_contract.yaml
   data: data_model.yaml
 external:
   shacl: http://www.w3.org/ns/shacl#
-  schema-org: http://schema.org/
 classTerms:
   shacl.SchemaShape:
     displayName: Schema Shape
@@ -14,74 +15,14 @@ classTerms:
     extends:
       - shacl.Shape
       - Shape
-      - doc.DomainElement
       - AnyShape
-    properties:
-      - shacl.mediaType
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
   ScalarShape:
     displayName: Scalar Shape
     description: Data shape describing a scalar value in the input data model, reified as an scalar node in the mapped graph
     extends:
       - shacl.Shape
       - Shape
-      - doc.DomainElement
       - AnyShape
-    properties:
-      - shacl.datatype
-      - shacl.pattern
-      - shacl.minLength
-      - shacl.maxLength
-      - shacl.minInclusive
-      - shacl.maxInclusive
-      - shacl.minExclusive
-      - shacl.maxExclusive
-      - format
-      - multipleOf
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
   UnionShape:
     displayName: Union Shape
     description: Shape representing the union of many alternative data shapes
@@ -89,29 +30,6 @@ classTerms:
       - shacl.Shape
       - Shape
       - AnyShape
-    properties:
-      - anyOf
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
   TupleShape:
     displayName: Tuple Shape
     description: Data shape containing a multi-valued collection of shapes
@@ -119,134 +37,30 @@ classTerms:
       - ArrayShape
       - shacl.Shape
       - Shape
-      - doc.DomainElement
-    properties:
-      - items
-      - shacl.minCount
-      - shacl.maxCount
-      - uniqueItems
-      - additionalItems
-      - collectionFormat
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
   AnyShape:
     displayName: Any Shape
     description: Base class for all shapes stored in the graph model
     extends:
       - shacl.Shape
       - Shape
-    properties:
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
   PropertyDependencies:
     displayName: Property Dependencies
     description: Dependency between sets of property shapes
-    extends: doc.DomainElement
-    properties:
-      - propertySource
-      - propertyTarget
-      - doc.extends
   shacl.PropertyShape:
     displayName: Property Shape
     description: Constraint over a property in a data shape.
     extends:
       - shacl.Shape
       - Shape
-    properties:
-      - shacl.path
-      - range
-      - shacl.minCount
-      - shacl.maxCount
-      - readOnly
-      - patternName
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - doc.extends
   RecursiveShape:
     displayName: Recursive Shape
     description: Recursion on a Shape structure, used when expanding a shape and finding the canonical representation of that shape.
     extends:
       - shacl.Shape
       - Shape
-    properties:
-      - fixPoint
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - doc.extends
   XMLSerializer:
     displayName: XML Serializer
     description: Information about how to encode into XML a particular data shape
-    extends: doc.DomainElement
-    properties:
-      - xmlAttribute
-      - xmlWrapped
-      - xmlName
-      - xmlNamespace
-      - xmlPrefix
-      - doc.extends
   MatrixShape:
     displayName: Matrix Shape
     description: Data shape containing nested multi-dimensional collection shapes
@@ -254,72 +68,13 @@ classTerms:
       - ArrayShape
       - shacl.Shape
       - Shape
-      - doc.DomainElement
-    properties:
-      - items
-      - shacl.minCount
-      - shacl.maxCount
-      - uniqueItems
-      - collectionFormat
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
   shacl.NodeShape:
     displayName: Node Shape
     description: Shape that validates a record of fields, like a JS object
     extends:
       - shacl.Shape
       - Shape
-      - doc.DomainElement
       - AnyShape
-    properties:
-      - minProperties
-      - maxProperties
-      - shacl.closed
-      - shacl.additionalPropertiesSchema
-      - discriminator
-      - discriminatorValue
-      - shacl.property
-      - dependencies
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
   Shape:
     displayName: Shape
     description: |-
@@ -327,22 +82,6 @@ classTerms:
       They can be used to define and enforce schemas for the data graph information through SHACL.
       Shapes can be recursive and inherit from other shapes.
     extends: shacl.Shape
-    properties:
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
   FileShape:
     displayName: File Shape
     description: Shape describing data uploaded in an API request
@@ -350,72 +89,12 @@ classTerms:
       - shacl.Shape
       - Shape
       - AnyShape
-    properties:
-      - fileType
-      - shacl.pattern
-      - shacl.minLength
-      - shacl.maxLength
-      - shacl.minInclusive
-      - shacl.maxInclusive
-      - shacl.minExclusive
-      - shacl.maxExclusive
-      - format
-      - multipleOf
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
   ArrayShape:
     displayName: Array Shape
     description: Shape that contains a nested collection of data shapes
     extends:
       - shacl.Shape
       - Shape
-      - doc.DomainElement
-    properties:
-      - items
-      - shacl.minCount
-      - shacl.maxCount
-      - uniqueItems
-      - collectionFormat
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
-      - doc.extends
   NilShape:
     displayName: Nil Shape
     description: Data shape representing the null/nil value in the input schema
@@ -423,27 +102,6 @@ classTerms:
       - shacl.Shape
       - Shape
       - AnyShape
-    properties:
-      - doc.link-target
-      - doc.link-label
-      - doc.recursive
-      - shacl.name
-      - schema-org.name
-      - schema-org.description
-      - shacl.defaultValue
-      - shacl.in
-      - inherits
-      - shacl.defaultValueStr
-      - shacl.not
-      - shacl.and
-      - shacl.or
-      - shacl.xone
-      - closure
-      - shacl.raw
-      - doc.reference-id
-      - schema-org.documentation
-      - xmlSerialization
-      - doc.examples
 propertyTerms:
   additionalItems:
     displayName: additional items
@@ -553,18 +211,6 @@ propertyTerms:
     displayName: xml wrapped
     description: XML wrapped mapping flag
     range: boolean
-  schema-org.description:
-    displayName: description
-    description: Human readable description of an element
-    range: string
-  schema-org.documentation:
-    displayName: documentation
-    description: Documentation for a particular part of the model
-    range: schema-org.CreativeWork
-  schema-org.name:
-    displayName: name
-    description: Name of the shape
-    range: string
   shacl.additionalPropertiesSchema:
     displayName: additional properties schema
     range: shacl.Shape
