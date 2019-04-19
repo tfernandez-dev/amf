@@ -2,26 +2,39 @@
 base: http://a.ml/vocabularies/apiContract#
 usage: API contract vocabulary
 uses:
-  security: security.yaml
-  data: data_model.yaml
   doc: aml_doc.yaml
-  meta: meta.yaml
   core: core.yaml
-external:
-  shacl: http://www.w3.org/ns/shacl#
+  shacl: external/shacl.yaml
 classTerms:
-  Response:
-    displayName: Response
-    description: Response information for an operation
-  Request:
-    displayName: Request
-    description: Request information for an operation
-  EndPoint:
-    displayName: EndPoint
-    description: EndPoint in the API holding a number of executable operations
-  Tag:
-    displayName: Tag
-    description: Categorical information provided by some API spec format. Tags are extensions to the model supported directly in the input API spec format.
+
+  # document model
+  UserDocumentationFragment:
+    extends: doc.Fragment
+  DataTypeFragment:
+    extends: doc.Fragment
+  NamedExampleFragment:
+    extends: doc.Fragment
+  ResourceTypeFragment:
+    extends: doc.Fragment
+  TraitFragment:
+    extends: doc.Fragment
+  AnnotationTypeDeclarationFragment:
+    extends: doc.Fragment
+  SecuritySchemeFragment:
+    extends: doc.Fragment
+  WebAPIDocument:
+    extends: doc.Document
+  ExtensionDocument:
+    extends: doc.Document
+  OverlayDocument:
+    extends: doc.Document
+  LibraryModule:
+    extends: doc.Module
+
+  # domain model
+  Callback:
+    displayName: Callback
+    description: Model defining the information for a HTTP callback/ webhook
   DomainExtension:
     displayName: Domain Extension
     description: |-
@@ -29,41 +42,50 @@ classTerms:
       They must be a DomainPropertySchema (only in RAML) defining them.
       The DomainPropertySchema might have an associated Data Shape that must validate the extension nested graph.
       They are parsed as RDF graphs using a default transformation from a set of nested records into RDF.
-  IriTemplateMapping:
-    displayName: Iri Template
-  WebAPI:
-    displayName: Web API
-    description: Top level element describing a HTTP API
+  Encoding:
+    displayName: Encoding
+  EndPoint:
+    displayName: EndPoint
+    description: EndPoint in the API holding a number of executable operations
   Example:
     displayName: Example
     description: Example value for a schema inside an API
     extends: doc.ExternalSource
-  Callback:
-    displayName: Callback
-    description: Model defining the information for a HTTP callback/ webhook
-  Parameter:
-    displayName: Parameter
-    description: Piece of data required or returned by an Operation
-  TemplatedLink:
-    displayName: Templated Link
-    description: Templated link containing URL template and variables mapping
-  Operation:
-    displayName: Operation
-    description: Action that can be executed using a particular HTTP invocation
-  Encoding:
-    displayName: Encoding
-  ShapeExtension:
-    displayName: Shape Extension
-    description: Custom extensions for a data shape definition inside an API definition
-  Payload:
-    displayName: Payload
-    description: Encoded payload using certain media-type
-  Server:
-    displayName: Server
-    description: Information about the network accessible locations where the API is available
+  IriTemplateMapping:
+    displayName: Iri Template
   NamedExamples:
     displayName: Examples
     description: Wrapper for a list of examples
+  Operation:
+    displayName: Operation
+    description: Action that can be executed using a particular HTTP invocation
+  Parameter:
+    displayName: Parameter
+    description: Piece of data required or returned by an Operation
+  Payload:
+    displayName: Payload
+    description: Encoded payload using certain media-type
+  Request:
+    displayName: Request
+    description: Request information for an operation
+  Response:
+    displayName: Response
+    description: Response information for an operation
+  Server:
+    displayName: Server
+    description: Information about the network accessible locations where the API is available
+  ShapeExtension:
+    displayName: Shape Extension
+    description: Custom extensions for a data shape definition inside an API definition
+  Tag:
+    displayName: Tag
+    description: Categorical information provided by some API spec format. Tags are extensions to the model supported directly in the input API spec format.
+  TemplatedLink:
+    displayName: Templated Link
+    description: Templated link containing URL template and variables mapping
+  WebAPI:
+    displayName: Web API
+    description: Top level element describing a HTTP API
 propertyTerms:
   accepts:
     displayName: accepts
@@ -115,7 +137,7 @@ propertyTerms:
   guiSummary:
     displayName: gui summary
     description: Human readable description of the operation
-    extends: description
+    extends: core.description
     range: string
   header:
     displayName: header
@@ -147,7 +169,7 @@ propertyTerms:
   paramName:
     displayName: param name
     description: Name of a parameter
-    extends: name
+    extends: core.name
     range: string
   parameter:
     displayName: parameter
@@ -175,6 +197,10 @@ propertyTerms:
     displayName: required
     description: Marks the parameter as required
     range: boolean
+  response:
+    displayName: response
+    description: Response associated to this security scheme
+    range: Response
   returns:
     displayName: returns
     description: Response data returned by the operation
@@ -213,6 +239,10 @@ propertyTerms:
   uriParameter:
     displayName: uri parameter
     range: Parameter
+  uriTemplate:
+    displayName: uriTemplate
+    description: URI template that will be used to generate the URI of the parsed nodeds in the graph
+    range: string
   url:
     displayName: url
     description: URL (potentially a template) for the server
@@ -221,15 +251,35 @@ propertyTerms:
     displayName: variable
     description: Variable defined inside an URL tempplate
     range: string
-  shacl.raw:
-    displayName: raw
-    description: Raw textual information that cannot be processed for the current model semantics.
+
+  # new document model properties
+  location:
+    displayName: location
+    description: URL where contract can be accessed
+    range: uri
+  reference:
+    displayName: reference
+    description: reference between documents containing fragments of API contract
+    range: doc.Unit
+  internalReference:
+    extends: reference
+    displayName: internal reference
+    description: reference to a different document in this spec not exposed as publicly
+    range: doc.Unit
+  externalReference:
+    extends: reference
+    displayName: external reference
+    description: reference to a document exposed as a public spec
+    range: doc.Unit
+  extends:
+    displayName: extends
+    description: Structural extension relationship between domain elements in the contract
+    range: doc.DomainElement
+  link-label:
+    displayName: link label
+    description: human readable name for a composition relationship between domain elements in the contract
     range: string
-  response:
-    displayName: response
-    description: Response associated to this security scheme
-    range: Response
-  uriTemplate:
-    displayName: uriTemplate
-    description: URI template that will be used to generate the URI of the parsed nodeds in the graph
-    range: string
+  link-target:
+    displayName: link target
+    description: composition relationship between two domain elements in a contract
+    range: doc.DomainElement

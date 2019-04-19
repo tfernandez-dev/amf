@@ -3,41 +3,38 @@ base: http://a.ml/vocabularies/security#
 usage: Vocabulary for HTTP security information
 uses:
   core: core.yaml
-  doc: aml_doc.yaml
   data: data_model.yaml
-external:
-  shacl: http://www.w3.org/ns/shacl#
 classTerms:
-  SecurityScheme:
-    displayName: Security Scheme
-    description: Authentication and access control mechanism defined in an API
+  ApiKeySettings:
+    displayName: API Key Settings
+    description: Settings for an API Key security scheme
+    extends: Settings
+  HttpSettings:
+    displayName: HTTP Settings
+    description: Settings for an HTTP security scheme
+    extends: Settings
+  OAuth1Settings:
+    displayName: OAuth1 Settings
+    description: Settings for an OAuth1 security scheme
+    extends: Settings
+  OAuth2Settings:
+    displayName: OAuth2 Settings
+    description: Settings for an OAuth2 security scheme
+    extends: Settings
   OpenIdConnectSettings:
     displayName: OpenID Settings
     description: Settings for an OpenID security scheme
     extends: Settings
   ParametrizedSecurityScheme:
     displayName: Parametrized Security Scheme
-  ApiKeySettings:
-    displayName: API Key Settings
-    description: Settings for an API Key security scheme
-    extends: Settings
   Scope:
     displayName: Scope
-  HttpSettings:
-    displayName: HTTP Settings
-    description: Settings for an HTTP security scheme
-    extends: Settings
+  SecurityScheme:
+    displayName: Security Scheme
+    description: Authentication and access control mechanism defined in an API
   Settings:
     displayName: Settings
     description: Settings for a security scheme
-  OAuth2Settings:
-    displayName: OAuth2 Settings
-    description: Settings for an OAuth2 security scheme
-    extends: Settings
-  OAuth1Settings:
-    displayName: OAuth1 Settings
-    description: Settings for an OAuth1 security scheme
-    extends: Settings
 propertyTerms:
   accessTokenUri:
     displayName: access token URI
@@ -83,6 +80,10 @@ propertyTerms:
   scope:
     displayName: scope
     range: Scope
+  security:
+    displayName: security
+    description: Security information associated to the endpoint
+    range: ParametrizedSecurityScheme
   settings:
     displayName: settings
     description: Security scheme settings
@@ -97,7 +98,3 @@ propertyTerms:
     displayName: type
     description: Type of security scheme
     range: string
-  security:
-    displayName: security
-    description: Security information associated to the endpoint
-    range: ParametrizedSecurityScheme
