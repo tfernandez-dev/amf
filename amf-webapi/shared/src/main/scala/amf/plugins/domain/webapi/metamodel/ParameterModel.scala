@@ -25,7 +25,7 @@ object ParameterModel
   val ParameterName = Field(
     Str,
     ApiContract + "paramName",
-    ModelDoc(ModelVocabularies.ApiContract, "param name", "Name of a parameter", Seq((Namespace.ApiContract + "name").iri())))
+    ModelDoc(ModelVocabularies.ApiContract, "param name", "Name of a parameter", Seq((Namespace.Core + "name").iri())))
 
   val Required =
     Field(Bool, ApiContract + "required", ModelDoc(ModelVocabularies.ApiContract, "required", "Marks the parameter as required"))

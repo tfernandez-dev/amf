@@ -469,7 +469,7 @@ trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps {
       val classes    = declarations.collect { case term: ClassTerm    => term }
       val properties = declarations.collect { case prop: PropertyTerm => prop }
 
-      assert(classes.size == 18)
+      assert(classes.size == 19)
       assert(properties.size == 24)
     }
   }

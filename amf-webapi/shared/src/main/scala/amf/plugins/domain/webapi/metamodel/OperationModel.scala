@@ -37,7 +37,7 @@ object OperationModel
     ModelDoc(ModelVocabularies.ApiContract,
              "gui summary",
              "Human readable description of the operation",
-             Seq((Namespace.ApiContract + "description").iri()))
+             Seq((Namespace.Core + "description").iri()))
   )
 
   val Schemes =

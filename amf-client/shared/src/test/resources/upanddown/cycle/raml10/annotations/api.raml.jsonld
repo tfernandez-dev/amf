@@ -88,7 +88,7 @@
                 "http://a.ml/vocabularies/data#Node",
                 "http://a.ml/vocabularies/document#DomainElement"
               ],
-              "http://www.w3.org/1999/02/22-rdf-syntax-ns#member": [
+              "http://www.w3.org/2000/01/rdf-schema#member": [
                 {
                   "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations/api.raml#/web-api/foo/object_1/array_3/scalar_4",
                   "@type": [

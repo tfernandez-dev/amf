@@ -3495,7 +3495,7 @@
                     "http://a.ml/vocabularies/data#Node",
                     "http://a.ml/vocabularies/document#DomainElement"
                   ],
-                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#member": [
+                  "http://www.w3.org/2000/01/rdf-schema#member": [
                     {
                       "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/oas-tags/array_1/scalar_2",
                       "@type": [
@@ -6274,7 +6274,7 @@
                     "http://a.ml/vocabularies/data#Node",
                     "http://a.ml/vocabularies/document#DomainElement"
                   ],
-                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#member": [
+                  "http://www.w3.org/2000/01/rdf-schema#member": [
                     {
                       "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/oas-tags/array_1/scalar_2",
                       "@type": [
@@ -8506,7 +8506,7 @@
                     "http://a.ml/vocabularies/data#Node",
                     "http://a.ml/vocabularies/document#DomainElement"
                   ],
-                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#member": [
+                  "http://www.w3.org/2000/01/rdf-schema#member": [
                     {
                       "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/oas-tags/array_1/scalar_2",
                       "@type": [
@@ -10668,7 +10668,7 @@
                     "http://a.ml/vocabularies/data#Node",
                     "http://a.ml/vocabularies/document#DomainElement"
                   ],
-                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#member": [
+                  "http://www.w3.org/2000/01/rdf-schema#member": [
                     {
                       "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/oas-tags/array_1/scalar_2",
                       "@type": [
@@ -16288,7 +16288,7 @@
                     "http://a.ml/vocabularies/data#Node",
                     "http://a.ml/vocabularies/document#DomainElement"
                   ],
-                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#member": [
+                  "http://www.w3.org/2000/01/rdf-schema#member": [
                     {
                       "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/oas-tags/array_1/scalar_2",
                       "@type": [
@@ -17416,7 +17416,7 @@
             "http://a.ml/vocabularies/data#Node",
             "http://a.ml/vocabularies/document#DomainElement"
           ],
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#member": [
+          "http://www.w3.org/2000/01/rdf-schema#member": [
             {
               "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/oas-tags-definition/array_1/object_2",
               "@type": [
