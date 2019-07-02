@@ -11,35 +11,35 @@
       {
         "@id": "#9",
         "@type": [
-          "schema-org:WebAPI",
+          "apiContract:WebAPI",
           "doc:RootDomainElement",
           "doc:DomainElement"
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "test title"
           }
         ],
-        "schema-org:description": [
+        "core:description": [
           {
             "@value": "test description"
           }
         ],
-        "raml-http:server": [
+        "apiContract:server": [
           {
             "@id": "#14",
             "@type": [
-              "raml-http:Server",
+              "apiContract:Server",
               "doc:DomainElement"
             ],
-            "raml-http:url": [
+            "apiContract:url": [
               {
                 "@value": "api.example.com/path"
               }
             ],
             "smaps": {
               "lexical": {
-                "raml-http:url": "[(5,0)-(7,0)]"
+                "apiContract:url": "[(5,0)-(7,0)]"
               },
               "synthesized-field": {
                 "#14": "true"
@@ -47,65 +47,65 @@
             }
           }
         ],
-        "raml-http:scheme": [
+        "apiContract:scheme": [
           {
             "@value": "HTTP"
           }
         ],
-        "raml-http:endpoint": [
+        "apiContract:endpoint": [
           {
             "@id": "#10",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/people"
               }
             ],
-            "schema-org:name": [
+            "core:name": [
               {
                 "@value": "People"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#11",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "schema-org:name": [
+                "core:name": [
                   {
                     "@value": "Create a person"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#12",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#13",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#8/linked_1",
                             "@type": [
@@ -136,7 +136,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(14,4)-(16,23)]",
+                        "apiContract:payload": "[(14,4)-(16,23)]",
                         "#12": "[(13,0)-(16,23)]"
                       }
                     }
@@ -144,7 +144,7 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "schema-org:name": "[(13,4)-(14,0)]",
+                    "core:name": "[(13,4)-(14,0)]",
                     "#11": "[(12,2)-(16,23)]"
                   }
                 }
@@ -152,7 +152,7 @@
             ],
             "smaps": {
               "lexical": {
-                "schema-org:name": "[(11,2)-(12,0)]",
+                "core:name": "[(11,2)-(12,0)]",
                 "#10": "[(10,0)-(16,23)]"
               }
             }
@@ -163,11 +163,11 @@
             "#9": "RAML 1.0"
           },
           "lexical": {
-            "raml-http:scheme": "[(4,0)-(5,0)]",
-            "schema-org:description": "[(3,0)-(4,0)]",
+            "apiContract:scheme": "[(4,0)-(5,0)]",
+            "core:description": "[(3,0)-(4,0)]",
             "#9": "[(2,0)-(16,23)]",
-            "schema-org:name": "[(2,0)-(3,0)]",
-            "raml-http:server": "[(5,0)-(7,0)]"
+            "core:name": "[(2,0)-(3,0)]",
+            "apiContract:server": "[(5,0)-(7,0)]"
           }
         }
       }
@@ -258,11 +258,11 @@
                 "@value": "type"
               }
             ],
-            "doc:examples": [
+            "apiContract:examples": [
               {
                 "@id": "#3",
                 "@type": [
-                  "doc:Example",
+                  "apiContract:Example",
                   "doc:DomainElement"
                 ],
                 "doc:strict": [
@@ -296,7 +296,7 @@
                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                           }
                         ],
-                        "schema-org:name": [
+                        "core:name": [
                           {
                             "@value": "scalar_2"
                           }
@@ -308,7 +308,7 @@
                         }
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "object_1"
                       }
@@ -436,11 +436,11 @@
             "@value": "AppPerson"
           }
         ],
-        "doc:examples": [
+        "apiContract:examples": [
           {
             "@id": "#3",
             "@type": [
-              "doc:Example",
+              "apiContract:Example",
               "doc:DomainElement"
             ],
             "doc:strict": [
@@ -474,7 +474,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -486,7 +486,7 @@
                     }
                   }
                 ],
-                "schema-org:name": [
+                "core:name": [
                   {
                     "@value": "object_1"
                   }
@@ -540,13 +540,12 @@
     ],
     "@context": {
       "@base": "amf://id",
-      "raml-http": "http://a.ml/vocabularies/http#",
       "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "shacl": "http://www.w3.org/ns/shacl#",
       "data": "http://a.ml/vocabularies/data#",
       "doc": "http://a.ml/vocabularies/document#",
-      "schema-org": "http://schema.org/",
-      "hydra": "http://www.w3.org/ns/hydra/core#"
+      "apiContract": "http://a.ml/vocabularies/apiContract#",
+      "core": "http://a.ml/vocabularies/core#"
     }
   }
 ]

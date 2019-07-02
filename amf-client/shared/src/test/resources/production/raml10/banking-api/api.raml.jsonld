@@ -312,7 +312,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -564,7 +564,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1869,7 +1869,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3464,7 +3464,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5423,7 +5423,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7018,7 +7018,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -8129,7 +8129,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -8176,7 +8176,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_5"
                               }
@@ -8223,7 +8223,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_6"
                               }
@@ -8252,7 +8252,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_3"
                           }
@@ -8317,7 +8317,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_2"
                       }
@@ -8392,7 +8392,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_9"
                               }
@@ -8455,7 +8455,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_12"
                                       }
@@ -8502,7 +8502,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_13"
                                       }
@@ -8531,7 +8531,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_11"
                                   }
@@ -8610,7 +8610,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_15"
                                       }
@@ -8657,7 +8657,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_16"
                                       }
@@ -8686,7 +8686,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_14"
                                   }
@@ -8739,7 +8739,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_10"
                               }
@@ -8792,7 +8792,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_8"
                           }
@@ -8871,7 +8871,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_18"
                               }
@@ -8934,7 +8934,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_21"
                                       }
@@ -8981,7 +8981,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_22"
                                       }
@@ -9010,7 +9010,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_20"
                                   }
@@ -9089,7 +9089,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_24"
                                       }
@@ -9136,7 +9136,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_25"
                                       }
@@ -9165,7 +9165,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_23"
                                   }
@@ -9218,7 +9218,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_19"
                               }
@@ -9271,7 +9271,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_17"
                           }
@@ -9324,7 +9324,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_7"
                       }
@@ -9377,7 +9377,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_1"
                   }
@@ -9759,7 +9759,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_4"
                                   }
@@ -9806,7 +9806,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_5"
                                   }
@@ -9835,7 +9835,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_3"
                               }
@@ -9888,7 +9888,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_2"
                           }
@@ -9929,7 +9929,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_1"
                       }
@@ -10110,7 +10110,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_4"
                                   }
@@ -10157,7 +10157,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_5"
                                   }
@@ -10204,7 +10204,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_6"
                                   }
@@ -10251,7 +10251,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_7"
                                   }
@@ -10280,7 +10280,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_3"
                               }
@@ -10383,7 +10383,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_9"
                                   }
@@ -10430,7 +10430,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_10"
                                   }
@@ -10477,7 +10477,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_11"
                                   }
@@ -10524,7 +10524,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_12"
                                   }
@@ -10553,7 +10553,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_8"
                               }
@@ -10656,7 +10656,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_14"
                                   }
@@ -10703,7 +10703,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_15"
                                   }
@@ -10750,7 +10750,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_16"
                                   }
@@ -10797,7 +10797,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_17"
                                   }
@@ -10826,7 +10826,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_13"
                               }
@@ -10903,7 +10903,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_2"
                           }
@@ -10968,7 +10968,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_1"
                       }
@@ -11149,7 +11149,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_4"
                                   }
@@ -11196,7 +11196,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_5"
                                   }
@@ -11243,7 +11243,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_6"
                                   }
@@ -11272,7 +11272,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_3"
                               }
@@ -11337,7 +11337,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_2"
                           }
@@ -11378,7 +11378,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_1"
                       }
@@ -11559,7 +11559,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_4"
                                   }
@@ -11606,7 +11606,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_5"
                                   }
@@ -11653,7 +11653,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_6"
                                   }
@@ -11682,7 +11682,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_3"
                               }
@@ -11747,7 +11747,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_2"
                           }
@@ -11822,7 +11822,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_9"
                                   }
@@ -11885,7 +11885,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_12"
                                           }
@@ -11932,7 +11932,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_13"
                                           }
@@ -11961,7 +11961,7 @@
                                         ]
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "object_11"
                                       }
@@ -12040,7 +12040,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_15"
                                           }
@@ -12087,7 +12087,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_16"
                                           }
@@ -12116,7 +12116,7 @@
                                         ]
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "object_14"
                                       }
@@ -12169,7 +12169,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_10"
                                   }
@@ -12222,7 +12222,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_8"
                               }
@@ -12301,7 +12301,7 @@
                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "scalar_18"
                                   }
@@ -12364,7 +12364,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_21"
                                           }
@@ -12411,7 +12411,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_22"
                                           }
@@ -12440,7 +12440,7 @@
                                         ]
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "object_20"
                                       }
@@ -12519,7 +12519,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_24"
                                           }
@@ -12566,7 +12566,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "scalar_25"
                                           }
@@ -12595,7 +12595,7 @@
                                         ]
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "object_23"
                                       }
@@ -12648,7 +12648,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_19"
                                   }
@@ -12701,7 +12701,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_17"
                               }
@@ -12754,7 +12754,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_7"
                           }
@@ -12807,7 +12807,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_1"
                       }
@@ -13853,7 +13853,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -13900,7 +13900,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -13947,7 +13947,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -13994,7 +13994,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -14355,7 +14355,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -14402,7 +14402,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -15747,7 +15747,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -15794,7 +15794,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -16250,7 +16250,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -16297,7 +16297,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -16344,7 +16344,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -16391,7 +16391,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -16438,7 +16438,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_5"
                               }
@@ -16485,7 +16485,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_6"
                               }
@@ -16532,7 +16532,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_7"
                               }
@@ -17783,7 +17783,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -17830,7 +17830,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -19005,7 +19005,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -19052,7 +19052,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -19099,7 +19099,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -19146,7 +19146,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -19193,7 +19193,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_5"
                               }
@@ -19240,7 +19240,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_6"
                               }
@@ -19287,7 +19287,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_7"
                               }
@@ -20262,7 +20262,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -20309,7 +20309,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -20765,7 +20765,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -20812,7 +20812,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -20859,7 +20859,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -20906,7 +20906,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -21823,7 +21823,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -21870,7 +21870,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -21917,7 +21917,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -21964,7 +21964,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -23514,7 +23514,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -23561,7 +23561,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -23608,7 +23608,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -23655,7 +23655,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -24016,7 +24016,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -24063,7 +24063,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -25263,7 +25263,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -25310,7 +25310,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -25357,7 +25357,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -25404,7 +25404,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -25451,7 +25451,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_5"
                               }
@@ -25498,7 +25498,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_6"
                               }
@@ -25545,7 +25545,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_7"
                               }
@@ -27352,7 +27352,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -27399,7 +27399,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -27446,7 +27446,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -27493,7 +27493,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -27854,7 +27854,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -27901,7 +27901,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -29353,7 +29353,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_1"
                               }
@@ -29400,7 +29400,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_2"
                               }
@@ -29447,7 +29447,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_3"
                               }
@@ -29494,7 +29494,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_4"
                               }
@@ -29541,7 +29541,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_5"
                               }
@@ -29588,7 +29588,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_6"
                               }
@@ -29635,7 +29635,7 @@
                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "scalar_7"
                               }

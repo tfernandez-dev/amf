@@ -7322,7 +7322,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -10173,7 +10173,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_1"
                       }
@@ -10224,7 +10224,7 @@
                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "scalar_1"
                           }

@@ -361,7 +361,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -647,7 +647,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#expects"
+                            "@value": "http://a.ml/vocabularies/apiContract#expects"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [

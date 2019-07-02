@@ -11,7 +11,7 @@
       {
         "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/named-example/api.raml#/web-api",
         "@type": [
-          "http://schema.org/WebAPI",
+          "http://a.ml/vocabularies/apiContract#WebAPI",
           "http://a.ml/vocabularies/document#RootDomainElement",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
@@ -73,7 +73,7 @@
                 "@value": "#%RAML 1.0 NamedExample\npersonExample:\n  name: Bob\n  lastname: Marley"
               }
             ],
-            "http://a.ml/vocabularies/http#mediaType": [
+            "http://a.ml/vocabularies/core#mediaType": [
               {
                 "@value": "application/raml+yaml"
               }
@@ -380,14 +380,14 @@
             "@value": "person"
           }
         ],
-        "http://a.ml/vocabularies/document#examples": [
+        "http://a.ml/vocabularies/apiContract#examples": [
           {
             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/named-example/api.raml#/declarations/types/person/example/personExample",
             "@type": [
-              "http://a.ml/vocabularies/document#Example",
+              "http://a.ml/vocabularies/apiContract#Example",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "personExample"
               }
@@ -423,7 +423,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -470,7 +470,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_3"
                       }
@@ -499,7 +499,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_1"
                   }
@@ -593,7 +593,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://schema.org/name"
+                        "@value": "http://a.ml/vocabularies/core#name"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [

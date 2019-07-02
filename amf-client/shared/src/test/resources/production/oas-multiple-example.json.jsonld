@@ -11,94 +11,94 @@
       {
         "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api",
         "@type": [
-          "http://schema.org/WebAPI",
+          "http://a.ml/vocabularies/apiContract#WebAPI",
           "http://a.ml/vocabularies/document#RootDomainElement",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "MockingServiceProxyAutomationTests"
           }
         ],
-        "http://schema.org/description": [
+        "http://a.ml/vocabularies/core#description": [
           {
             "@value": "Mocking service proxy test API"
           }
         ],
-        "http://schema.org/version": [
+        "http://a.ml/vocabularies/core#version": [
           {
             "@value": "v1"
           }
         ],
-        "http://a.ml/vocabularies/http#endpoint": [
+        "http://a.ml/vocabularies/apiContract#endpoint": [
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2Fexamples",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/examples"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2Fexamples/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "GET_examples"
                   }
                 ],
-                "http://a.ml/vocabularies/http#contentType": [
+                "http://a.ml/vocabularies/core#mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2Fexamples/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://schema.org/description": [
+                    "http://a.ml/vocabularies/core#description": [
                       {
                         "@value": ""
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2Fexamples/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_5",
                             "@type": [
@@ -132,7 +132,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/description"
+                                "@value": "http://a.ml/vocabularies/core#description"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -168,7 +168,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -192,7 +192,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -232,71 +232,71 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleType",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/exampleType"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleType/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "GET_exampleType"
                   }
                 ],
-                "http://a.ml/vocabularies/http#contentType": [
+                "http://a.ml/vocabularies/core#mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleType/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://schema.org/description": [
+                    "http://a.ml/vocabularies/core#description": [
                       {
                         "@value": ""
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleType/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_6",
                             "@type": [
@@ -330,7 +330,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/description"
+                                "@value": "http://a.ml/vocabularies/core#description"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -366,7 +366,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -390,7 +390,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -430,71 +430,71 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleInTypeAndResource",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/exampleInTypeAndResource"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleInTypeAndResource/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "GET_exampleInTypeAndResource"
                   }
                 ],
-                "http://a.ml/vocabularies/http#contentType": [
+                "http://a.ml/vocabularies/core#mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleInTypeAndResource/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://schema.org/description": [
+                    "http://a.ml/vocabularies/core#description": [
                       {
                         "@value": ""
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexampleInTypeAndResource/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_7",
                             "@type": [
@@ -528,7 +528,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/description"
+                                "@value": "http://a.ml/vocabularies/core#description"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -564,7 +564,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -588,7 +588,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -628,71 +628,71 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResource",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/examplesInResource"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResource/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "GET_examplesInResource"
                   }
                 ],
-                "http://a.ml/vocabularies/http#contentType": [
+                "http://a.ml/vocabularies/core#mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResource/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://schema.org/description": [
+                    "http://a.ml/vocabularies/core#description": [
                       {
                         "@value": ""
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResource/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResource/get/200/default/default",
                             "@type": [
@@ -970,11 +970,11 @@
                                 "@value": "default"
                               }
                             ],
-                            "http://a.ml/vocabularies/document#examples": [
+                            "http://a.ml/vocabularies/apiContract#examples": [
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResource/get/200/default/default/example/default-example",
                                 "@type": [
-                                  "http://a.ml/vocabularies/document#Example",
+                                  "http://a.ml/vocabularies/apiContract#Example",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
                                 "http://a.ml/vocabularies/document#strict": [
@@ -1016,7 +1016,7 @@
                                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                                               }
                                             ],
-                                            "http://schema.org/name": [
+                                            "http://a.ml/vocabularies/core#name": [
                                               {
                                                 "@value": "scalar_3"
                                               }
@@ -1063,7 +1063,7 @@
                                                 "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                               }
                                             ],
-                                            "http://schema.org/name": [
+                                            "http://a.ml/vocabularies/core#name": [
                                               {
                                                 "@value": "scalar_4"
                                               }
@@ -1092,7 +1092,7 @@
                                             ]
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "object_2"
                                           }
@@ -1171,7 +1171,7 @@
                                                 "@id": "http://www.w3.org/2001/XMLSchema#string"
                                               }
                                             ],
-                                            "http://schema.org/name": [
+                                            "http://a.ml/vocabularies/core#name": [
                                               {
                                                 "@value": "scalar_6"
                                               }
@@ -1218,7 +1218,7 @@
                                                 "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                               }
                                             ],
-                                            "http://schema.org/name": [
+                                            "http://a.ml/vocabularies/core#name": [
                                               {
                                                 "@value": "scalar_7"
                                               }
@@ -1247,7 +1247,7 @@
                                             ]
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "object_5"
                                           }
@@ -1300,7 +1300,7 @@
                                         ]
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "object_1"
                                       }
@@ -1498,7 +1498,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/description"
+                                "@value": "http://a.ml/vocabularies/core#description"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1534,7 +1534,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1558,7 +1558,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1598,71 +1598,71 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResourceAndType",
             "@type": [
-              "http://a.ml/vocabularies/http#EndPoint",
+              "http://a.ml/vocabularies/apiContract#EndPoint",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/http#path": [
+            "http://a.ml/vocabularies/apiContract#path": [
               {
                 "@value": "/examplesInResourceAndType"
               }
             ],
-            "http://www.w3.org/ns/hydra/core#supportedOperation": [
+            "http://a.ml/vocabularies/apiContract#supportedOperation": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResourceAndType/get",
                 "@type": [
-                  "http://www.w3.org/ns/hydra/core#Operation",
+                  "http://a.ml/vocabularies/apiContract#Operation",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://www.w3.org/ns/hydra/core#method": [
+                "http://a.ml/vocabularies/apiContract#method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "GET_examplesInResourceAndType"
                   }
                 ],
-                "http://a.ml/vocabularies/http#contentType": [
+                "http://a.ml/vocabularies/core#mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "http://www.w3.org/ns/hydra/core#returns": [
+                "http://a.ml/vocabularies/apiContract#returns": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResourceAndType/get/200",
                     "@type": [
-                      "http://a.ml/vocabularies/http#Response",
+                      "http://a.ml/vocabularies/apiContract#Response",
                       "http://a.ml/vocabularies/document#DomainElement"
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://schema.org/description": [
+                    "http://a.ml/vocabularies/core#description": [
                       {
                         "@value": ""
                       }
                     ],
-                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                    "http://a.ml/vocabularies/apiContract#statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "http://a.ml/vocabularies/http#payload": [
+                    "http://a.ml/vocabularies/apiContract#payload": [
                       {
                         "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResourceAndType/get/200/application%2Fjson",
                         "@type": [
-                          "http://a.ml/vocabularies/http#Payload",
+                          "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/http#mediaType": [
+                        "http://a.ml/vocabularies/apiContract#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/http#schema": [
+                        "http://a.ml/vocabularies/apiContract#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_8",
                             "@type": [
@@ -1696,7 +1696,7 @@
                           {
                             "http://a.ml/vocabularies/document-source-maps#element": [
                               {
-                                "@value": "http://schema.org/description"
+                                "@value": "http://a.ml/vocabularies/core#description"
                               }
                             ],
                             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1732,7 +1732,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://www.w3.org/ns/hydra/core#returns"
+                            "@value": "http://a.ml/vocabularies/apiContract#returns"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1756,7 +1756,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://schema.org/name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1818,7 +1818,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/http#endpoint"
+                    "@value": "http://a.ml/vocabularies/apiContract#endpoint"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1830,7 +1830,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://schema.org/description"
+                    "@value": "http://a.ml/vocabularies/core#description"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1854,7 +1854,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://schema.org/name"
+                    "@value": "http://a.ml/vocabularies/core#name"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1866,7 +1866,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://schema.org/version"
+                    "@value": "http://a.ml/vocabularies/core#version"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2163,11 +2163,11 @@
             "@value": "exampleType"
           }
         ],
-        "http://a.ml/vocabularies/document#examples": [
+        "http://a.ml/vocabularies/apiContract#examples": [
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/example/default-example",
             "@type": [
-              "http://a.ml/vocabularies/document#Example",
+              "http://a.ml/vocabularies/apiContract#Example",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
             "http://a.ml/vocabularies/document#strict": [
@@ -2201,7 +2201,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -2248,7 +2248,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#integer"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_3"
                       }
@@ -2277,7 +2277,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_1"
                   }
@@ -2399,10 +2399,10 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/example/application%2Fjson0",
             "@type": [
-              "http://a.ml/vocabularies/document#Example",
+              "http://a.ml/vocabularies/apiContract#Example",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "application/json0"
               }
@@ -2412,7 +2412,7 @@
                 "@value": false
               }
             ],
-            "http://a.ml/vocabularies/http#mediaType": [
+            "http://a.ml/vocabularies/core#mediaType": [
               {
                 "@value": "application/json"
               }
@@ -2443,7 +2443,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -2490,7 +2490,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#integer"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_3"
                       }
@@ -2519,7 +2519,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_1"
                   }
@@ -2655,10 +2655,10 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/example/application%2Fjson2",
             "@type": [
-              "http://a.ml/vocabularies/document#Example",
+              "http://a.ml/vocabularies/apiContract#Example",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "application/json2"
               }
@@ -2668,7 +2668,7 @@
                 "@value": false
               }
             ],
-            "http://a.ml/vocabularies/http#mediaType": [
+            "http://a.ml/vocabularies/core#mediaType": [
               {
                 "@value": "application/json"
               }
@@ -2699,7 +2699,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -2746,7 +2746,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#integer"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_3"
                       }
@@ -2775,7 +2775,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_1"
                   }
@@ -2911,10 +2911,10 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/example/application%2Fjson4",
             "@type": [
-              "http://a.ml/vocabularies/document#Example",
+              "http://a.ml/vocabularies/apiContract#Example",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "application/json4"
               }
@@ -2924,7 +2924,7 @@
                 "@value": false
               }
             ],
-            "http://a.ml/vocabularies/http#mediaType": [
+            "http://a.ml/vocabularies/core#mediaType": [
               {
                 "@value": "application/json"
               }
@@ -2963,7 +2963,7 @@
                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "scalar_3"
                           }
@@ -3010,7 +3010,7 @@
                             "@id": "http://www.w3.org/2001/XMLSchema#integer"
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "scalar_4"
                           }
@@ -3039,7 +3039,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_2"
                       }
@@ -3118,7 +3118,7 @@
                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "scalar_6"
                           }
@@ -3165,7 +3165,7 @@
                             "@id": "http://www.w3.org/2001/XMLSchema#integer"
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "scalar_7"
                           }
@@ -3194,7 +3194,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_5"
                       }
@@ -3247,7 +3247,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_1"
                   }

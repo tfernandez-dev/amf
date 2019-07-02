@@ -11,79 +11,79 @@
       {
         "@id": "#22",
         "@type": [
-          "schema-org:WebAPI",
+          "apiContract:WebAPI",
           "doc:RootDomainElement",
           "doc:DomainElement"
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "MockingServiceProxyAutomationTests"
           }
         ],
-        "schema-org:version": [
+        "core:version": [
           {
             "@value": "v1"
           }
         ],
-        "raml-http:endpoint": [
+        "apiContract:endpoint": [
           {
             "@id": "#23",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/examples"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#24",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "raml-http:contentType": [
+                "core:mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#14",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#15",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#1/linked_4",
                             "@type": [
@@ -116,9 +116,9 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(30,8)-(30,21)]",
+                    "apiContract:returns": "[(30,8)-(30,21)]",
                     "#24": "[(26,6)-(26,13)]",
-                    "raml-http:contentType": "[(27,8)-(27,20)]"
+                    "core:mediaType": "[(27,8)-(27,20)]"
                   }
                 }
               }
@@ -132,61 +132,61 @@
           {
             "@id": "#25",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/exampleType"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#26",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "raml-http:contentType": [
+                "core:mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#27",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#28",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#1/linked_5",
                             "@type": [
@@ -219,9 +219,9 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(50,8)-(50,21)]",
+                    "apiContract:returns": "[(50,8)-(50,21)]",
                     "#26": "[(46,6)-(46,13)]",
-                    "raml-http:contentType": "[(47,8)-(47,20)]"
+                    "core:mediaType": "[(47,8)-(47,20)]"
                   }
                 }
               }
@@ -235,61 +235,61 @@
           {
             "@id": "#29",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/exampleInTypeAndResource"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#30",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "raml-http:contentType": [
+                "core:mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#17",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#18",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#1/linked_6",
                             "@type": [
@@ -322,9 +322,9 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(64,8)-(64,21)]",
+                    "apiContract:returns": "[(64,8)-(64,21)]",
                     "#30": "[(60,6)-(60,13)]",
-                    "raml-http:contentType": "[(61,8)-(61,20)]"
+                    "core:mediaType": "[(61,8)-(61,20)]"
                   }
                 }
               }
@@ -338,61 +338,61 @@
           {
             "@id": "#31",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/examplesInResource"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#32",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "get"
                   }
                 ],
-                "raml-http:contentType": [
+                "core:mediaType": [
                   {
                     "@value": "application/json"
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#33",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#34",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#35",
                             "@type": [
@@ -534,11 +534,11 @@
                                 "@value": "default"
                               }
                             ],
-                            "doc:examples": [
+                            "apiContract:examples": [
                               {
                                 "@id": "#36",
                                 "@type": [
-                                  "doc:Example",
+                                  "apiContract:Example",
                                   "doc:DomainElement"
                                 ],
                                 "doc:strict": [
@@ -572,7 +572,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                                           }
                                         ],
-                                        "schema-org:name": [
+                                        "core:name": [
                                           {
                                             "@value": "scalar_2"
                                           }
@@ -602,7 +602,7 @@
                                             "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                           }
                                         ],
-                                        "schema-org:name": [
+                                        "core:name": [
                                           {
                                             "@value": "scalar_3"
                                           }
@@ -614,7 +614,7 @@
                                         }
                                       }
                                     ],
-                                    "schema-org:name": [
+                                    "core:name": [
                                       {
                                         "@value": "object_1"
                                       }
@@ -672,9 +672,9 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(84,8)-(84,21)]",
+                    "apiContract:returns": "[(84,8)-(84,21)]",
                     "#32": "[(80,6)-(80,13)]",
-                    "raml-http:contentType": "[(81,8)-(81,20)]"
+                    "core:mediaType": "[(81,8)-(81,20)]"
                   }
                 }
               }
@@ -691,10 +691,10 @@
             "#22": "OAS 2.0"
           },
           "lexical": {
-            "raml-http:endpoint": "[(24,11)-(105,3)]",
-            "schema-org:name": "[(4,4)-(4,13)]",
+            "apiContract:endpoint": "[(24,11)-(105,3)]",
+            "core:name": "[(4,4)-(4,13)]",
             "#22": "[(1,0)-(106,1)]",
-            "schema-org:version": "[(5,4)-(5,15)]"
+            "core:version": "[(5,4)-(5,15)]"
           }
         }
       }
@@ -846,11 +846,11 @@
             "@value": "exampleType"
           }
         ],
-        "doc:examples": [
+        "apiContract:examples": [
           {
             "@id": "#6",
             "@type": [
-              "doc:Example",
+              "apiContract:Example",
               "doc:DomainElement"
             ],
             "doc:strict": [
@@ -884,7 +884,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -914,7 +914,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#integer"
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "scalar_3"
                       }
@@ -926,7 +926,7 @@
                     }
                   }
                 ],
-                "schema-org:name": [
+                "core:name": [
                   {
                     "@value": "object_1"
                   }
@@ -959,10 +959,10 @@
           {
             "@id": "#10",
             "@type": [
-              "doc:Example",
+              "apiContract:Example",
               "doc:DomainElement"
             ],
-            "schema-org:name": [
+            "core:name": [
               {
                 "@value": "application/json0"
               }
@@ -972,7 +972,7 @@
                 "@value": false
               }
             ],
-            "raml-http:mediaType": [
+            "core:mediaType": [
               {
                 "@value": "application/json"
               }
@@ -1003,7 +1003,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -1033,7 +1033,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#integer"
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "scalar_3"
                       }
@@ -1045,7 +1045,7 @@
                     }
                   }
                 ],
-                "schema-org:name": [
+                "core:name": [
                   {
                     "@value": "object_1"
                   }
@@ -1081,10 +1081,10 @@
           {
             "@id": "#16",
             "@type": [
-              "doc:Example",
+              "apiContract:Example",
               "doc:DomainElement"
             ],
-            "schema-org:name": [
+            "core:name": [
               {
                 "@value": "application/json2"
               }
@@ -1094,7 +1094,7 @@
                 "@value": false
               }
             ],
-            "raml-http:mediaType": [
+            "core:mediaType": [
               {
                 "@value": "application/json"
               }
@@ -1125,7 +1125,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -1155,7 +1155,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#integer"
                       }
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "scalar_3"
                       }
@@ -1167,7 +1167,7 @@
                     }
                   }
                 ],
-                "schema-org:name": [
+                "core:name": [
                   {
                     "@value": "object_1"
                   }
@@ -1223,13 +1223,12 @@
     ],
     "@context": {
       "@base": "amf://id",
-      "raml-http": "http://a.ml/vocabularies/http#",
       "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "shacl": "http://www.w3.org/ns/shacl#",
       "data": "http://a.ml/vocabularies/data#",
       "doc": "http://a.ml/vocabularies/document#",
-      "schema-org": "http://schema.org/",
-      "hydra": "http://www.w3.org/ns/hydra/core#"
+      "apiContract": "http://a.ml/vocabularies/apiContract#",
+      "core": "http://a.ml/vocabularies/core#"
     }
   }
 ]

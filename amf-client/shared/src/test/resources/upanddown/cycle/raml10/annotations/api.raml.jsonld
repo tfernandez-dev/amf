@@ -50,7 +50,7 @@
                   "@id": "http://www.w3.org/2001/XMLSchema#string"
                 }
               ],
-              "http://schema.org/name": [
+              "http://a.ml/vocabularies/core#name": [
                 {
                   "@value": "scalar_2"
                 }
@@ -106,7 +106,7 @@
                       "@id": "http://www.w3.org/2001/XMLSchema#integer"
                     }
                   ],
-                  "http://schema.org/name": [
+                  "http://a.ml/vocabularies/core#name": [
                     {
                       "@value": "scalar_4"
                     }
@@ -151,7 +151,7 @@
                       "@id": "http://www.w3.org/2001/XMLSchema#integer"
                     }
                   ],
-                  "http://schema.org/name": [
+                  "http://a.ml/vocabularies/core#name": [
                     {
                       "@value": "scalar_5"
                     }
@@ -180,7 +180,7 @@
                   ]
                 }
               ],
-              "http://schema.org/name": [
+              "http://a.ml/vocabularies/core#name": [
                 {
                   "@value": "array_3"
                 }
@@ -209,7 +209,7 @@
               ]
             }
           ],
-          "http://schema.org/name": [
+          "http://a.ml/vocabularies/core#name": [
             {
               "@value": "object_1"
             }
@@ -283,7 +283,7 @@
               "@id": "http://www.w3.org/2001/XMLSchema#string"
             }
           ],
-          "http://schema.org/name": [
+          "http://a.ml/vocabularies/core#name": [
             {
               "@value": "scalar_1"
             }

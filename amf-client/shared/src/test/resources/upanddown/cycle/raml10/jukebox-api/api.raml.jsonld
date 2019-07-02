@@ -215,7 +215,7 @@
                                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                                   }
                                                 ],
-                                                "http://schema.org/name": [
+                                                "http://a.ml/vocabularies/core#name": [
                                                   {
                                                     "@value": "scalar_7"
                                                   }
@@ -262,7 +262,7 @@
                                                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                                                   }
                                                 ],
-                                                "http://schema.org/name": [
+                                                "http://a.ml/vocabularies/core#name": [
                                                   {
                                                     "@value": "scalar_8"
                                                   }
@@ -291,7 +291,7 @@
                                                 ]
                                               }
                                             ],
-                                            "http://schema.org/name": [
+                                            "http://a.ml/vocabularies/core#name": [
                                               {
                                                 "@value": "object_6"
                                               }
@@ -344,7 +344,7 @@
                                             ]
                                           }
                                         ],
-                                        "http://schema.org/name": [
+                                        "http://a.ml/vocabularies/core#name": [
                                           {
                                             "@value": "object_5"
                                           }
@@ -385,7 +385,7 @@
                                         ]
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "object_4"
                                       }
@@ -426,7 +426,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_3"
                                   }
@@ -467,7 +467,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_2"
                               }
@@ -508,7 +508,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_1"
                           }
@@ -608,7 +608,7 @@
                             "@id": "http://www.w3.org/2001/XMLSchema#string"
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "scalar_1"
                           }
@@ -1497,7 +1497,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_7"
                                       }
@@ -1544,7 +1544,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_8"
                                       }
@@ -1573,7 +1573,7 @@
                                     ]
                                   }
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "object_6"
                                   }
@@ -1626,7 +1626,7 @@
                                 ]
                               }
                             ],
-                            "http://schema.org/name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "object_5"
                               }
@@ -1667,7 +1667,7 @@
                             ]
                           }
                         ],
-                        "http://schema.org/name": [
+                        "http://a.ml/vocabularies/core#name": [
                           {
                             "@value": "object_4"
                           }
@@ -1708,7 +1708,7 @@
                         ]
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "object_3"
                       }
@@ -1749,7 +1749,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_2"
                   }
@@ -1790,7 +1790,7 @@
                 ]
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "object_1"
               }

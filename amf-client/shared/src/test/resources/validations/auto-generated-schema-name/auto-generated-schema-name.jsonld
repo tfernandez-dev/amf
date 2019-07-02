@@ -11,59 +11,59 @@
       {
         "@id": "#28",
         "@type": [
-          "schema-org:WebAPI",
+          "apiContract:WebAPI",
           "doc:RootDomainElement",
           "doc:DomainElement"
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "a title"
           }
         ],
-        "raml-http:endpoint": [
+        "apiContract:endpoint": [
           {
             "@id": "#29",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/anonymous"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#30",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#31",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#32",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#33",
                             "@type": [
@@ -163,37 +163,37 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(23,7)-(28,0)]",
+                        "apiContract:payload": "[(23,7)-(28,0)]",
                         "#31": "[(23,0)-(35,0)]"
                       }
                     }
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#36",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#37",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#38",
                             "@type": [
@@ -293,7 +293,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(30,15)-(35,0)]",
+                        "apiContract:payload": "[(30,15)-(35,0)]",
                         "#36": "[(29,11)-(35,0)]"
                       }
                     }
@@ -301,7 +301,7 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(28,7)-(35,0)]",
+                    "apiContract:returns": "[(28,7)-(35,0)]",
                     "#30": "[(22,3)-(35,0)]"
                   }
                 }
@@ -316,46 +316,46 @@
           {
             "@id": "#41",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/anonymous-with-include"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#42",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#43",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#44",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#8/linked_6",
                             "@type": [
@@ -386,37 +386,37 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(37,7)-(40,0)]",
+                        "apiContract:payload": "[(37,7)-(40,0)]",
                         "#43": "[(37,0)-(46,0)]"
                       }
                     }
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#45",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#46",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#2/linked_5",
                             "@type": [
@@ -447,7 +447,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(42,15)-(46,0)]",
+                        "apiContract:payload": "[(42,15)-(46,0)]",
                         "#45": "[(41,11)-(46,0)]"
                       }
                     }
@@ -455,7 +455,7 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(40,7)-(46,0)]",
+                    "apiContract:returns": "[(40,7)-(46,0)]",
                     "#42": "[(36,3)-(46,0)]"
                   }
                 }
@@ -470,46 +470,46 @@
           {
             "@id": "#47",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/anonymous-with-include-no-inherits"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#48",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#49",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#50",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#8/linked_7",
                             "@type": [
@@ -540,7 +540,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(48,7)-(51,0)]",
+                        "apiContract:payload": "[(48,7)-(51,0)]",
                         "#49": "[(48,0)-(51,0)]"
                       }
                     }
@@ -562,46 +562,46 @@
           {
             "@id": "#51",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/linked"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#52",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#53",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#54",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#17/linked_4",
                             "@type": [
@@ -632,37 +632,37 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(53,7)-(56,0)]",
+                        "apiContract:payload": "[(53,7)-(56,0)]",
                         "#53": "[(53,0)-(60,0)]"
                       }
                     }
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#55",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#56",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#17/linked_5",
                             "@type": [
@@ -693,7 +693,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(58,15)-(60,0)]",
+                        "apiContract:payload": "[(58,15)-(60,0)]",
                         "#55": "[(57,11)-(60,0)]"
                       }
                     }
@@ -701,7 +701,7 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(56,7)-(60,0)]",
+                    "apiContract:returns": "[(56,7)-(60,0)]",
                     "#52": "[(52,3)-(60,0)]"
                   }
                 }
@@ -716,46 +716,46 @@
           {
             "@id": "#57",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/linked-no-inherits"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#58",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#59",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#60",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#17/linked_6",
                             "@type": [
@@ -786,7 +786,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(62,7)-(65,0)]",
+                        "apiContract:payload": "[(62,7)-(65,0)]",
                         "#59": "[(62,0)-(65,0)]"
                       }
                     }
@@ -808,46 +808,46 @@
           {
             "@id": "#61",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/linked-with-include-inherits"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#62",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#63",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#64",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#23/linked_1",
                             "@type": [
@@ -878,37 +878,37 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(67,7)-(69,0)]",
+                        "apiContract:payload": "[(67,7)-(69,0)]",
                         "#63": "[(67,0)-(73,0)]"
                       }
                     }
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#65",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#66",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#14/linked_1",
                             "@type": [
@@ -939,7 +939,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(71,15)-(73,0)]",
+                        "apiContract:payload": "[(71,15)-(73,0)]",
                         "#65": "[(70,11)-(73,0)]"
                       }
                     }
@@ -947,7 +947,7 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(69,7)-(73,0)]",
+                    "apiContract:returns": "[(69,7)-(73,0)]",
                     "#62": "[(66,3)-(73,0)]"
                   }
                 }
@@ -962,46 +962,46 @@
           {
             "@id": "#67",
             "@type": [
-              "raml-http:EndPoint",
+              "apiContract:EndPoint",
               "doc:DomainElement"
             ],
-            "raml-http:path": [
+            "apiContract:path": [
               {
                 "@value": "/linked-with-include-link"
               }
             ],
-            "hydra:supportedOperation": [
+            "apiContract:supportedOperation": [
               {
                 "@id": "#68",
                 "@type": [
-                  "hydra:Operation",
+                  "apiContract:Operation",
                   "doc:DomainElement"
                 ],
-                "hydra:method": [
+                "apiContract:method": [
                   {
                     "@value": "post"
                   }
                 ],
-                "hydra:expects": [
+                "apiContract:expects": [
                   {
                     "@id": "#69",
                     "@type": [
-                      "raml-http:Request",
+                      "apiContract:Request",
                       "doc:DomainElement"
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#70",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:mediaType": [
+                        "apiContract:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#27/linked_1",
                             "@type": [
@@ -1032,37 +1032,37 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(75,7)-(77,0)]",
+                        "apiContract:payload": "[(75,7)-(77,0)]",
                         "#69": "[(75,0)-(81,0)]"
                       }
                     }
                   }
                 ],
-                "hydra:returns": [
+                "apiContract:returns": [
                   {
                     "@id": "#71",
                     "@type": [
-                      "raml-http:Response",
+                      "apiContract:Response",
                       "doc:DomainElement"
                     ],
-                    "schema-org:name": [
+                    "core:name": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "hydra:statusCode": [
+                    "apiContract:statusCode": [
                       {
                         "@value": "200"
                       }
                     ],
-                    "raml-http:payload": [
+                    "apiContract:payload": [
                       {
                         "@id": "#72",
                         "@type": [
-                          "raml-http:Payload",
+                          "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "raml-http:schema": [
+                        "apiContract:schema": [
                           {
                             "@id": "#26/linked_1",
                             "@type": [
@@ -1093,7 +1093,7 @@
                     ],
                     "smaps": {
                       "lexical": {
-                        "raml-http:payload": "[(79,15)-(81,0)]",
+                        "apiContract:payload": "[(79,15)-(81,0)]",
                         "#71": "[(78,11)-(81,0)]"
                       }
                     }
@@ -1101,7 +1101,7 @@
                 ],
                 "smaps": {
                   "lexical": {
-                    "hydra:returns": "[(77,7)-(81,0)]",
+                    "apiContract:returns": "[(77,7)-(81,0)]",
                     "#68": "[(74,3)-(81,0)]"
                   }
                 }
@@ -1119,7 +1119,7 @@
             "#28": "RAML 1.0"
           },
           "lexical": {
-            "schema-org:name": "[(2,0)-(4,0)]",
+            "core:name": "[(2,0)-(4,0)]",
             "#28": "[(2,0)-(81,0)]"
           }
         }
@@ -1214,7 +1214,7 @@
                 "@value": "amf_inline_type_2"
               }
             ],
-            "schema-org:name": [
+            "core:name": [
               {
                 "@value": "Response data type"
               }
@@ -1233,7 +1233,7 @@
                 "#2": "RAML 1.0"
               },
               "lexical": {
-                "schema-org:name": "[(2,0)-(3,0)]",
+                "core:name": "[(2,0)-(3,0)]",
                 "#2": "[(2,0)-(5,32)]"
               },
               "type-property-lexical-info": {
@@ -1339,7 +1339,7 @@
                 "@value": "amf_inline_type_1"
               }
             ],
-            "schema-org:name": [
+            "core:name": [
               {
                 "@value": "Validation Passed"
               }
@@ -1358,7 +1358,7 @@
                 "#8": "RAML 1.0"
               },
               "lexical": {
-                "schema-org:name": "[(2,0)-(3,0)]",
+                "core:name": "[(2,0)-(3,0)]",
                 "#8": "[(2,0)-(5,30)]"
               },
               "type-property-lexical-info": {
@@ -1458,14 +1458,14 @@
             "@value": "included-inherits-response"
           }
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "Response data type"
           }
         ],
         "smaps": {
           "inheritance-provenance": {
-            "schema-org:name": "amf://id#2"
+            "core:name": "amf://id#2"
           },
           "resolved-link-target": {
             "#14": "amf://id#14"
@@ -1474,7 +1474,7 @@
             "#14": ""
           },
           "lexical": {
-            "schema-org:name": "[(2,0)-(3,0)]",
+            "core:name": "[(2,0)-(3,0)]",
             "#14": "[(15,3)-(18,0)]",
             "shacl:name": "[(15,3)-(15,29)]"
           },
@@ -1665,14 +1665,14 @@
             "@value": "included-inherits"
           }
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "Validation Passed"
           }
         ],
         "smaps": {
           "inheritance-provenance": {
-            "schema-org:name": "amf://id#8"
+            "core:name": "amf://id#8"
           },
           "resolved-link-target": {
             "#23": "amf://id#23"
@@ -1681,7 +1681,7 @@
             "#23": ""
           },
           "lexical": {
-            "schema-org:name": "[(2,0)-(3,0)]",
+            "core:name": "[(2,0)-(3,0)]",
             "#23": "[(10,3)-(13,0)]",
             "shacl:name": "[(10,3)-(10,20)]"
           },
@@ -1776,7 +1776,7 @@
             "@value": "included-link-response"
           }
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "Response data type"
           }
@@ -1792,7 +1792,7 @@
             "#26": "[(3,0)-(3,4)]"
           },
           "lexical": {
-            "schema-org:name": "[(2,0)-(3,0)]",
+            "core:name": "[(2,0)-(3,0)]",
             "#26": "[(2,0)-(5,32)]"
           },
           "source-vendor": {
@@ -1883,7 +1883,7 @@
             "@value": "included-link"
           }
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "Validation Passed"
           }
@@ -1899,7 +1899,7 @@
             "#27": "[(3,0)-(3,4)]"
           },
           "lexical": {
-            "schema-org:name": "[(2,0)-(3,0)]",
+            "core:name": "[(2,0)-(3,0)]",
             "#27": "[(2,0)-(5,30)]"
           },
           "source-vendor": {
@@ -1990,7 +1990,7 @@
             "@value": "amf_inline_type_1"
           }
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "Validation Passed"
           }
@@ -2009,7 +2009,7 @@
             "#8": "RAML 1.0"
           },
           "lexical": {
-            "schema-org:name": "[(2,0)-(3,0)]",
+            "core:name": "[(2,0)-(3,0)]",
             "#8": "[(2,0)-(5,30)]"
           },
           "type-property-lexical-info": {
@@ -2100,7 +2100,7 @@
             "@value": "amf_inline_type_2"
           }
         ],
-        "schema-org:name": [
+        "core:name": [
           {
             "@value": "Response data type"
           }
@@ -2119,7 +2119,7 @@
             "#2": "RAML 1.0"
           },
           "lexical": {
-            "schema-org:name": "[(2,0)-(3,0)]",
+            "core:name": "[(2,0)-(3,0)]",
             "#2": "[(2,0)-(5,32)]"
           },
           "type-property-lexical-info": {
@@ -2133,12 +2133,11 @@
     ],
     "@context": {
       "@base": "amf://id",
-      "raml-http": "http://a.ml/vocabularies/http#",
       "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "shacl": "http://www.w3.org/ns/shacl#",
       "doc": "http://a.ml/vocabularies/document#",
-      "schema-org": "http://schema.org/",
-      "hydra": "http://www.w3.org/ns/hydra/core#"
+      "apiContract": "http://a.ml/vocabularies/apiContract#",
+      "core": "http://a.ml/vocabularies/core#"
     }
   }
 ]

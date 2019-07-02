@@ -518,7 +518,7 @@
                       "@id": "http://www.w3.org/2001/XMLSchema#string"
                     }
                   ],
-                  "http://schema.org/name": [
+                  "http://a.ml/vocabularies/core#name": [
                     {
                       "@value": "scalar_1"
                     }
@@ -568,7 +568,7 @@
                       "@id": "http://www.w3.org/2001/XMLSchema#string"
                     }
                   ],
-                  "http://schema.org/name": [
+                  "http://a.ml/vocabularies/core#name": [
                     {
                       "@value": "scalar_1"
                     }
@@ -1105,7 +1105,7 @@
                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                       }
                     ],
-                    "http://schema.org/name": [
+                    "http://a.ml/vocabularies/core#name": [
                       {
                         "@value": "scalar_2"
                       }
@@ -1134,7 +1134,7 @@
                     ]
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "object_1"
                   }
@@ -2452,7 +2452,7 @@
                     "@id": "http://www.w3.org/2001/XMLSchema#string"
                   }
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "scalar_2"
                   }
@@ -2481,7 +2481,7 @@
                 ]
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "object_1"
               }

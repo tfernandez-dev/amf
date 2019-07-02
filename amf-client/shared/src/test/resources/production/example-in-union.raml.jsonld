@@ -189,22 +189,28 @@
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/production/example-in-union.raml#/web-api/end-points/%2Fendpoint/get/request/parameter/x-union/union/schema/example/stringExample",
                                 "@type": [
-                                  "http://a.ml/vocabularies/apiContract#NamedExamples",
+                                  "http://a.ml/vocabularies/apiContract#Example",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/apiContract#examples": [
+                                "http://a.ml/vocabularies/core#name": [
+                                  {
+                                    "@value": "stringExample"
+                                  }
+                                ],
+                                "http://a.ml/vocabularies/document#strict": [
+                                  {
+                                    "@value": true
+                                  }
+                                ],
+                                "http://a.ml/vocabularies/document#structuredValue": [
                                   {
                                     "@id": "file://amf-client/shared/src/test/resources/production/example-in-union.raml#/web-api/end-points/%2Fendpoint/get/request/parameter/x-union/union/schema/example/stringExample/scalar_1",
                                     "@type": [
-                                      "http://a.ml/vocabularies/apiContract#Example",
+                                      "http://a.ml/vocabularies/data#Scalar",
+                                      "http://a.ml/vocabularies/data#Node",
                                       "http://a.ml/vocabularies/document#DomainElement"
                                     ],
-                                    "http://a.ml/vocabularies/core#name": [
-                                      {
-                                        "@value": "stringExample"
-                                      }
-                                    ],
-                                    "http://a.ml/vocabularies/document#strict": [
+                                    "http://a.ml/vocabularies/data#value": [
                                       {
                                         "@value": "Hello union"
                                       }
@@ -214,7 +220,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#string"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_1"
                                       }
@@ -237,44 +243,6 @@
                                                 "@value": "[(13,25)-(13,36)]"
                                               }
                                             ]
-                                          },
-                                          {
-                                            "http://a.ml/vocabularies/document-source-maps#element": [
-                                              {
-                                                "@value": "file://amf-client/shared/src/test/resources/production/example-in-union.raml#/web-api/end-points/%2Fendpoint/get/request/parameter/x-union/union/schema/examples/example/stringExample"
-                                              }
-                                            ],
-                                            "http://a.ml/vocabularies/document-source-maps#value": [
-                                              {
-                                                "@value": "[(13,10)-(14,0)]"
-                                              }
-                                            ]
-                                          },
-                                          {
-                                            "http://a.ml/vocabularies/document-source-maps#element": [
-                                              {
-                                                "@value": "http://a.ml/vocabularies/core#name"
-                                              }
-                                            ],
-                                            "http://a.ml/vocabularies/document-source-maps#value": [
-                                              {
-                                                "@value": "[(13,10)-(14,0)]"
-                                              }
-                                            ]
-                                          }
-                                        ],
-                                        "http://a.ml/vocabularies/document-source-maps#tracked-element": [
-                                          {
-                                            "http://a.ml/vocabularies/document-source-maps#element": [
-                                              {
-                                                "@value": "file://amf-client/shared/src/test/resources/production/example-in-union.raml#/web-api/end-points/%2Fendpoint/get/request/parameter/x-union/union/schema/examples/example/stringExample"
-                                              }
-                                            ],
-                                            "http://a.ml/vocabularies/document-source-maps#value": [
-                                              {
-                                                "@value": "file://amf-client/shared/src/test/resources/production/example-in-union.raml#/web-api/end-points/%2Fendpoint/get/request/parameter/x-union"
-                                              }
-                                            ]
                                           }
                                         ]
                                       }
@@ -290,10 +258,9 @@
                                   {
                                     "@id": "file://amf-client/shared/src/test/resources/production/example-in-union.raml#/web-api/end-points/%2Fendpoint/get/request/parameter/x-union/union/schema/example/stringExample/source-map",
                                     "@type": [
-                                      "http://a.ml/vocabularies/apiContract#Example",
-                                      "http://a.ml/vocabularies/document#DomainElement"
+                                      "http://a.ml/vocabularies/document-source-maps#SourceMap"
                                     ],
-                                    "http://a.ml/vocabularies/core#name": [
+                                    "http://a.ml/vocabularies/document-source-maps#synthesized-field": [
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
@@ -323,7 +290,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://schema.org/name"
+                                            "@value": "http://a.ml/vocabularies/core#name"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -377,10 +344,10 @@
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/production/example-in-union.raml#/web-api/end-points/%2Fendpoint/get/request/parameter/x-union/union/schema/example/numberExample",
                                 "@type": [
-                                  "http://a.ml/vocabularies/document#Example",
+                                  "http://a.ml/vocabularies/apiContract#Example",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://schema.org/name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "numberExample"
                                   }
@@ -408,7 +375,7 @@
                                         "@id": "http://www.w3.org/2001/XMLSchema#integer"
                                       }
                                     ],
-                                    "http://schema.org/name": [
+                                    "http://a.ml/vocabularies/core#name": [
                                       {
                                         "@value": "scalar_1"
                                       }
@@ -471,16 +438,14 @@
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
                                           {
-                                            "http://a.ml/vocabularies/document-source-maps#element": [
-                                              {
-                                                "@value": "http://a.ml/vocabularies/core#name"
-                                              }
-                                            ],
-                                            "http://a.ml/vocabularies/document-source-maps#value": [
-                                              {
-                                                "@value": "[(14,10)-(14,27)]"
-                                              }
-                                            ]
+                                            "@value": "[(14,25)-(14,27)]"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "http://a.ml/vocabularies/document-source-maps#element": [
+                                          {
+                                            "@value": "http://a.ml/vocabularies/core#name"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -592,7 +557,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/http#schema"
+                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [

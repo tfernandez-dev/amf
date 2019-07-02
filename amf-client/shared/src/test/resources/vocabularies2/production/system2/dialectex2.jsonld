@@ -8,12 +8,12 @@
       "http://a.ml/vocabularies/document#Module",
       "http://a.ml/vocabularies/document#Unit"
     ],
-    "http://schema.org/name": [
+    "http://a.ml/vocabularies/core#name": [
       {
         "@value": "OAS"
       }
     ],
-    "http://schema.org/version": [
+    "http://a.ml/vocabularies/core#version": [
       {
         "@value": "2.0"
       }
@@ -26,7 +26,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "shapes"
           }
@@ -44,7 +44,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "shacl"
           }
@@ -62,7 +62,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "security"
           }
@@ -80,7 +80,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "schema-org"
           }
@@ -98,7 +98,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "owl"
           }
@@ -116,7 +116,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "meta"
           }
@@ -134,7 +134,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "hydra"
           }
@@ -152,7 +152,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "http"
           }
@@ -170,7 +170,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "doc"
           }
@@ -188,7 +188,7 @@
           "http://a.ml/vocabularies/meta#ExternalVocabulary",
           "http://a.ml/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/alias": [
+        "http://a.ml/vocabularies/core#displayName": [
           {
             "@value": "anypoint"
           }
@@ -214,7 +214,7 @@
               "http://a.ml/vocabularies/meta#DocumentMapping",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/meta#name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "OAS 2.0"
               }
@@ -231,7 +231,7 @@
                   "http://a.ml/vocabularies/meta#PublicNodeMapping",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "responses"
                   }
@@ -270,7 +270,7 @@
                   "http://a.ml/vocabularies/meta#PublicNodeMapping",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "parameters"
                   }
@@ -309,7 +309,7 @@
                   "http://a.ml/vocabularies/meta#PublicNodeMapping",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://schema.org/name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "definitions"
                   }
@@ -379,7 +379,7 @@
           {
             "http://a.ml/vocabularies/document-source-maps#element": [
               {
-                "@value": "http://schema.org/version"
+                "@value": "http://a.ml/vocabularies/core#version"
               }
             ],
             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -403,7 +403,7 @@
           {
             "http://a.ml/vocabularies/document-source-maps#element": [
               {
-                "@value": "http://schema.org/name"
+                "@value": "http://a.ml/vocabularies/core#name"
               }
             ],
             "http://a.ml/vocabularies/document-source-maps#value": [
@@ -428,7 +428,7 @@
             "@id": "http://a.ml/vocab/shapes#XMLSerializer"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "XMLObject"
           }
@@ -445,7 +445,7 @@
                 "@id": "http://a.ml/vocab/shapes#xmlWrapped"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "wrapped"
               }
@@ -489,7 +489,7 @@
                 "@id": "http://a.ml/vocab/shapes#xmlPrefix"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "prefix"
               }
@@ -533,7 +533,7 @@
                 "@id": "http://a.ml/vocab/shapes#xmlNamespace"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "namespace"
               }
@@ -577,7 +577,7 @@
                 "@id": "http://a.ml/vocab/shapes#xmlName"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -621,7 +621,7 @@
                 "@id": "http://a.ml/vocab/shapes#xmlAttribute"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "attribute"
               }
@@ -690,7 +690,7 @@
             "@id": "http://mulesoft.org/vocab/anpoint#WebAPI"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "WebAPIObject"
           }
@@ -707,7 +707,7 @@
                 "@id": "http://a.ml/vocab/meta#implicit"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "swagger"
               }
@@ -756,7 +756,7 @@
                 "@id": "http://a.ml/vocab/doc#declares"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "securityDefinitions"
               }
@@ -836,7 +836,7 @@
                 "@id": "http://a.ml/vocab/security#security"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "security"
               }
@@ -886,7 +886,7 @@
                 "@id": "http://a.ml/vocab/http#scheme"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "schemes"
               }
@@ -965,7 +965,7 @@
                 "@id": "http://a.ml/vocab/http#contentType"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "produces"
               }
@@ -1014,7 +1014,7 @@
                 "@id": "http://a.ml/vocab/http#endpoint"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "paths"
               }
@@ -1084,7 +1084,7 @@
                 "@id": "http://www.w3.org/2002/07/owl#sameAs"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "info"
               }
@@ -1139,7 +1139,7 @@
                 "@id": "http://a.ml/vocabularies/data#host"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "host"
               }
@@ -1183,7 +1183,7 @@
                 "@id": "http://a.ml/vocab/http#accepts"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "consumes"
               }
@@ -1232,7 +1232,7 @@
                 "@id": "http://a.ml/vocab/http#url"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "basePath"
               }
@@ -1301,7 +1301,7 @@
             "@id": "http://a.ml/vocab/http#Tag"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "TagObject"
           }
@@ -1318,7 +1318,7 @@
                 "@id": "http://schema.org/name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -1367,7 +1367,7 @@
                 "@id": "http://schema.org/externalDocs"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "externalDocs"
               }
@@ -1417,7 +1417,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -1486,7 +1486,7 @@
             "@id": "http://a.ml/vocab/security#Scope"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ScopeObject"
           }
@@ -1503,7 +1503,7 @@
                 "@id": "http://a.ml/vocab/security#name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -1552,7 +1552,7 @@
                 "@id": "http://a.ml/vocab/security#description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -1621,7 +1621,7 @@
             "@id": "http://www.w3.org/ns/shacl#Shape"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "SchemaObject"
           }
@@ -1638,7 +1638,7 @@
                 "@id": "http://a.ml/vocab/shapes#xmlSerialization"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "xml"
               }
@@ -1688,7 +1688,7 @@
                 "@id": "http://a.ml/vocab/shapes#uniqueItems"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "uniqueItems"
               }
@@ -1732,7 +1732,7 @@
                 "@id": "http://a.ml/vocab/meta#implicit"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "type"
               }
@@ -1829,7 +1829,7 @@
                 "@id": "http://www.w3.org/ns/shacl#name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "title"
               }
@@ -1878,7 +1878,7 @@
                 "@id": "http://a.ml/vocabularies/data#required"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "required"
               }
@@ -1922,7 +1922,7 @@
                 "@id": "http://a.ml/vocab/shapes#readOnly"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "readOnly"
               }
@@ -1966,7 +1966,7 @@
                 "@id": "http://www.w3.org/ns/shacl#property"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "properties"
               }
@@ -2026,7 +2026,7 @@
                 "@id": "http://www.w3.org/ns/shacl#pattern"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "pattern"
               }
@@ -2070,7 +2070,7 @@
                 "@id": "http://a.ml/vocab/shapes#multipleOf"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "multipleOf"
               }
@@ -2114,7 +2114,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minInclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "minimum"
               }
@@ -2158,7 +2158,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minLength"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "minLength"
               }
@@ -2202,7 +2202,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minCount"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "minItems"
               }
@@ -2246,7 +2246,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxInclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "maximum"
               }
@@ -2290,7 +2290,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxLength"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "maxLength"
               }
@@ -2334,7 +2334,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxCount"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "maxItems"
               }
@@ -2378,7 +2378,7 @@
                 "@id": "http://a.ml/vocab/shapes#items"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "items"
               }
@@ -2428,7 +2428,7 @@
                 "@id": "http://a.ml/vocab/shapes#format"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "format"
               }
@@ -2472,7 +2472,7 @@
                 "@id": "http://schema.org/documentation"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "externalDocs"
               }
@@ -2522,7 +2522,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minExclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "exclusiveMinimum"
               }
@@ -2566,7 +2566,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxExclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "exclusiveMaximum"
               }
@@ -2610,7 +2610,7 @@
                 "@id": "http://a.ml/vocab/doc#examples"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "example"
               }
@@ -2660,7 +2660,7 @@
                 "@id": "http://www.w3.org/ns/shacl#in"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "enum"
               }
@@ -2709,7 +2709,7 @@
                 "@id": "http://a.ml/vocab/shapes#discriminator"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "discriminator"
               }
@@ -2753,7 +2753,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -2802,7 +2802,7 @@
                 "@id": "http://www.w3.org/ns/shacl#defaultValue"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "default"
               }
@@ -2846,7 +2846,7 @@
                 "@id": "http://a.ml/vocab/shapes#collectionFormat"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "collectionFormat"
               }
@@ -2951,7 +2951,7 @@
             "@id": "http://a.ml/vocab/http#Response"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ResponseObject"
           }
@@ -2968,7 +2968,7 @@
                 "@id": "http://www.w3.org/ns/hydra/core#statusCode"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "statusCode"
               }
@@ -3017,7 +3017,7 @@
                 "@id": "http://a.ml/vocab/http#payload"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "schema"
               }
@@ -3067,7 +3067,7 @@
                 "@id": "http://a.ml/vocab/http#header"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "headers"
               }
@@ -3127,7 +3127,7 @@
                 "@id": "http://a.ml/vocab/doc#examples"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "examples"
               }
@@ -3197,7 +3197,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -3271,7 +3271,7 @@
             "@id": "http://a.ml/vocab/http#EndPoint"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "PathItemObject"
           }
@@ -3288,7 +3288,7 @@
                 "@id": "http://a.ml/vocabularies/data#put"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "put"
               }
@@ -3338,7 +3338,7 @@
                 "@id": "http://a.ml/vocabularies/data#post"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "post"
               }
@@ -3388,7 +3388,7 @@
                 "@id": "http://a.ml/vocabularies/data#patch"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "patch"
               }
@@ -3438,7 +3438,7 @@
                 "@id": "http://a.ml/vocab/http#parameter"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "parameter"
               }
@@ -3498,7 +3498,7 @@
                 "@id": "http://a.ml/vocabularies/data#options"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "options"
               }
@@ -3548,7 +3548,7 @@
                 "@id": "http://a.ml/vocab/http#path"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -3602,7 +3602,7 @@
                 "@id": "http://a.ml/vocabularies/data#head"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "head"
               }
@@ -3652,7 +3652,7 @@
                 "@id": "http://a.ml/vocabularies/data#get"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "get"
               }
@@ -3702,7 +3702,7 @@
                 "@id": "http://a.ml/vocabularies/data#delete"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "delete"
               }
@@ -3777,7 +3777,7 @@
             "@id": "http://a.ml/vocab/http#Parameter"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ParameterObject"
           }
@@ -3794,7 +3794,7 @@
                 "@id": "http://a.ml/vocab/shapes#uniqueItems"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "uniqueItems"
               }
@@ -3838,7 +3838,7 @@
                 "@id": "http://a.ml/vocab/meta#implicit"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "type"
               }
@@ -3929,7 +3929,7 @@
                 "@id": "http://www.w3.org/ns/hydra/core#required"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "required"
               }
@@ -3978,7 +3978,7 @@
                 "@id": "http://www.w3.org/ns/shacl#pattern"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "pattern"
               }
@@ -4022,7 +4022,7 @@
                 "@id": "http://a.ml/vocab/http#paramName"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -4071,7 +4071,7 @@
                 "@id": "http://a.ml/vocab/shapes#multipleOf"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "multipleOf"
               }
@@ -4115,7 +4115,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minInclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "minimum"
               }
@@ -4159,7 +4159,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minLength"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "minLength"
               }
@@ -4203,7 +4203,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minCount"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "minItems"
               }
@@ -4247,7 +4247,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxInclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "maximum"
               }
@@ -4291,7 +4291,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxLength"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "maxLength"
               }
@@ -4335,7 +4335,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxCount"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "maxItems"
               }
@@ -4379,7 +4379,7 @@
                 "@id": "http://a.ml/vocab/shapes#items"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "items"
               }
@@ -4429,7 +4429,7 @@
                 "@id": "http://a.ml/vocab/http#binding"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "in"
               }
@@ -4508,7 +4508,7 @@
                 "@id": "http://a.ml/vocab/shapes#format"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "format"
               }
@@ -4552,7 +4552,7 @@
                 "@id": "http://www.w3.org/ns/shacl#minExclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "exclusiveMinimum"
               }
@@ -4596,7 +4596,7 @@
                 "@id": "http://www.w3.org/ns/shacl#maxExclusive"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "exclusiveMaximum"
               }
@@ -4640,7 +4640,7 @@
                 "@id": "http://www.w3.org/ns/shacl#in"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "enum"
               }
@@ -4684,7 +4684,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -4728,7 +4728,7 @@
                 "@id": "http://www.w3.org/ns/shacl#defaultValue"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "default"
               }
@@ -4772,7 +4772,7 @@
                 "@id": "http://schema.org/name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "declarationName"
               }
@@ -4821,7 +4821,7 @@
                 "@id": "http://a.ml/vocab/shapes#collectionFormat"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "collectionFormat"
               }
@@ -4901,7 +4901,7 @@
                 "@id": "http://a.ml/vocab/http#allowEmptyValue"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "allowEmptyValue"
               }
@@ -4970,7 +4970,7 @@
             "@id": "http://www.w3.org/ns/hydra/core#Operation"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "OperationObject"
           }
@@ -4987,7 +4987,7 @@
                 "@id": "http://a.ml/vocab/http#tag"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "tags"
               }
@@ -5042,7 +5042,7 @@
                 "@id": "http://a.ml/vocab/http#guiSummary"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "summary"
               }
@@ -5086,7 +5086,7 @@
                 "@id": "http://a.ml/vocab/security#security"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "security"
               }
@@ -5166,7 +5166,7 @@
                 "@id": "http://a.ml/vocab/http#scheme"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "schemes"
               }
@@ -5245,7 +5245,7 @@
                 "@id": "http://www.w3.org/ns/hydra/core#returns"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "responses"
               }
@@ -5310,7 +5310,7 @@
                 "@id": "http://a.ml/vocab/http#contentType"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "produces"
               }
@@ -5359,7 +5359,7 @@
                 "@id": "http://a.ml/vocab/http#uriParameter"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "parameters"
               }
@@ -5414,7 +5414,7 @@
                 "@id": "http://schema.org/name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "operationId"
               }
@@ -5458,7 +5458,7 @@
                 "@id": "http://schema.org/documentation"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "externalDocs"
               }
@@ -5508,7 +5508,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -5552,7 +5552,7 @@
                 "@id": "http://a.ml/vocab/doc#deprecated"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "deprecated"
               }
@@ -5596,7 +5596,7 @@
                 "@id": "http://a.ml/vocab/http#accepts"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "consumes"
               }
@@ -5670,7 +5670,7 @@
             "@id": "http://a.ml/vocab/security#ParametrizedSecurityScheme"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "Oauth2SecurityScheme"
           }
@@ -5687,7 +5687,7 @@
                 "@id": "http://a.ml/vocab/security#scheme"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "type"
               }
@@ -5736,7 +5736,7 @@
                 "@id": "http://a.ml/vocab/security#accessTokenUri"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "tokenUrl"
               }
@@ -5780,7 +5780,7 @@
                 "@id": "http://a.ml/vocab/security#scope"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "scopes"
               }
@@ -5840,7 +5840,7 @@
                 "@id": "http://a.ml/vocab/security#name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -5889,7 +5889,7 @@
                 "@id": "http://a.ml/vocab/security#flow"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "flow"
               }
@@ -5968,7 +5968,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -6012,7 +6012,7 @@
                 "@id": "http://a.ml/vocab/security#authorizationUri"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "authorizationUrl"
               }
@@ -6081,7 +6081,7 @@
             "@id": "http://a.ml/vocab/http#License"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "LicenseObject"
           }
@@ -6098,7 +6098,7 @@
                 "@id": "http://schema.org/url"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "url"
               }
@@ -6142,7 +6142,7 @@
                 "@id": "http://schema.org/name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -6216,7 +6216,7 @@
             "@id": "http://schema.org/WebAPI"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "InfoObject"
           }
@@ -6233,7 +6233,7 @@
                 "@id": "http://schema.org/version"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "version"
               }
@@ -6277,7 +6277,7 @@
                 "@id": "http://schema.org/name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "title"
               }
@@ -6321,7 +6321,7 @@
                 "@id": "http://schema.org/termsOfService"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "termsOfService"
               }
@@ -6365,7 +6365,7 @@
                 "@id": "http://schema.org/license"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "license"
               }
@@ -6415,7 +6415,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -6459,7 +6459,7 @@
                 "@id": "http://schema.org/provider"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "contact"
               }
@@ -6534,7 +6534,7 @@
             "@id": "http://schema.org/CreativeWork"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ExternalDocumentationObject"
           }
@@ -6551,7 +6551,7 @@
                 "@id": "http://schema.org/url"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "url"
               }
@@ -6600,7 +6600,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -6669,7 +6669,7 @@
             "@id": "http://a.ml/vocab/doc#Example"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ExampleObject"
           }
@@ -6686,7 +6686,7 @@
                 "@id": "http://www.w3.org/ns/shacl#raw"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "raw"
               }
@@ -6730,7 +6730,7 @@
                 "@id": "http://a.ml/vocab/http#mediaType"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "mediaType"
               }
@@ -6799,7 +6799,7 @@
             "@id": "http://schema.org/Organization"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ContactObject"
           }
@@ -6816,7 +6816,7 @@
                 "@id": "http://schema.org/url"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "url"
               }
@@ -6860,7 +6860,7 @@
                 "@id": "http://schema.org/name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -6904,7 +6904,7 @@
                 "@id": "http://schema.org/email"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "email"
               }
@@ -6973,7 +6973,7 @@
             "@id": "http://a.ml/vocab/http#Parameter"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "BodyParameterObject"
           }
@@ -6990,7 +6990,7 @@
                 "@id": "http://a.ml/vocab/http#schema"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "schema"
               }
@@ -7045,7 +7045,7 @@
                 "@id": "http://www.w3.org/ns/hydra/core#required"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "required"
               }
@@ -7094,7 +7094,7 @@
                 "@id": "http://a.ml/vocab/http#paramName"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -7143,7 +7143,7 @@
                 "@id": "http://a.ml/vocab/http#binding"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "in"
               }
@@ -7204,7 +7204,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -7248,7 +7248,7 @@
                 "@id": "http://schema.org/name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "declarationName"
               }
@@ -7322,7 +7322,7 @@
             "@id": "http://a.ml/vocab/security#ParametrizedSecurityScheme"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "BasicSecurityScheme"
           }
@@ -7339,7 +7339,7 @@
                 "@id": "http://a.ml/vocab/security#scheme"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "type"
               }
@@ -7388,7 +7388,7 @@
                 "@id": "http://a.ml/vocab/security#name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "schemeName"
               }
@@ -7437,7 +7437,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }
@@ -7506,7 +7506,7 @@
             "@id": "http://a.ml/vocab/security#ParametrizedSecurityScheme"
           }
         ],
-        "http://schema.org/name": [
+        "http://a.ml/vocabularies/core#name": [
           {
             "@value": "ApiKeySecurityScheme"
           }
@@ -7523,7 +7523,7 @@
                 "@id": "http://a.ml/vocab/security#scheme"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "type"
               }
@@ -7572,7 +7572,7 @@
                 "@id": "http://a.ml/vocabularies/data#schemeName"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "schemeName"
               }
@@ -7621,7 +7621,7 @@
                 "@id": "http://a.ml/vocab/security#name"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "name"
               }
@@ -7670,7 +7670,7 @@
                 "@id": "http://a.ml/vocab/security#in"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "in"
               }
@@ -7737,7 +7737,7 @@
                 "@id": "http://schema.org/description"
               }
             ],
-            "http://schema.org/name": [
+            "http://a.ml/vocabularies/core#name": [
               {
                 "@value": "description"
               }

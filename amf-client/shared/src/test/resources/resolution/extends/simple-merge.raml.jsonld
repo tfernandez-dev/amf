@@ -137,7 +137,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/http#schema"
+                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [

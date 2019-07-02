@@ -1,1172 +1,56 @@
 #%WebAPI Spec 1.0
-internalReference:
-  -
-    unitType: LibraryModule
-    internalReference:
-      -
-        unitType: TraitFragment
-        location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/sortable.raml#
-        encodes:
-          name: trait
-      -
-        unitType: TraitFragment
-        location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/partial.raml#
-        encodes:
-          name: trait
-      -
-        unitType: TraitFragment
-        location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/pageable.raml#
-        encodes:
-          name: trait
-      -
-        unitType: TraitFragment
-        location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/content-cacheable.raml#
-        encodes:
-          name: trait
-    location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml
-    declares:
-      -
-        declarationType: Trait
-        name: sortable
-        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/sortable.raml#/trait
-        linkLabel: sortable.raml
-      -
-        declarationType: Trait
-        name: partial
-        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/partial.raml#/trait
-        linkLabel: partial.raml
-      -
-        declarationType: Trait
-        name: pageable
-        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/pageable.raml#/trait
-        linkLabel: pageable.raml
-      -
-        declarationType: Trait
-        name: contentCacheable
-        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/content-cacheable.raml#/trait
-        linkLabel: content-cacheable.raml
-  -
-    unitType: TraitFragment
-    location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/content-cacheable.raml#
-    encodes:
-      name: trait
-  -
-    unitType: SecuritySchemeFragment
-    location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml
-    encodes:
-      type: OAuth 2.0
-      description: ACME Banking API supports OAuth 2.0 security policy for methods that involve updating existing data
-      header:
-        -
-          name: Authorization
-          paramName: Authorization
-          description: |
-            Used to send a valid OAuth 2 access token. Do not use with the "access_token" query string parameter.
-          required: true
-          binding: header
-          schema:
-            shapeType: Scalar
-            description: |
-              Used to send a valid OAuth 2 access token. Do not use with the "access_token" query string parameter.
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-      parameter:
-        -
-          name: access_token
-          paramName: access_token
-          description: |
-            Used to send a valid OAuth 2 access token. Do not use together with the "Authorization" header
-          required: true
-          binding: query
-          schema:
-            shapeType: Scalar
-            description: |
-              Used to send a valid OAuth 2 access token. Do not use together with the "Authorization" header
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-      response:
-        -
-          name: "403"
-          description: |
-            Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won't help here.
-          statusCode: "403"
-        -
-          name: "401"
-          description: |
-            Bad or expired token. This can happen if the API consumer uses a revoked or expired access token. To fix, you should re-authenticate the user.
-          statusCode: "401"
-      settings:
-        settingsType: OAuth2
-        authorizationURI: https://placeholder.com/oauth2/authorize
-        accessTokenURI: https://placeholder.com/oauth2/access_token
-        authorizationGrant:
-          - implicit
-  -
-    unitType: LibraryModule
-    location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml
-    declares:
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#integer
-              name: number_payments
-            min.Count: 1
-            name: number_payments
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: down_payment
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: down_payment
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: early_payment_penalty
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: early_payment_penalty
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: payment_frequency
-            min.Count: 1
-            name: payment_frequency
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: payment_amount
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: payment_amount
-        name: RepaymentSpecificationData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: accountType
-            min.Count: 1
-            name: accountType
-        name: NewBankAccountRequestData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#date
-              name: birth_date?
-            min.Count: 0
-            name: birth_date
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: lei?
-            min.Count: 0
-            name: lei
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: postal_code?
-            min.Count: 0
-            name: postal_code
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: title?
-            min.Count: 0
-            name: title
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: vat_id?
-            min.Count: 0
-            name: vat_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: name?
-            min.Count: 0
-            name: name
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: address_locality?
-            min.Count: 0
-            name: address_locality
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: email?
-            min.Count: 0
-            name: email
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: gender?
-            min.Count: 0
-            name: gender
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: address_region?
-            min.Count: 0
-            name: address_region
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: family_name?
-            min.Count: 0
-            name: family_name
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: address_country?
-            min.Count: 0
-            name: address_country
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#date
-              name: death_date?
-            min.Count: 0
-            name: death_date
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: tax_id?
-            min.Count: 0
-            name: tax_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: street_address?
-            min.Count: 0
-            name: street_address
-        name: CustomerPatchData
-        closed: false
-      -
-        declarationType: Node
-        discriminator: type
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: tax_id
-            min.Count: 1
-            name: tax_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: lei
-            min.Count: 1
-            name: lei
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: email
-            min.Count: 1
-            name: email
-          -
-            range:
-              shapeType: Node
-              linkLabel: AddressData
-              name: address
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/AddressData
-            min.Count: 1
-            name: address
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: type
-            min.Count: 1
-            name: type
-        name: CustomerData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: vat_id
-            min.Count: 1
-            name: vat_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: name
-            min.Count: 1
-            name: name
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: id
-            min.Count: 1
-            name: id
-        discriminatorValue: Organization
-        name: OrganizationData
-        inherits:
-          -
-            shapeType: Node
-            linkLabel: CustomerData
-            name: CustomerData
-            linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/CustomerData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: postal_code
-            min.Count: 1
-            name: postal_code
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: address_locality
-            min.Count: 1
-            name: address_locality
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: address_region
-            min.Count: 1
-            name: address_region
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: address_country
-            min.Count: 1
-            name: address_country
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: street_address
-            min.Count: 1
-            name: street_address
-        name: AddressData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: family_name
-            min.Count: 1
-            name: family_name
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: vat_id?
-            min.Count: 0
-            name: vat_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: title?
-            min.Count: 0
-            name: title
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#date
-              name: death_date?
-            min.Count: 0
-            name: death_date
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#date
-              name: birth_date
-            min.Count: 1
-            name: birth_date
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: id
-            min.Count: 1
-            name: id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: given_name
-            min.Count: 1
-            name: given_name
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: gender
-            min.Count: 1
-            name: gender
-        discriminatorValue: Person
-        name: PersonData
-        inherits:
-          -
-            shapeType: Node
-            linkLabel: CustomerData
-            name: CustomerData
-            linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/CustomerData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: payment_amount
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: payment_amount
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: interest_rate
-            min.Count: 1
-            name: interest_rate
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: review_state
-            min.Count: 1
-            name: review_state
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: contactless
-            min.Count: 1
-            name: contactless
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: payment_frequency
-            min.Count: 1
-            name: payment_frequency
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: cash_back
-            min.Count: 1
-            name: cash_back
-        name: NewCreditCardRequestData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: contactless
-            min.Count: 1
-            name: contactless
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: cash_back
-            min.Count: 1
-            name: cash_back
-        name: NewDebitCardRequestData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#date
-              name: birth_date
-            min.Count: 1
-            name: birth_date
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: vat_id?
-            min.Count: 0
-            name: vat_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: gender
-            min.Count: 1
-            name: gender
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: family_name
-            min.Count: 1
-            name: family_name
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: given_name
-            min.Count: 1
-            name: given_name
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: title?
-            min.Count: 0
-            name: title
-        name: NewPersonData
-        inherits:
-          -
-            shapeType: Node
-            linkLabel: NewCustomerData
-            name: NewCustomerData
-            linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewCustomerData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: telephone
-            min.Count: 1
-            name: telephone
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: tax_id
-            min.Count: 1
-            name: tax_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: lei
-            min.Count: 1
-            name: lei
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: email
-            min.Count: 1
-            name: email
-        name: NewCustomerData
-        inherits:
-          -
-            shapeType: Node
-            linkLabel: AddressData
-            name: AddressData
-            linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/AddressData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: id
-            min.Count: 1
-            name: id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: interest_rate
-            min.Count: 1
-            name: interest_rate
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: overdraft_limit
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: overdraft_limit
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: floor_limit
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: floor_limit
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: amount
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: amount
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: lei
-            min.Count: 1
-            name: lei
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: minimum_inflow
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: minimum_inflow
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: annual_interest_rate
-            min.Count: 1
-            name: annual_interest_rate
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: cash_back
-            min.Count: 1
-            name: cash_back
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: review_state
-            min.Count: 1
-            name: review_state
-          -
-            range:
-              shapeType: Node
-              linkLabel: DurationData
-              name: grace_period
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/DurationData
-            min.Count: 1
-            name: grace_period
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: contactless
-            min.Count: 1
-            name: contactless
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: fees_and_comissions
-            min.Count: 1
-            name: fees_and_comissions
-        name: CreditCardData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: review_state
-            min.Count: 1
-            name: review_state
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: floor_limit
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: floor_limit
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: contactless
-            min.Count: 1
-            name: contactless
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: id
-            min.Count: 1
-            name: id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: fees_and_comissions
-            min.Count: 1
-            name: fees_and_comissions
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: lei
-            min.Count: 1
-            name: lei
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#boolean
-              name: cash_back
-            min.Count: 1
-            name: cash_back
-        name: DebitCardData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: fees_and_comissions
-            min.Count: 1
-            name: fees_and_comissions
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: annual_interest_rate
-            min.Count: 1
-            name: annual_interest_rate
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: account_number
-            min.Count: 1
-            name: account_number
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: minimum_inflow
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: minimum_inflow
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: interest_rate
-            min.Count: 1
-            name: interest_rate
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: amount
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: amount
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: review_state
-            min.Count: 1
-            name: review_state
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: overdraft_limit
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: overdraft_limit
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: id
-            min.Count: 1
-            name: id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: accountType
-            min.Count: 1
-            name: accountType
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: lei
-            min.Count: 1
-            name: lei
-        name: BankAccountData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: vat_id
-            min.Count: 1
-            name: vat_id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: name
-            min.Count: 1
-            name: name
-        name: NewOrganizationData
-        inherits:
-          -
-            shapeType: Node
-            linkLabel: NewCustomerData
-            name: NewCustomerData
-            linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewCustomerData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: value
-            min.Count: 1
-            name: value
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: currency
-            min.Count: 1
-            name: currency
-        name: MonetaryAmountData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: value
-            min.Count: 1
-            name: value
-        name: DurationData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Node
-              linkLabel: DurationData
-              name: term
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/DurationData
-            min.Count: 1
-            name: term
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: amount
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: amount
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: payment_frequency
-            min.Count: 1
-            name: payment_frequency
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: review_state
-            min.Count: 1
-            name: review_state
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: payment_amount
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: payment_amount
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: interest_rate
-            min.Count: 1
-            name: interest_rate
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: category
-            min.Count: 1
-            name: category
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: down_payment
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: down_payment
-        name: NewLoanRequestData
-        closed: false
-      -
-        declarationType: Node
-        property:
-          -
-            range:
-              shapeType: Node
-              linkLabel: DurationData
-              name: grace_period
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/DurationData
-            min.Count: 1
-            name: grace_period
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: annual_interest_rate
-            min.Count: 1
-            name: annual_interest_rate
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: minimum_inflow
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: minimum_inflow
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: fees_and_comissions
-            min.Count: 1
-            name: fees_and_comissions
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: id
-            min.Count: 1
-            name: id
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: review_state
-            min.Count: 1
-            name: review_state
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: accountType
-            min.Count: 1
-            name: accountType
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: lei
-            min.Count: 1
-            name: lei
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://www.w3.org/2001/XMLSchema#string
-              name: account_number
-            min.Count: 1
-            name: account_number
-          -
-            range:
-              shapeType: Scalar
-              datatype: http://a.ml/vocabularies/shapes#number
-              name: interest_rate
-            min.Count: 1
-            name: interest_rate
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: amount
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: amount
-          -
-            range:
-              shapeType: Node
-              linkLabel: MonetaryAmountData
-              name: overdraft_limit
-              linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/MonetaryAmountData
-            min.Count: 1
-            name: overdraft_limit
-        name: LoanData
-        closed: false
-location: file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml
 encodes:
   name: ACME Banking HTTP API
+  security:
+    -
+      name: oauth2_0
+      scheme:
+        name: oauth2_0
   server:
     -
       url: acme-banking.com/apis
   accepts:
     - application/json
-  contentType:
-    - application/json
   version: "1.0"
   endpoint:
     -
-      path: /customers
-      name: Customer Resource
-    -
-      path: /customers/{customer_id}/loans/schedule
+      parameter:
+        -
+          required: true
+          paramName: customer_id
+          name: customer_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
       supportedOperation:
         -
-          method: get
           description: Returns the repayments schedule for a Loan
           returns:
             -
               name: "200"
-              statusCode: "200"
               payload:
                 -
                   schema:
                     shapeType: Node
-                    linkLabel: shapes.RepaymentSpecificationData
                     name: body
-                    linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/RepaymentSpecificationData
-      parameter:
-        -
-          name: customer_id
-          paramName: customer_id
-          required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-    -
-      path: /customers/{customer_id}/cards/debit/{card_id}
-      supportedOperation:
-        -
-          extends:
-            -
-              operationType: AppliedTrait
-              name: traits.partial
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/partial
-                linkLabel: traits.partial
-          method: get
-          description: Returns DebitCard data
-          returns:
-            -
-              name: "200"
               statusCode: "200"
-              payload:
-                -
-                  mediaType: application/json
-                  schema:
-                    shapeType: Node
-                    name: schema
-                    inherits:
-                      -
-                        shapeType: Node
-                        linkLabel: shapes.DebitCardData
-                        name: DebitCardData
-                        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/DebitCardData
-                    closed: false
-        -
-          method: delete
-          description: Removes a DebitCard from the system
+          method: get
+      path: /customers/{customer_id}/loans/schedule
+    -
       parameter:
         -
-          name: customer_id
+          required: true
           paramName: customer_id
-          required: true
-          binding: path
+          name: customer_id
           schema:
             shapeType: Scalar
             datatype: http://www.w3.org/2001/XMLSchema#string
             name: schema
-        -
-          name: card_id
-          paramName: card_id
-          required: true
           binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-    -
-      path: /customers/{customer_id}/cards/debit
       supportedOperation:
         -
-          method: post
-          description: Requests the creation of a new DebitCard
           expects:
             payload:
               -
@@ -1177,30 +61,15 @@ encodes:
                   inherits:
                     -
                       shapeType: Node
-                      linkLabel: shapes.NewDebitCardRequestData
-                      name: NewDebitCardRequestData
-                      linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewDebitCardRequestData
+                      name: NewCreditCardRequestData
                   closed: false
+          description: Requests the creation of a new CreditCard
+          method: post
         -
-          extends:
-            -
-              operationType: AppliedTrait
-              name: traits.sortable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/sortable
-                linkLabel: traits.sortable
-            -
-              operationType: AppliedTrait
-              name: traits.pageable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/pageable
-                linkLabel: traits.pageable
-          method: get
-          description: Returns a collection of cards
+          description: Returns a collection accounts
           returns:
             -
               name: "200"
-              statusCode: "200"
               payload:
                 -
                   mediaType: application/json
@@ -1212,35 +81,81 @@ encodes:
                         shapeType: Array
                         items:
                           shapeType: Node
-                          linkLabel: shapes.DebitCardData
-                          linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/DebitCardData
+              statusCode: "200"
+          method: get
+      path: /customers/{customer_id}/cards/credit
+    -
       parameter:
         -
-          name: customer_id
-          paramName: customer_id
           required: true
-          binding: path
+          paramName: customer_id
+          name: customer_id
           schema:
             shapeType: Scalar
             datatype: http://www.w3.org/2001/XMLSchema#string
             name: schema
-    -
-      path: /customers/{customer_id}/loans/{loan_id}
+          binding: path
       supportedOperation:
         -
-          extends:
+          expects:
+            payload:
+              -
+                mediaType: application/json
+                schema:
+                  shapeType: Node
+                  name: schema
+                  inherits:
+                    -
+                      shapeType: Node
+                      name: NewBankAccountRequestData
+                  closed: false
+          description: Requests the creation of a new BankAccount
+          method: post
+        -
+          description: Returns a collection accounts
+          returns:
             -
-              operationType: AppliedTrait
-              name: traits.partial
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/partial
-                linkLabel: traits.partial
+              name: "200"
+              payload:
+                -
+                  mediaType: application/json
+                  schema:
+                    shapeType: Array
+                    name: schema
+                    inherits:
+                      -
+                        shapeType: Array
+                        items:
+                          shapeType: Node
+              statusCode: "200"
           method: get
+      path: /customers/{customer_id}/accounts
+    -
+      parameter:
+        -
+          required: true
+          paramName: loan_id
+          name: loan_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
+        -
+          required: true
+          paramName: customer_id
+          name: customer_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
+      supportedOperation:
+        -
           description: Returns Loan data
           returns:
             -
               name: "200"
-              statusCode: "200"
               payload:
                 -
                   mediaType: application/json
@@ -1250,46 +165,221 @@ encodes:
                     inherits:
                       -
                         shapeType: Node
-                        linkLabel: shapes.LoanData
                         name: LoanData
-                        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/LoanData
                     closed: false
+              statusCode: "200"
+          method: get
+      path: /customers/{customer_id}/loans/{loan_id}
+    -
       parameter:
         -
-          name: loan_id
-          paramName: loan_id
           required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-        -
-          name: customer_id
           paramName: customer_id
-          required: true
-          binding: path
+          name: customer_id
           schema:
             shapeType: Scalar
             datatype: http://www.w3.org/2001/XMLSchema#string
             name: schema
-    -
-      path: /customers/{customer_id}
+          binding: path
+        -
+          required: true
+          paramName: card_id
+          name: card_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
       supportedOperation:
         -
-          extends:
+          description: Returns DebitCard data
+          returns:
             -
-              operationType: AppliedTrait
-              name: traits.partial
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/partial
-                linkLabel: traits.partial
+              name: "200"
+              payload:
+                -
+                  mediaType: application/json
+                  schema:
+                    shapeType: Node
+                    name: schema
+                    inherits:
+                      -
+                        shapeType: Node
+                        name: DebitCardData
+                    closed: false
+              statusCode: "200"
           method: get
+        -
+          description: Removes a DebitCard from the system
+          method: delete
+      path: /customers/{customer_id}/cards/debit/{card_id}
+    -
+      parameter:
+        -
+          required: true
+          paramName: customer_id
+          name: customer_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
+      supportedOperation:
+        -
+          expects:
+            payload:
+              -
+                mediaType: application/json
+                schema:
+                  shapeType: Node
+                  name: schema
+                  inherits:
+                    -
+                      shapeType: Node
+                      name: NewDebitCardRequestData
+                  closed: false
+          description: Requests the creation of a new DebitCard
+          method: post
+        -
+          description: Returns a collection of cards
+          returns:
+            -
+              name: "200"
+              payload:
+                -
+                  mediaType: application/json
+                  schema:
+                    shapeType: Array
+                    name: schema
+                    inherits:
+                      -
+                        shapeType: Array
+                        items:
+                          shapeType: Node
+              statusCode: "200"
+          method: get
+      path: /customers/{customer_id}/cards/debit
+    -
+      parameter:
+        -
+          required: true
+          paramName: customer_id
+          name: customer_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
+      supportedOperation:
+        -
+          expects:
+            payload:
+              -
+                mediaType: application/json
+                schema:
+                  shapeType: Node
+                  name: schema
+                  inherits:
+                    -
+                      shapeType: Node
+                      name: NewLoanRequestData
+                  closed: false
+          description: Requests the creation of a new Loan
+          method: post
+        -
+          description: Returns a collection accounts
+          returns:
+            -
+              name: "200"
+              payload:
+                -
+                  mediaType: application/json
+                  schema:
+                    shapeType: Array
+                    name: schema
+                    inherits:
+                      -
+                        shapeType: Array
+                        items:
+                          shapeType: Node
+              statusCode: "200"
+          method: get
+      path: /customers/{customer_id}/loans
+    -
+      supportedOperation:
+        -
+          expects:
+            payload:
+              -
+                schema:
+                  shapeType: Node
+                  name: body
+          description: Customer data created correctly for a Person
+          method: post
+      path: /customers/commercial
+    -
+      name: Customer Resource
+      path: /customers
+    -
+      parameter:
+        -
+          required: true
+          paramName: customer_id
+          name: customer_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
+        -
+          required: true
+          paramName: card_id
+          name: card_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
+      supportedOperation:
+        -
+          description: Returns DebitCard data
+          returns:
+            -
+              name: "200"
+              payload:
+                -
+                  mediaType: application/json
+                  schema:
+                    shapeType: Node
+                    name: schema
+                    inherits:
+                      -
+                        shapeType: Node
+                        name: CreditCardData
+                    closed: false
+              statusCode: "200"
+          method: get
+        -
+          description: Removes a CreditCard from the system
+          method: delete
+      path: /customers/{customer_id}/cards/credit/{card_id}
+    -
+      parameter:
+        -
+          required: true
+          paramName: customer_id
+          name: customer_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
+      supportedOperation:
+        -
           description: Returns Customer data
           returns:
             -
               name: "200"
-              statusCode: "200"
               payload:
                 -
                   mediaType: application/json
@@ -1299,330 +389,37 @@ encodes:
                     inherits:
                       -
                         shapeType: Union
-                        linkLabel: CustomerMemberResponse
                         name: CustomerMemberResponse
-                        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/declarations/types/union/CustomerMemberResponse
                     closed: false
-      parameter:
-        -
-          name: customer_id
-          paramName: customer_id
-          required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-    -
-      path: /customers/{customer_id}/accounts
-      supportedOperation:
-        -
-          method: post
-          description: Requests the creation of a new BankAccount
-          expects:
-            payload:
-              -
-                mediaType: application/json
-                schema:
-                  shapeType: Node
-                  name: schema
-                  inherits:
-                    -
-                      shapeType: Node
-                      linkLabel: shapes.NewBankAccountRequestData
-                      name: NewBankAccountRequestData
-                      linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewBankAccountRequestData
-                  closed: false
-        -
-          extends:
-            -
-              operationType: AppliedTrait
-              name: traits.sortable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/sortable
-                linkLabel: traits.sortable
-            -
-              operationType: AppliedTrait
-              name: traits.pageable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/pageable
-                linkLabel: traits.pageable
-          method: get
-          description: Returns a collection accounts
-          returns:
-            -
-              name: "200"
               statusCode: "200"
-              payload:
-                -
-                  mediaType: application/json
-                  schema:
-                    shapeType: Array
-                    name: schema
-                    inherits:
-                      -
-                        shapeType: Array
-                        items:
-                          shapeType: Node
-                          linkLabel: shapes.BankAccountData
-                          linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/BankAccountData
-      parameter:
-        -
-          name: customer_id
-          paramName: customer_id
-          required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-    -
-      path: /customers/commercial
-      supportedOperation:
-        -
-          method: post
-          description: Customer data created correctly for a Person
-          expects:
-            payload:
-              -
-                schema:
-                  shapeType: Node
-                  linkLabel: shapes.NewPersonData
-                  name: body
-                  linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewPersonData
-    -
-      path: /customers/corporate
-      supportedOperation:
-        -
-          method: post
-          description: Customer data created correctly for an Organization
-          expects:
-            payload:
-              -
-                schema:
-                  shapeType: Node
-                  linkLabel: shapes.NewOrganizationData
-                  name: body
-                  linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewOrganizationData
-    -
-      path: /customers/{customer_id}/loans
-      supportedOperation:
-        -
-          method: post
-          description: Requests the creation of a new Loan
-          expects:
-            payload:
-              -
-                mediaType: application/json
-                schema:
-                  shapeType: Node
-                  name: schema
-                  inherits:
-                    -
-                      shapeType: Node
-                      linkLabel: shapes.NewLoanRequestData
-                      name: NewLoanRequestData
-                      linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewLoanRequestData
-                  closed: false
-        -
-          extends:
-            -
-              operationType: AppliedTrait
-              name: traits.sortable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/sortable
-                linkLabel: traits.sortable
-            -
-              operationType: AppliedTrait
-              name: traits.pageable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/pageable
-                linkLabel: traits.pageable
-            -
-              operationType: AppliedTrait
-              name: contentCacheable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/declarations/traits/contentCacheable
-                linkLabel: contentCacheable
           method: get
-          description: Returns a collection accounts
-          returns:
-            -
-              name: "200"
-              statusCode: "200"
-              payload:
-                -
-                  mediaType: application/json
-                  schema:
-                    shapeType: Array
-                    name: schema
-                    inherits:
-                      -
-                        shapeType: Array
-                        items:
-                          shapeType: Node
-                          linkLabel: shapes.LoanData
-                          linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/LoanData
+      path: /customers/{customer_id}
+    -
       parameter:
         -
-          name: customer_id
-          paramName: customer_id
           required: true
-          binding: path
+          paramName: customer_id
+          name: customer_id
           schema:
             shapeType: Scalar
             datatype: http://www.w3.org/2001/XMLSchema#string
             name: schema
-    -
-      path: /customers/{customer_id}/cards/credit/{card_id}
+          binding: path
+        -
+          required: true
+          paramName: account_id
+          name: account_id
+          schema:
+            shapeType: Scalar
+            datatype: http://www.w3.org/2001/XMLSchema#string
+            name: schema
+          binding: path
       supportedOperation:
         -
-          extends:
-            -
-              operationType: AppliedTrait
-              name: traits.partial
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/partial
-                linkLabel: traits.partial
-          method: get
-          description: Returns DebitCard data
-          returns:
-            -
-              name: "200"
-              statusCode: "200"
-              payload:
-                -
-                  mediaType: application/json
-                  schema:
-                    shapeType: Node
-                    name: schema
-                    inherits:
-                      -
-                        shapeType: Node
-                        linkLabel: shapes.CreditCardData
-                        name: CreditCardData
-                        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/CreditCardData
-                    closed: false
-        -
-          method: delete
-          description: Removes a CreditCard from the system
-      parameter:
-        -
-          name: customer_id
-          paramName: customer_id
-          required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-        -
-          name: card_id
-          paramName: card_id
-          required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-    -
-      path: /customers/{customer_id}/cards/credit
-      supportedOperation:
-        -
-          method: post
-          description: Requests the creation of a new CreditCard
-          expects:
-            payload:
-              -
-                mediaType: application/json
-                schema:
-                  shapeType: Node
-                  name: schema
-                  inherits:
-                    -
-                      shapeType: Node
-                      linkLabel: shapes.NewCreditCardRequestData
-                      name: NewCreditCardRequestData
-                      linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/NewCreditCardRequestData
-                  closed: false
-        -
-          extends:
-            -
-              operationType: AppliedTrait
-              name: traits.sortable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/sortable
-                linkLabel: traits.sortable
-            -
-              operationType: AppliedTrait
-              name: traits.pageable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/pageable
-                linkLabel: traits.pageable
-            -
-              operationType: AppliedTrait
-              name: contentCacheable
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/api.raml#/declarations/traits/contentCacheable
-                linkLabel: contentCacheable
-          method: get
-          description: Returns a collection accounts
-          returns:
-            -
-              name: "200"
-              statusCode: "200"
-              payload:
-                -
-                  mediaType: application/json
-                  schema:
-                    shapeType: Array
-                    name: schema
-                    inherits:
-                      -
-                        shapeType: Array
-                        items:
-                          shapeType: Node
-                          linkLabel: shapes.CreditCardData
-                          linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/CreditCardData
-      parameter:
-        -
-          name: customer_id
-          paramName: customer_id
-          required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-    -
-      path: /customers/{customer_id}/cards
-      parameter:
-        -
-          name: customer_id
-          paramName: customer_id
-          required: true
-          binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-    -
-      path: /customers/{customer_id}/accounts/{account_id}
-      supportedOperation:
-        -
-          extends:
-            -
-              operationType: AppliedTrait
-              name: traits.partial
-              target:
-                linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/traits.raml#/declarations/traits/partial
-                linkLabel: traits.partial
-          method: get
           description: Returns BankAccount data
           returns:
             -
               name: "200"
-              statusCode: "200"
               payload:
                 -
                   mediaType: application/json
@@ -1632,39 +429,40 @@ encodes:
                     inherits:
                       -
                         shapeType: Node
-                        linkLabel: shapes.BankAccountData
                         name: BankAccountData
-                        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/BankAccountData
                     closed: false
+              statusCode: "200"
+          method: get
         -
-          method: delete
           description: Removes a BankAccount from the system
+          method: delete
+      path: /customers/{customer_id}/accounts/{account_id}
+    -
+      supportedOperation:
+        -
+          expects:
+            payload:
+              -
+                schema:
+                  shapeType: Node
+                  name: body
+          description: Customer data created correctly for an Organization
+          method: post
+      path: /customers/corporate
+    -
       parameter:
         -
-          name: customer_id
+          required: true
           paramName: customer_id
-          required: true
-          binding: path
+          name: customer_id
           schema:
             shapeType: Scalar
             datatype: http://www.w3.org/2001/XMLSchema#string
             name: schema
-        -
-          name: account_id
-          paramName: account_id
-          required: true
           binding: path
-          schema:
-            shapeType: Scalar
-            datatype: http://www.w3.org/2001/XMLSchema#string
-            name: schema
-  security:
-    -
-      name: oauth2_0
-      scheme:
-        name: oauth2_0
-        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#fragment
-        linkLabel: securitySchemes/oauth2_0.raml
+      path: /customers/{customer_id}/cards
+  contentType:
+    - application/json
 declares:
   -
     declarationType: Union
@@ -1672,15 +470,9 @@ declares:
     anyOf:
       -
         shapeType: Node
-        linkLabel: shapes.OrganizationData
-        linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/dataTypes/shapes.raml#/declarations/types/OrganizationData
   -
     declarationType: Trait
     name: contentCacheable
-    linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/traits/content-cacheable.raml#/trait
-    linkLabel: traits/content-cacheable.raml
   -
     declarationType: SecurityScheme
     name: oauth2_0
-    linkTarget: file://amf-client/shared/src/test/resources/production/raml10/banking-api/securitySchemes/oauth2_0.raml#fragment
-    linkLabel: securitySchemes/oauth2_0.raml
