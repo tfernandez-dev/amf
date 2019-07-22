@@ -1,6 +1,8 @@
 #%Vocabulary 1.0
 base: http://a.ml/vocabularies/core#
 usage: Core vocabulary with common classes and properties
+uses:
+  doc: aml_doc.yaml
 classTerms:
   CreativeWork:
     displayName: Creative Work
@@ -11,6 +13,12 @@ classTerms:
   Organization:
     displayName: Organization
     description: Organization providing an good or service
+  PayloadFragment:
+    displayName: Payload Fragment
+    description: Fragment encoding HTTP payload information
+    extends:
+      - doc.Fragment
+      - doc.Unit
 propertyTerms:
   deprecated:
     displayName: deprecated
