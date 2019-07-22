@@ -250,7 +250,7 @@
             "@value": "bp"
           }
         ],
-        "http://a.ml/vocabularies/apiContract#schema": [
+        "http://a.ml/vocabularies/shapes#schema": [
           {
             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/oas20/yaml/param-in-body-link/api.yaml#/declarations/parameters/bp/bp",
             "@type": [
@@ -346,7 +346,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                    "@value": "http://a.ml/vocabularies/shapes#schema"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -396,7 +396,7 @@
             "@value": "fp"
           }
         ],
-        "http://a.ml/vocabularies/apiContract#schema": [
+        "http://a.ml/vocabularies/shapes#schema": [
           {
             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/oas20/yaml/param-in-body-link/api.yaml#/declarations/parameters/fp/fp",
             "@type": [
@@ -492,7 +492,7 @@
               {
                 "http://a.ml/vocabularies/document-source-maps#element": [
                   {
-                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                    "@value": "http://a.ml/vocabularies/shapes#schema"
                   }
                 ],
                 "http://a.ml/vocabularies/document-source-maps#value": [

@@ -32,14 +32,14 @@
               "apiContract:Server",
               "doc:DomainElement"
             ],
-            "apiContract:url": [
+            "core:urlTemplate": [
               {
                 "@value": "api.example.com/path"
               }
             ],
             "smaps": {
               "lexical": {
-                "apiContract:url": "[(5,0)-(7,0)]"
+                "core:urlTemplate": "[(5,0)-(7,0)]"
               },
               "synthesized-field": {
                 "#14": "true"
@@ -100,12 +100,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#8/linked_1",
                             "@type": [
@@ -176,7 +176,7 @@
       {
         "@id": "#1",
         "@type": [
-          "doc:DataType",
+          "raml-shapes:DataTypeFragment",
           "doc:Fragment",
           "doc:Unit"
         ],
@@ -321,7 +321,7 @@
                     }
                   }
                 ],
-                "shacl:raw": [
+                "doc:raw": [
                   {
                     "@value": "\n  a: wadus"
                   }
@@ -331,7 +331,7 @@
                     "doc:strict": "true"
                   },
                   "lexical": {
-                    "shacl:raw": "[(6,0)-(6,10)]",
+                    "doc:raw": "[(6,0)-(6,10)]",
                     "#3": "[(5,0)-(6,10)]",
                     "doc:structuredValue": "[(5,8)-(6,10)]"
                   }
@@ -499,7 +499,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "\n  a: wadus"
               }
@@ -509,7 +509,7 @@
                 "doc:strict": "true"
               },
               "lexical": {
-                "shacl:raw": "[(6,0)-(6,10)]",
+                "doc:raw": "[(6,0)-(6,10)]",
                 "#3": "[(5,0)-(6,10)]",
                 "doc:structuredValue": "[(5,8)-(6,10)]"
               }
@@ -540,8 +540,8 @@
     ],
     "@context": {
       "@base": "amf://id",
-      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "shacl": "http://www.w3.org/ns/shacl#",
+      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "data": "http://a.ml/vocabularies/data#",
       "doc": "http://a.ml/vocabularies/document#",
       "apiContract": "http://a.ml/vocabularies/apiContract#",

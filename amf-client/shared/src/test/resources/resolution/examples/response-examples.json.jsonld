@@ -83,7 +83,7 @@
                             "@value": "header"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/resolution/examples/response-examples.json#/web-api/end-points/%2Forganization/post/request/parameter/UserID/scalar/schema",
                             "@type": [
@@ -167,7 +167,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "SWED-123"
                                   }
@@ -196,7 +196,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -306,7 +306,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -392,12 +392,12 @@
                             "@value": "Pepe"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/resolution/examples/response-examples.json#/web-api/end-points/%2Forganization/post/request/Pepe/any/Pepe",
                             "@type": [
@@ -602,7 +602,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Doe Enterprise\":\n\"value\": \"Silver\": "
                                   }
@@ -631,7 +631,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -755,7 +755,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -791,7 +791,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#mediaType"
+                                    "@value": "http://a.ml/vocabularies/core#mediaType"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -892,12 +892,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/resolution/examples/response-examples.json#/web-api/end-points/%2Forganization/get/201/default/default",
                             "@type": [
@@ -1173,7 +1173,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Software Corp\":\n\"address\": \"35 Central Street\":\n\"value\": \"Gold\": "
                                   }
@@ -1202,7 +1202,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1372,7 +1372,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Acme\": "
                                   }
@@ -1401,7 +1401,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1805,7 +1805,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Puma\":\n\"type\": \"Dog\":\n\"color\": \"Black\":\n\"gender\": \"Female\":\n\"breed\": \"Mixed\": "
                                   }
@@ -1834,7 +1834,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2238,7 +2238,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Puma\":\n\"type\": \"Dog\":\n\"color\": \"Black\":\n\"gender\": \"Female\":\n\"breed\": \"Mixed\": "
                                   }
@@ -2267,7 +2267,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2390,12 +2390,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/resolution/examples/response-examples.json#/web-api/end-points/%2Forganization/get/201/default/default",
                             "@type": [
@@ -2671,7 +2671,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Software Corp\":\n\"address\": \"35 Central Street\":\n\"value\": \"Gold\": "
                                   }
@@ -2700,7 +2700,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2870,7 +2870,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Acme\": "
                                   }
@@ -2899,7 +2899,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3303,7 +3303,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Puma\":\n\"type\": \"Dog\":\n\"color\": \"Black\":\n\"gender\": \"Female\":\n\"breed\": \"Mixed\": "
                                   }
@@ -3332,7 +3332,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3736,7 +3736,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"name\": \"Puma\":\n\"type\": \"Dog\":\n\"color\": \"Black\":\n\"gender\": \"Female\":\n\"breed\": \"Mixed\": "
                                   }
@@ -3765,7 +3765,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4583,7 +4583,7 @@
                 ]
               }
             ],
-            "http://www.w3.org/ns/shacl#raw": [
+            "http://a.ml/vocabularies/document#raw": [
               {
                 "@value": "\"name\": \"Bob\":\n\"lastname\": \"Marley\": "
               }
@@ -4612,7 +4612,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://www.w3.org/ns/shacl#raw"
+                        "@value": "http://a.ml/vocabularies/document#raw"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [

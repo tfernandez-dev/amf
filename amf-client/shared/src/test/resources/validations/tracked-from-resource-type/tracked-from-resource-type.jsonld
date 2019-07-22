@@ -68,12 +68,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#3/linked_3",
                             "@type": [
@@ -97,7 +97,7 @@
                         ],
                         "smaps": {
                           "extension-provenance": {
-                            "apiContract:mediaType": "id->amf://id#4",
+                            "core:mediaType": "id->amf://id#4",
                             "#10": "id->amf://id#4"
                           },
                           "lexical": {
@@ -111,12 +111,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#3/linked_4",
                             "@type": [
@@ -140,7 +140,7 @@
                         ],
                         "smaps": {
                           "extension-provenance": {
-                            "apiContract:mediaType": "id->amf://id#4",
+                            "core:mediaType": "id->amf://id#4",
                             "#11": "id->amf://id#4"
                           },
                           "lexical": {
@@ -180,7 +180,7 @@
               {
                 "@id": "#4",
                 "@type": [
-                  "doc:ParametrizedResourceType",
+                  "apiContract:ParametrizedResourceType",
                   "doc:ParametrizedDeclaration",
                   "doc:DomainElement"
                 ],
@@ -193,7 +193,7 @@
                   {
                     "@id": "#15",
                     "@type": [
-                      "doc:ResourceType",
+                      "apiContract:ResourceType",
                       "doc:AbstractDeclaration",
                       "doc:DomainElement"
                     ],
@@ -805,7 +805,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "name: some name"
               }
@@ -815,13 +815,13 @@
                 "doc:strict": "true"
               },
               "extension-provenance": {
-                "shacl:raw": "id->amf://id#4",
+                "doc:raw": "id->amf://id#4",
                 "core:name": "id->amf://id#4",
                 "#7": "id->amf://id#4",
                 "doc:strict": "id->amf://id#4"
               },
               "lexical": {
-                "shacl:raw": "[(3,2)-(3,17)]",
+                "doc:raw": "[(3,2)-(3,17)]",
                 "core:name": "[(2,0)-(3,17)]",
                 "#7": "[(2,0)-(3,17)]",
                 "doc:structuredValue": "[(3,2)-(3,17)]"
@@ -858,7 +858,7 @@
       {
         "@id": "#15",
         "@type": [
-          "doc:ResourceType",
+          "apiContract:ResourceType",
           "doc:AbstractDeclaration",
           "doc:DomainElement"
         ],
@@ -1151,8 +1151,8 @@
     ],
     "@context": {
       "@base": "amf://id",
-      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "shacl": "http://www.w3.org/ns/shacl#",
+      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "data": "http://a.ml/vocabularies/data#",
       "doc": "http://a.ml/vocabularies/document#",
       "apiContract": "http://a.ml/vocabularies/apiContract#",

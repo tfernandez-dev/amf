@@ -98,7 +98,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml08/lock-unlock/api.raml#/web-api/end-points/%2Fstores/get/request/parameter/period/scalar/period",
                             "@type": [
@@ -666,12 +666,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml08/lock-unlock/api.raml#/web-api/end-points/%2Fstores/get/200/application%2Fjson/any/schema",
                             "@type": [
@@ -899,7 +899,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml08/lock-unlock/api.raml#/web-api/end-points/%2Fstores%2F%7BstoreNumber%7D/get/request/parameter/period/scalar/period",
                             "@type": [
@@ -1508,7 +1508,7 @@
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/apiContract#schema": [
+                "http://a.ml/vocabularies/shapes#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/production/raml08/lock-unlock/api.raml#/web-api/end-points/%2Fstores%2F%7BstoreNumber%7D/parameter/storeNumber/scalar/storeNumber",
                     "@type": [
@@ -1653,7 +1653,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml08/lock-unlock/api.raml#/web-api/end-points/%2Fstores%2Fcount/get/request/parameter/from/scalar/from",
                             "@type": [
@@ -1794,7 +1794,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "2017-09-05 10:00:00"
                                   }
@@ -1823,7 +1823,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2022,7 +2022,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/raml08/lock-unlock/api.raml#/web-api/end-points/%2Fstores%2Fcount/get/request/parameter/to/scalar/to",
                             "@type": [
@@ -2163,7 +2163,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "2017-09-05 10:10:00"
                                   }
@@ -2192,7 +2192,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [

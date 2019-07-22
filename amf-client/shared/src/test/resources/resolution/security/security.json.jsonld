@@ -100,7 +100,7 @@
                                 "@value": "header"
                               }
                             ],
-                            "http://a.ml/vocabularies/apiContract#schema": [
+                            "http://a.ml/vocabularies/shapes#schema": [
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_2_0/parameter/Authorization/scalar/schema",
                                 "@type": [
@@ -197,7 +197,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                        "@value": "http://a.ml/vocabularies/shapes#schema"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -267,7 +267,7 @@
                                 "@value": "query"
                               }
                             ],
-                            "http://a.ml/vocabularies/apiContract#schema": [
+                            "http://a.ml/vocabularies/shapes#schema": [
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_2_0/parameter/access_token/scalar/schema",
                                 "@type": [
@@ -338,7 +338,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                        "@value": "http://a.ml/vocabularies/shapes#schema"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -470,12 +470,12 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "profile"
                                   }
                                 ],
-                                "http://a.ml/vocabularies/security#description": [
+                                "http://a.ml/vocabularies/core#description": [
                                   {
                                     "@value": ""
                                   }
@@ -490,7 +490,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#description"
+                                            "@value": "http://a.ml/vocabularies/core#description"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -514,7 +514,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#name"
+                                            "@value": "http://a.ml/vocabularies/core#name"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -533,12 +533,12 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "history"
                                   }
                                 ],
-                                "http://a.ml/vocabularies/security#description": [
+                                "http://a.ml/vocabularies/core#description": [
                                   {
                                     "@value": ""
                                   }
@@ -553,7 +553,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#description"
+                                            "@value": "http://a.ml/vocabularies/core#description"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -577,7 +577,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#name"
+                                            "@value": "http://a.ml/vocabularies/core#name"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -894,7 +894,7 @@
                                 "@value": "header"
                               }
                             ],
-                            "http://a.ml/vocabularies/apiContract#schema": [
+                            "http://a.ml/vocabularies/shapes#schema": [
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_1_0/parameter/Authorization/scalar/schema",
                                 "@type": [
@@ -991,7 +991,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                        "@value": "http://a.ml/vocabularies/shapes#schema"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1061,7 +1061,7 @@
                                 "@value": "query"
                               }
                             ],
-                            "http://a.ml/vocabularies/apiContract#schema": [
+                            "http://a.ml/vocabularies/shapes#schema": [
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_1_0/parameter/access_token/scalar/schema",
                                 "@type": [
@@ -1132,7 +1132,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                        "@value": "http://a.ml/vocabularies/shapes#schema"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1588,7 +1588,7 @@
                                 "@value": "header"
                               }
                             ],
-                            "http://a.ml/vocabularies/apiContract#schema": [
+                            "http://a.ml/vocabularies/shapes#schema": [
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_2_0/parameter/Authorization/scalar/schema",
                                 "@type": [
@@ -1685,7 +1685,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                        "@value": "http://a.ml/vocabularies/shapes#schema"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1755,7 +1755,7 @@
                                 "@value": "query"
                               }
                             ],
-                            "http://a.ml/vocabularies/apiContract#schema": [
+                            "http://a.ml/vocabularies/shapes#schema": [
                               {
                                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_2_0/parameter/access_token/scalar/schema",
                                 "@type": [
@@ -1826,7 +1826,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                        "@value": "http://a.ml/vocabularies/shapes#schema"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1958,12 +1958,12 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "profile"
                                   }
                                 ],
-                                "http://a.ml/vocabularies/security#description": [
+                                "http://a.ml/vocabularies/core#description": [
                                   {
                                     "@value": ""
                                   }
@@ -1978,7 +1978,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#description"
+                                            "@value": "http://a.ml/vocabularies/core#description"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2002,7 +2002,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#name"
+                                            "@value": "http://a.ml/vocabularies/core#name"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2021,12 +2021,12 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "history"
                                   }
                                 ],
-                                "http://a.ml/vocabularies/security#description": [
+                                "http://a.ml/vocabularies/core#description": [
                                   {
                                     "@value": ""
                                   }
@@ -2041,7 +2041,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#description"
+                                            "@value": "http://a.ml/vocabularies/core#description"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2065,7 +2065,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://a.ml/vocabularies/security#name"
+                                            "@value": "http://a.ml/vocabularies/core#name"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2276,7 +2276,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "profile"
                               }
@@ -2291,7 +2291,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/security#name"
+                                        "@value": "http://a.ml/vocabularies/core#name"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2322,7 +2322,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "history"
                               }
@@ -2337,7 +2337,7 @@
                                   {
                                     "http://a.ml/vocabularies/document-source-maps#element": [
                                       {
-                                        "@value": "http://a.ml/vocabularies/security#name"
+                                        "@value": "http://a.ml/vocabularies/core#name"
                                       }
                                     ],
                                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2563,7 +2563,7 @@
                 "@value": "header"
               }
             ],
-            "http://a.ml/vocabularies/apiContract#schema": [
+            "http://a.ml/vocabularies/shapes#schema": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_1_0/parameter/Authorization/scalar/schema",
                 "@type": [
@@ -2660,7 +2660,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                        "@value": "http://a.ml/vocabularies/shapes#schema"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2730,7 +2730,7 @@
                 "@value": "query"
               }
             ],
-            "http://a.ml/vocabularies/apiContract#schema": [
+            "http://a.ml/vocabularies/shapes#schema": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_1_0/parameter/access_token/scalar/schema",
                 "@type": [
@@ -2801,7 +2801,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                        "@value": "http://a.ml/vocabularies/shapes#schema"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3149,7 +3149,7 @@
                 "@value": "header"
               }
             ],
-            "http://a.ml/vocabularies/apiContract#schema": [
+            "http://a.ml/vocabularies/shapes#schema": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_2_0/parameter/Authorization/scalar/schema",
                 "@type": [
@@ -3246,7 +3246,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                        "@value": "http://a.ml/vocabularies/shapes#schema"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3316,7 +3316,7 @@
                 "@value": "query"
               }
             ],
-            "http://a.ml/vocabularies/apiContract#schema": [
+            "http://a.ml/vocabularies/shapes#schema": [
               {
                 "@id": "file://amf-client/shared/src/test/resources/resolution/security/security.json#/declarations/securitySchemes/oauth_2_0/parameter/access_token/scalar/schema",
                 "@type": [
@@ -3387,7 +3387,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#schema"
+                        "@value": "http://a.ml/vocabularies/shapes#schema"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3519,12 +3519,12 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "profile"
                   }
                 ],
-                "http://a.ml/vocabularies/security#description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": ""
                   }
@@ -3539,7 +3539,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3563,7 +3563,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3582,12 +3582,12 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "history"
                   }
                 ],
-                "http://a.ml/vocabularies/security#description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": ""
                   }
@@ -3602,7 +3602,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3626,7 +3626,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [

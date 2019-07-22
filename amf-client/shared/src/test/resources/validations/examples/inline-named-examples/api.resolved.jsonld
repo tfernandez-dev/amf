@@ -58,12 +58,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#34/linked_1",
                             "@type": [
@@ -146,12 +146,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#50/linked_1",
                             "@type": [
@@ -270,7 +270,7 @@
                             "@value": "path"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#68",
                             "@type": [
@@ -309,7 +309,7 @@
                         ],
                         "smaps": {
                           "lexical": {
-                            "apiContract:schema": "[(26,6)-(29,0)]",
+                            "raml-shapes:schema": "[(26,6)-(29,0)]",
                             "#67": "[(26,6)-(29,0)]",
                             "core:description": "[(28,8)-(29,0)]"
                           }
@@ -342,12 +342,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#20/linked_1",
                             "@type": [
@@ -455,7 +455,7 @@
       {
         "@id": "#3",
         "@type": [
-          "doc:DataType",
+          "raml-shapes:DataTypeFragment",
           "doc:Fragment",
           "doc:Unit"
         ],
@@ -1450,7 +1450,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "\n    alternate_id: 1\n    category: \n      id: 39691\n      name: Religious and Spiritual\n    created_at: 2013-01-02T22:21:34Z\n   \n"
               }
@@ -1460,7 +1460,7 @@
                 "doc:strict": "true"
               },
               "lexical": {
-                "shacl:raw": "[(3,0)-(9,0)]",
+                "doc:raw": "[(3,0)-(9,0)]",
                 "core:name": "[(2,0)-(9,0)]",
                 "#21": "[(2,0)-(9,0)]",
                 "doc:structuredValue": "[(2,6)-(9,0)]"
@@ -1835,7 +1835,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "\n  -\n   \n    category: \n      id: 39691\n      name: Religious and Spiritual\n    created_at: 2013-01-02T22:21:34Z\n    \n  -\n    category: \n      id: 61111   \n      name: Service\n    created_at: 2016-02-01T16:37:02Z\n   "
               }
@@ -1845,7 +1845,7 @@
                 "doc:strict": "true"
               },
               "lexical": {
-                "shacl:raw": "[(3,0)-(15,3)]",
+                "doc:raw": "[(3,0)-(15,3)]",
                 "core:name": "[(2,0)-(15,3)]",
                 "#35": "[(2,0)-(15,3)]",
                 "doc:structuredValue": "[(2,6)-(15,3)]"
@@ -2208,7 +2208,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "\n  -\n   \n    category: \n      id: 39691\n      name: Religious and Spiritual\n    created_at: 2013-01-02T22:21:34Z\n    \n  -\n    category: \n      id: 61111   \n      name: Service\n    created_at: 2016-02-01T16:37:02Z\n   "
               }
@@ -2218,7 +2218,7 @@
                 "doc:strict": "true"
               },
               "lexical": {
-                "shacl:raw": "[(3,0)-(15,3)]",
+                "doc:raw": "[(3,0)-(15,3)]",
                 "core:name": "[(2,0)-(15,3)]",
                 "#51": "[(2,0)-(15,3)]",
                 "doc:structuredValue": "[(2,6)-(15,3)]"

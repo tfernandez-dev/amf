@@ -491,7 +491,7 @@
                 ]
               }
             ],
-            "http://www.w3.org/ns/shacl#raw": [
+            "http://a.ml/vocabularies/document#raw": [
               {
                 "@value": "\n      name: juan roman\n      description: el ultimo gran 10"
               }
@@ -520,7 +520,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://www.w3.org/ns/shacl#raw"
+                        "@value": "http://a.ml/vocabularies/document#raw"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [

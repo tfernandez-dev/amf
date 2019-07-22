@@ -27,7 +27,7 @@
               "http://a.ml/vocabularies/apiContract#Server",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/apiContract#url": [
+            "http://a.ml/vocabularies/core#urlTemplate": [
               {
                 "@value": "api.example.com/path"
               }
@@ -42,7 +42,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#url"
+                        "@value": "http://a.ml/vocabularies/core#urlTemplate"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -70,7 +70,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#url"
+                        "@value": "http://a.ml/vocabularies/core#urlTemplate"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -556,12 +556,12 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "write:pets"
                   }
                 ],
-                "http://a.ml/vocabularies/security#description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "modify pets in your account"
                   }
@@ -576,7 +576,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -600,7 +600,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -619,12 +619,12 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "read:pets"
                   }
                 ],
-                "http://a.ml/vocabularies/security#description": [
+                "http://a.ml/vocabularies/core#description": [
                   {
                     "@value": "read your pets"
                   }
@@ -639,7 +639,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#description"
+                            "@value": "http://a.ml/vocabularies/core#description"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -663,7 +663,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/security#name"
+                            "@value": "http://a.ml/vocabularies/core#name"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [

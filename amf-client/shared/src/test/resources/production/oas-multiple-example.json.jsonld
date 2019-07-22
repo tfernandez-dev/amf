@@ -93,12 +93,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_5",
                             "@type": [
@@ -291,12 +291,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_6",
                             "@type": [
@@ -489,12 +489,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_7",
                             "@type": [
@@ -687,12 +687,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/web-api/end-points/%2FexamplesInResource/get/200/default/default",
                             "@type": [
@@ -1353,7 +1353,7 @@
                                     ]
                                   }
                                 ],
-                                "http://www.w3.org/ns/shacl#raw": [
+                                "http://a.ml/vocabularies/document#raw": [
                                   {
                                     "@value": "\"one\":\n  \"prop1\": \"something\":\n  \"prop2\": 20: :\n\"two\":\n  \"prop1\": \"other\":\n  \"prop2\": 21: : "
                                   }
@@ -1382,7 +1382,7 @@
                                       {
                                         "http://a.ml/vocabularies/document-source-maps#element": [
                                           {
-                                            "@value": "http://www.w3.org/ns/shacl#raw"
+                                            "@value": "http://a.ml/vocabularies/document#raw"
                                           }
                                         ],
                                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1657,12 +1657,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/oas-multiple-example.json#/declarations/types/exampleType/linked_8",
                             "@type": [
@@ -2330,7 +2330,7 @@
                 ]
               }
             ],
-            "http://www.w3.org/ns/shacl#raw": [
+            "http://a.ml/vocabularies/document#raw": [
               {
                 "@value": "\"prop1\": \"John Doe\":\n\"prop2\": 1: "
               }
@@ -2359,7 +2359,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://www.w3.org/ns/shacl#raw"
+                        "@value": "http://a.ml/vocabularies/document#raw"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2572,7 +2572,7 @@
                 ]
               }
             ],
-            "http://www.w3.org/ns/shacl#raw": [
+            "http://a.ml/vocabularies/document#raw": [
               {
                 "@value": "\"prop1\": \"example5\":\n\"prop2\": 5: "
               }
@@ -2601,7 +2601,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://www.w3.org/ns/shacl#raw"
+                        "@value": "http://a.ml/vocabularies/document#raw"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -2828,7 +2828,7 @@
                 ]
               }
             ],
-            "http://www.w3.org/ns/shacl#raw": [
+            "http://a.ml/vocabularies/document#raw": [
               {
                 "@value": "\"prop1\": \"resource example\":\n\"prop2\": 10: "
               }
@@ -2857,7 +2857,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://www.w3.org/ns/shacl#raw"
+                        "@value": "http://a.ml/vocabularies/document#raw"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3300,7 +3300,7 @@
                 ]
               }
             ],
-            "http://www.w3.org/ns/shacl#raw": [
+            "http://a.ml/vocabularies/document#raw": [
               {
                 "@value": "\"one\":\n  \"prop1\": \"something else\":\n  \"prop2\": 30: :\n\"two\":\n  \"prop1\": \"another\":\n  \"prop2\": 31: : "
               }
@@ -3329,7 +3329,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://www.w3.org/ns/shacl#raw"
+                        "@value": "http://a.ml/vocabularies/document#raw"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [

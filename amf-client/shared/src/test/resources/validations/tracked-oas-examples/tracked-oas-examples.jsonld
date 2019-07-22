@@ -78,12 +78,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#1/linked_4",
                             "@type": [
@@ -181,12 +181,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#1/linked_5",
                             "@type": [
@@ -284,12 +284,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#1/linked_6",
                             "@type": [
@@ -387,12 +387,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#35",
                             "@type": [
@@ -628,7 +628,7 @@
                                     }
                                   }
                                 ],
-                                "shacl:raw": [
+                                "doc:raw": [
                                   {
                                     "@value": "\"prop1\": \"something\":\n\"prop2\": 20: "
                                   }
@@ -638,7 +638,7 @@
                                     "doc:strict": "true"
                                   },
                                   "lexical": {
-                                    "shacl:raw": "[(87,25)-(90,15)]",
+                                    "doc:raw": "[(87,25)-(90,15)]",
                                     "#36": "[(87,14)-(87,25)]",
                                     "doc:structuredValue": "[(87,25)-(90,15)]"
                                   },
@@ -940,7 +940,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "\"prop1\": \"John Doe\":\n\"prop2\": 1: "
               }
@@ -950,7 +950,7 @@
                 "doc:strict": "true"
               },
               "lexical": {
-                "shacl:raw": "[(9,17)-(12,7)]",
+                "doc:raw": "[(9,17)-(12,7)]",
                 "#6": "[(9,6)-(9,17)]",
                 "doc:structuredValue": "[(9,17)-(12,7)]"
               }
@@ -1059,7 +1059,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "\"prop1\": \"example5\":\n\"prop2\": 5: "
               }
@@ -1069,7 +1069,7 @@
                 "doc:strict": "true"
               },
               "lexical": {
-                "shacl:raw": "[(33,34)-(36,15)]",
+                "doc:raw": "[(33,34)-(36,15)]",
                 "#10": "[(33,14)-(33,34)]",
                 "doc:structuredValue": "[(33,34)-(36,15)]"
               },
@@ -1181,7 +1181,7 @@
                 }
               }
             ],
-            "shacl:raw": [
+            "doc:raw": [
               {
                 "@value": "\"prop1\": \"resource example\":\n\"prop2\": 10: "
               }
@@ -1191,7 +1191,7 @@
                 "doc:strict": "true"
               },
               "lexical": {
-                "shacl:raw": "[(67,34)-(70,15)]",
+                "doc:raw": "[(67,34)-(70,15)]",
                 "#16": "[(67,14)-(67,34)]",
                 "doc:structuredValue": "[(67,34)-(70,15)]"
               },
@@ -1223,8 +1223,8 @@
     ],
     "@context": {
       "@base": "amf://id",
-      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "shacl": "http://www.w3.org/ns/shacl#",
+      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "data": "http://a.ml/vocabularies/data#",
       "doc": "http://a.ml/vocabularies/document#",
       "apiContract": "http://a.ml/vocabularies/apiContract#",

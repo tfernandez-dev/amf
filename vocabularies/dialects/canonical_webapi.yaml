@@ -29,6 +29,8 @@ nodeMappings:
       Nil: NilShape
       Scalar: ScalarShape
       Any: AnyShape
+      Recursive: RecursiveShape
+    
     union:
       - UnionShape
       - TupleShape
@@ -40,6 +42,7 @@ nodeMappings:
       - NilShape
       - ScalarShape
       - AnyShape
+      - RecursiveShape
     
   SecuritySettingsUnion:
     typeDiscriminatorName: type
@@ -49,6 +52,7 @@ nodeMappings:
       APIKey: APIKeySettings
       Http: HTTPSettings
       OpenID: OpenIDSettings
+    
     union:
       - OAuth2Settings
       - OAuth1Settings
@@ -61,7 +65,7 @@ nodeMappings:
     extends: AnyShape
     mapping:
       mediaType:
-        propertyTerm: shacl.mediaType
+        propertyTerm: core.mediaType
         range: string
 
 
@@ -119,6 +123,7 @@ nodeMappings:
         range:
           - ParametrizedTrait
         allowMultiple: true
+    
       method:
         propertyTerm: apiContract.method
         range: string
@@ -189,10 +194,10 @@ nodeMappings:
     classTerm: security.Scope
     mapping:
       name:
-        propertyTerm: security.name
+        propertyTerm: core.name
         range: string
       description:
-        propertyTerm: security.description
+        propertyTerm: core.description
         range: string
 
 
@@ -238,7 +243,8 @@ nodeMappings:
         allowMultiple: true
       examples:
         propertyTerm: apiContract.examples
-        range: Examples
+        range: Example
+        allowMultiple: true
 
 
   OAuth2Settings:
@@ -275,7 +281,7 @@ nodeMappings:
 
 
   ResourceType:
-    classTerm: doc.ResourceType
+    classTerm: apiContract.ResourceType
     mapping:
       name:
         propertyTerm: core.name
@@ -290,7 +296,7 @@ nodeMappings:
 
 
   ParametrizedTrait:
-    classTerm: doc.ParametrizedTrait
+    classTerm: apiContract.ParametrizedTrait
     mapping:
       name:
         propertyTerm: core.name
@@ -442,7 +448,7 @@ nodeMappings:
     classTerm: security.ApiKeySettings
     mapping:
       name:
-        propertyTerm: security.name
+        propertyTerm: core.name
         range: string
       in:
         propertyTerm: security.in
@@ -630,7 +636,7 @@ nodeMappings:
 
 
   ParametrizedResourceType:
-    classTerm: doc.ParametrizedResourceType
+    classTerm: apiContract.ParametrizedResourceType
     mapping:
       name:
         propertyTerm: core.name
@@ -651,12 +657,6 @@ nodeMappings:
     classTerm: raml-shapes.AnyShape
     extends: Shape
     mapping:
-      raw:
-        propertyTerm: shacl.raw
-        range: string
-      referenceId:
-        propertyTerm: doc.reference-id
-        range: link
       documentation:
         propertyTerm: core.documentation
         range: CreativeWork
@@ -665,7 +665,17 @@ nodeMappings:
         range: XMLSerializer
       examples:
         propertyTerm: apiContract.examples
-        range: Examples
+        range: Example
+        allowMultiple: true
+      raw:
+        propertyTerm: doc.raw
+        range: string
+      referenceId:
+        propertyTerm: doc.reference-id
+        range: link
+      location:
+        propertyTerm: doc.location
+        range: string
 
 
   CustomDomainProperty:
@@ -681,15 +691,6 @@ nodeMappings:
       name:
         propertyTerm: core.name
         range: string
-
-
-  Examples:
-    classTerm: apiContract.NamedExamples
-    mapping:
-      examples:
-        propertyTerm: apiContract.examples
-        range: Example
-        allowMultiple: true
 
 
   Tag:
@@ -729,11 +730,14 @@ nodeMappings:
     classTerm: doc.ExternalSource
     mapping:
       raw:
-        propertyTerm: shacl.raw
+        propertyTerm: doc.raw
         range: string
       referenceId:
         propertyTerm: doc.reference-id
         range: link
+      location:
+        propertyTerm: doc.location
+        range: string
 
 
   ShapeExtension:
@@ -750,6 +754,9 @@ nodeMappings:
       value:
         propertyTerm: data.value
         range: string
+      dataType:
+        propertyTerm: shacl.datatype
+        range: link
       name:
         propertyTerm: core.name
         range: string
@@ -828,8 +835,8 @@ nodeMappings:
   Server:
     classTerm: apiContract.Server
     mapping:
-      url:
-        propertyTerm: apiContract.url
+      urlTemplate:
+        propertyTerm: core.urlTemplate
         range: string
       description:
         propertyTerm: core.description
@@ -964,7 +971,8 @@ nodeMappings:
         allowMultiple: true
       examples:
         propertyTerm: apiContract.examples
-        range: Examples
+        range: Example
+        allowMultiple: true
 
 
   Organization:
@@ -1006,11 +1014,14 @@ nodeMappings:
         propertyTerm: core.mediaType
         range: string
       raw:
-        propertyTerm: shacl.raw
+        propertyTerm: doc.raw
         range: string
       referenceId:
         propertyTerm: doc.reference-id
         range: link
+      location:
+        propertyTerm: doc.location
+        range: string
 
 
   Payload:
@@ -1020,14 +1031,15 @@ nodeMappings:
         propertyTerm: core.name
         range: string
       mediaType:
-        propertyTerm: apiContract.mediaType
+        propertyTerm: core.mediaType
         range: string
       schema:
         propertyTerm: apiContract.schema
         range: DataShapesUnion
       examples:
         propertyTerm: apiContract.examples
-        range: Examples
+        range: Example
+        allowMultiple: true
       encoding:
         propertyTerm: apiContract.encoding
         range: Encoding
@@ -1121,7 +1133,7 @@ nodeMappings:
 
 
   Trait:
-    classTerm: doc.Trait
+    classTerm: apiContract.Trait
     mapping:
       name:
         propertyTerm: core.name
@@ -1197,8 +1209,4 @@ documents:
       dataShapes: DataShapesUnion
       resourceTypes: ResourceType
       traits: Trait
-      securitySchemes: SecurityScheme
-      parameters: Parameter
-      responses: Response
-
   

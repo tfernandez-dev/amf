@@ -27,7 +27,7 @@
               "http://a.ml/vocabularies/apiContract#Server",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/apiContract#url": [
+            "http://a.ml/vocabularies/core#urlTemplate": [
               {
                 "@value": "myfalsehost.com/apis"
               }
@@ -42,7 +42,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#url"
+                        "@value": "http://a.ml/vocabularies/core#urlTemplate"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -227,12 +227,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/get/200/application%2Fjson/any/schema",
                             "@type": [
@@ -539,7 +539,7 @@
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/apiContract#schema": [
+                "http://a.ml/vocabularies/shapes#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -717,7 +717,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/apiContract#schema"
+                            "@value": "http://a.ml/vocabularies/shapes#schema"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -856,12 +856,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/get/200/application%2Fjson/any/schema",
                             "@type": [
@@ -1062,7 +1062,7 @@
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/apiContract#schema": [
+                "http://a.ml/vocabularies/shapes#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Faccounts/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -1254,7 +1254,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/apiContract#schema"
+                            "@value": "http://a.ml/vocabularies/shapes#schema"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1367,7 +1367,7 @@
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/apiContract#schema": [
+                "http://a.ml/vocabularies/shapes#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -1559,7 +1559,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/apiContract#schema"
+                            "@value": "http://a.ml/vocabularies/shapes#schema"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1686,12 +1686,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/get/200/application%2Fjson/any/schema",
                             "@type": [
@@ -1894,12 +1894,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/post/request/application%2Fjson/scalar/schema",
                             "@type": [
@@ -2120,7 +2120,7 @@
                     "@value": "path"
                   }
                 ],
-                "http://a.ml/vocabularies/apiContract#schema": [
+                "http://a.ml/vocabularies/shapes#schema": [
                   {
                     "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/annotations-full/api.raml#/web-api/end-points/%2Fcustomers%2F%7Bcustomer_id%7D%2Fcards%2Fdebit/parameter/customer_id/scalar/schema",
                     "@type": [
@@ -2312,7 +2312,7 @@
                       {
                         "http://a.ml/vocabularies/document-source-maps#element": [
                           {
-                            "@value": "http://a.ml/vocabularies/apiContract#schema"
+                            "@value": "http://a.ml/vocabularies/shapes#schema"
                           }
                         ],
                         "http://a.ml/vocabularies/document-source-maps#value": [

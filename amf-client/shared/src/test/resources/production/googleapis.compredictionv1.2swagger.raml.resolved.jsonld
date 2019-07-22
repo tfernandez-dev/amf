@@ -32,7 +32,7 @@
               "http://a.ml/vocabularies/apiContract#Server",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
-            "http://a.ml/vocabularies/apiContract#url": [
+            "http://a.ml/vocabularies/core#urlTemplate": [
               {
                 "@value": "https://www.googleapis.com/prediction/v1.2"
               }
@@ -47,7 +47,7 @@
                   {
                     "http://a.ml/vocabularies/document-source-maps#element": [
                       {
-                        "@value": "http://a.ml/vocabularies/apiContract#url"
+                        "@value": "http://a.ml/vocabularies/core#urlTemplate"
                       }
                     ],
                     "http://a.ml/vocabularies/document-source-maps#value": [
@@ -163,7 +163,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/data/scalar/schema",
                             "@type": [
@@ -260,7 +260,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -328,7 +328,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/alt/scalar/schema",
                             "@type": [
@@ -566,7 +566,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -634,7 +634,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/fields/scalar/schema",
                             "@type": [
@@ -731,7 +731,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -799,7 +799,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/key/scalar/schema",
                             "@type": [
@@ -896,7 +896,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -964,7 +964,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/oauth_token/scalar/schema",
                             "@type": [
@@ -1061,7 +1061,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1129,7 +1129,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/prettyPrint/scalar/schema",
                             "@type": [
@@ -1302,7 +1302,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1370,7 +1370,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/quotaUser/scalar/schema",
                             "@type": [
@@ -1467,7 +1467,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1535,7 +1535,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/parameter/userIp/scalar/schema",
                             "@type": [
@@ -1632,7 +1632,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -1677,12 +1677,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining/post/request/application%2Fjson/schema",
                             "@type": [
@@ -3036,12 +3036,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/declarations/types/Training/linked_5",
                             "@type": [
@@ -3199,7 +3199,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.full_control"
                                   }
@@ -3211,7 +3211,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_only"
                                   }
@@ -3223,7 +3223,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_write"
                                   }
@@ -3235,7 +3235,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/prediction"
                                   }
@@ -3415,7 +3415,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "https://www.googleapis.com/auth/prediction"
                               }
@@ -3747,7 +3747,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/parameter/prettyPrint/scalar/schema",
                             "@type": [
@@ -3920,7 +3920,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -3988,7 +3988,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/parameter/quotaUser/scalar/schema",
                             "@type": [
@@ -4085,7 +4085,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4153,7 +4153,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/parameter/key/scalar/schema",
                             "@type": [
@@ -4250,7 +4250,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4318,7 +4318,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/parameter/userIp/scalar/schema",
                             "@type": [
@@ -4415,7 +4415,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4483,7 +4483,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/parameter/oauth_token/scalar/schema",
                             "@type": [
@@ -4580,7 +4580,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4648,7 +4648,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/parameter/alt/scalar/schema",
                             "@type": [
@@ -4886,7 +4886,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -4954,7 +4954,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/parameter/fields/scalar/schema",
                             "@type": [
@@ -5051,7 +5051,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5096,12 +5096,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/put/request/application%2Fjson/schema",
                             "@type": [
@@ -5603,7 +5603,7 @@
                             "@value": "path"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/parameter/data/scalar/schema",
                             "@type": [
@@ -5700,7 +5700,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -5815,12 +5815,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/declarations/types/Training/linked_6",
                             "@type": [
@@ -5978,7 +5978,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.full_control"
                                   }
@@ -5990,7 +5990,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_only"
                                   }
@@ -6002,7 +6002,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_write"
                                   }
@@ -6014,7 +6014,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/prediction"
                                   }
@@ -6194,7 +6194,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "https://www.googleapis.com/auth/prediction"
                               }
@@ -6473,7 +6473,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/request/parameter/prettyPrint/scalar/schema",
                             "@type": [
@@ -6646,7 +6646,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6714,7 +6714,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/request/parameter/quotaUser/scalar/schema",
                             "@type": [
@@ -6811,7 +6811,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -6879,7 +6879,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/request/parameter/key/scalar/schema",
                             "@type": [
@@ -6976,7 +6976,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7044,7 +7044,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/request/parameter/userIp/scalar/schema",
                             "@type": [
@@ -7141,7 +7141,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7209,7 +7209,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/request/parameter/oauth_token/scalar/schema",
                             "@type": [
@@ -7306,7 +7306,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7374,7 +7374,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/request/parameter/alt/scalar/schema",
                             "@type": [
@@ -7612,7 +7612,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7680,7 +7680,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/get/request/parameter/fields/scalar/schema",
                             "@type": [
@@ -7777,7 +7777,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -7847,7 +7847,7 @@
                             "@value": "path"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/parameter/data/scalar/schema",
                             "@type": [
@@ -7944,7 +7944,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -8047,12 +8047,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/declarations/types/Training/linked_7",
                             "@type": [
@@ -8210,7 +8210,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.full_control"
                                   }
@@ -8222,7 +8222,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_only"
                                   }
@@ -8234,7 +8234,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_write"
                                   }
@@ -8246,7 +8246,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/prediction"
                                   }
@@ -8426,7 +8426,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "https://www.googleapis.com/auth/prediction"
                               }
@@ -8705,7 +8705,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/request/parameter/prettyPrint/scalar/schema",
                             "@type": [
@@ -8878,7 +8878,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -8946,7 +8946,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/request/parameter/quotaUser/scalar/schema",
                             "@type": [
@@ -9043,7 +9043,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -9111,7 +9111,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/request/parameter/key/scalar/schema",
                             "@type": [
@@ -9208,7 +9208,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -9276,7 +9276,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/request/parameter/userIp/scalar/schema",
                             "@type": [
@@ -9373,7 +9373,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -9441,7 +9441,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/request/parameter/oauth_token/scalar/schema",
                             "@type": [
@@ -9538,7 +9538,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -9606,7 +9606,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/request/parameter/alt/scalar/schema",
                             "@type": [
@@ -9844,7 +9844,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -9912,7 +9912,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/delete/request/parameter/fields/scalar/schema",
                             "@type": [
@@ -10009,7 +10009,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -10079,7 +10079,7 @@
                             "@value": "path"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D/parameter/data/scalar/schema",
                             "@type": [
@@ -10176,7 +10176,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -10372,7 +10372,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.full_control"
                                   }
@@ -10384,7 +10384,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_only"
                                   }
@@ -10396,7 +10396,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_write"
                                   }
@@ -10408,7 +10408,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/prediction"
                                   }
@@ -10588,7 +10588,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "https://www.googleapis.com/auth/prediction"
                               }
@@ -10934,7 +10934,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/parameter/prettyPrint/scalar/schema",
                             "@type": [
@@ -11107,7 +11107,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -11175,7 +11175,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/parameter/quotaUser/scalar/schema",
                             "@type": [
@@ -11272,7 +11272,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -11340,7 +11340,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/parameter/key/scalar/schema",
                             "@type": [
@@ -11437,7 +11437,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -11505,7 +11505,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/parameter/userIp/scalar/schema",
                             "@type": [
@@ -11602,7 +11602,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -11670,7 +11670,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/parameter/oauth_token/scalar/schema",
                             "@type": [
@@ -11767,7 +11767,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -11835,7 +11835,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/parameter/alt/scalar/schema",
                             "@type": [
@@ -12073,7 +12073,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -12141,7 +12141,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/parameter/fields/scalar/schema",
                             "@type": [
@@ -12238,7 +12238,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -12283,12 +12283,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/post/request/application%2Fjson/schema",
                             "@type": [
@@ -12746,7 +12746,7 @@
                             "@value": "path"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/parameter/data/scalar/schema",
                             "@type": [
@@ -12857,7 +12857,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -12972,12 +12972,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/declarations/types/Output/linked_3",
                             "@type": [
@@ -13135,7 +13135,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.full_control"
                                   }
@@ -13147,7 +13147,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_only"
                                   }
@@ -13159,7 +13159,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_write"
                                   }
@@ -13171,7 +13171,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/prediction"
                                   }
@@ -13351,7 +13351,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "https://www.googleapis.com/auth/prediction"
                               }
@@ -13720,7 +13720,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/parameter/prettyPrint/scalar/schema",
                             "@type": [
@@ -13893,7 +13893,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -13961,7 +13961,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/parameter/quotaUser/scalar/schema",
                             "@type": [
@@ -14058,7 +14058,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -14126,7 +14126,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/parameter/key/scalar/schema",
                             "@type": [
@@ -14223,7 +14223,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -14291,7 +14291,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/parameter/userIp/scalar/schema",
                             "@type": [
@@ -14388,7 +14388,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -14456,7 +14456,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/parameter/oauth_token/scalar/schema",
                             "@type": [
@@ -14553,7 +14553,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -14621,7 +14621,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/parameter/alt/scalar/schema",
                             "@type": [
@@ -14859,7 +14859,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -14927,7 +14927,7 @@
                             "@value": "query"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/parameter/fields/scalar/schema",
                             "@type": [
@@ -15024,7 +15024,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -15069,12 +15069,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/post/request/application%2Fjson/schema",
                             "@type": [
@@ -15532,7 +15532,7 @@
                             "@value": "path"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Ftraining%2F%7Bdata%7D%2Fpredict/parameter/data/scalar/schema",
                             "@type": [
@@ -15643,7 +15643,7 @@
                               {
                                 "http://a.ml/vocabularies/document-source-maps#element": [
                                   {
-                                    "@value": "http://a.ml/vocabularies/apiContract#schema"
+                                    "@value": "http://a.ml/vocabularies/shapes#schema"
                                   }
                                 ],
                                 "http://a.ml/vocabularies/document-source-maps#value": [
@@ -15718,7 +15718,7 @@
                             "@value": "path"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/web-api/end-points/%2Fhostedmodels%2F%7BhostedModelName%7D%2Fpredict/parameter/hostedModelName/scalar/hostedModelName",
                             "@type": [
@@ -15829,12 +15829,12 @@
                           "http://a.ml/vocabularies/apiContract#Payload",
                           "http://a.ml/vocabularies/document#DomainElement"
                         ],
-                        "http://a.ml/vocabularies/apiContract#mediaType": [
+                        "http://a.ml/vocabularies/core#mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "http://a.ml/vocabularies/apiContract#schema": [
+                        "http://a.ml/vocabularies/shapes#schema": [
                           {
                             "@id": "file://amf-client/shared/src/test/resources/production/googleapis.compredictionv1.2swagger.raml#/declarations/types/Output/linked_4",
                             "@type": [
@@ -15992,7 +15992,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.full_control"
                                   }
@@ -16004,7 +16004,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_only"
                                   }
@@ -16016,7 +16016,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/devstorage.read_write"
                                   }
@@ -16028,7 +16028,7 @@
                                   "http://a.ml/vocabularies/security#Scope",
                                   "http://a.ml/vocabularies/document#DomainElement"
                                 ],
-                                "http://a.ml/vocabularies/security#name": [
+                                "http://a.ml/vocabularies/core#name": [
                                   {
                                     "@value": "https://www.googleapis.com/auth/prediction"
                                   }
@@ -16208,7 +16208,7 @@
                               "http://a.ml/vocabularies/security#Scope",
                               "http://a.ml/vocabularies/document#DomainElement"
                             ],
-                            "http://a.ml/vocabularies/security#name": [
+                            "http://a.ml/vocabularies/core#name": [
                               {
                                 "@value": "https://www.googleapis.com/auth/prediction"
                               }
@@ -17795,7 +17795,7 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "https://www.googleapis.com/auth/devstorage.full_control"
                   }
@@ -17807,7 +17807,7 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "https://www.googleapis.com/auth/devstorage.read_only"
                   }
@@ -17819,7 +17819,7 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "https://www.googleapis.com/auth/devstorage.read_write"
                   }
@@ -17831,7 +17831,7 @@
                   "http://a.ml/vocabularies/security#Scope",
                   "http://a.ml/vocabularies/document#DomainElement"
                 ],
-                "http://a.ml/vocabularies/security#name": [
+                "http://a.ml/vocabularies/core#name": [
                   {
                     "@value": "https://www.googleapis.com/auth/prediction"
                   }

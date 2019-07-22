@@ -57,7 +57,7 @@
       {
         "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/trait-fragment/trait.raml#",
         "@type": [
-          "http://a.ml/vocabularies/document#TraitFragment",
+          "http://a.ml/vocabularies/apiContract#TraitFragment",
           "http://a.ml/vocabularies/document#Fragment",
           "http://a.ml/vocabularies/document#Unit"
         ],
@@ -65,7 +65,7 @@
           {
             "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/trait-fragment/trait.raml#/trait",
             "@type": [
-              "http://a.ml/vocabularies/document#Trait",
+              "http://a.ml/vocabularies/apiContract#Trait",
               "http://a.ml/vocabularies/document#AbstractDeclaration",
               "http://a.ml/vocabularies/document#DomainElement"
             ],
@@ -339,7 +339,7 @@
       {
         "@id": "file://amf-client/shared/src/test/resources/upanddown/cycle/raml10/trait-fragment/api.raml#/declarations/traits/secured",
         "@type": [
-          "http://a.ml/vocabularies/document#Trait",
+          "http://a.ml/vocabularies/apiContract#Trait",
           "http://a.ml/vocabularies/document#AbstractDeclaration",
           "http://a.ml/vocabularies/document#DomainElement"
         ],

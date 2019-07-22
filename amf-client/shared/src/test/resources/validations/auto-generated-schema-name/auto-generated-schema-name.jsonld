@@ -58,12 +58,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#33",
                             "@type": [
@@ -193,7 +193,7 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#38",
                             "@type": [
@@ -350,12 +350,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#8/linked_6",
                             "@type": [
@@ -416,7 +416,7 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#2/linked_5",
                             "@type": [
@@ -504,12 +504,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#8/linked_7",
                             "@type": [
@@ -596,12 +596,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#17/linked_4",
                             "@type": [
@@ -662,7 +662,7 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#17/linked_5",
                             "@type": [
@@ -750,12 +750,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/json"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#17/linked_6",
                             "@type": [
@@ -842,12 +842,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#23/linked_1",
                             "@type": [
@@ -908,7 +908,7 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#14/linked_1",
                             "@type": [
@@ -996,12 +996,12 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:mediaType": [
+                        "core:mediaType": [
                           {
                             "@value": "application/xml"
                           }
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#27/linked_1",
                             "@type": [
@@ -1062,7 +1062,7 @@
                           "apiContract:Payload",
                           "doc:DomainElement"
                         ],
-                        "apiContract:schema": [
+                        "raml-shapes:schema": [
                           {
                             "@id": "#26/linked_1",
                             "@type": [
@@ -1129,7 +1129,7 @@
       {
         "@id": "#1",
         "@type": [
-          "doc:DataType",
+          "raml-shapes:DataTypeFragment",
           "doc:Fragment",
           "doc:Unit"
         ],
@@ -1254,7 +1254,7 @@
       {
         "@id": "#7",
         "@type": [
-          "doc:DataType",
+          "raml-shapes:DataTypeFragment",
           "doc:Fragment",
           "doc:Unit"
         ],
@@ -2133,8 +2133,8 @@
     ],
     "@context": {
       "@base": "amf://id",
-      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "shacl": "http://www.w3.org/ns/shacl#",
+      "raml-shapes": "http://a.ml/vocabularies/shapes#",
       "doc": "http://a.ml/vocabularies/document#",
       "apiContract": "http://a.ml/vocabularies/apiContract#",
       "core": "http://a.ml/vocabularies/core#"
