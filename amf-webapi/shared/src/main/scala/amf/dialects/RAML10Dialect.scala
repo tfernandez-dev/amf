@@ -2,7 +2,6 @@ package amf.dialects
 
 import amf.core.annotations.Aliases
 import amf.core.metamodel.domain.ModelVocabularies
-import amf.core.metamodel.domain.extensions.PropertyShapeModel
 import amf.core.vocabulary.Namespace
 import amf.core.vocabulary.Namespace.XsdTypes._
 import amf.plugins.document.vocabularies.model.document.{Dialect, Vocabulary}
@@ -17,265 +16,13 @@ object RAML10Dialect {
   val DialectLocation = "file://vocabularies/dialects/raml10.yaml"
 
   // Marking syntactic fields in the AST that are not directly mapped to properties in the mdoel
-  val ImplicitField = (Namespace.Meta + "implicit").iri()
+  val ImplicitField: String = (Namespace.Meta + "implicit").iri()
 
 
   object DialectNodes {
 
-    def commonShapeProperties(nodeId: String): Seq[PropertyMapping] = Seq(
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataTypeNode/required")
-        .withName("required")
-        .withNodePropertyMapping(PropertyShapeModel.MinCount.value.iri())
-        .withLiteralRange(xsdBoolean.iri()),
 
-      // Common properties
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/default")
-        .withName("format")
-        .withNodePropertyMapping(AnyShapeModel.Default.value.iri())
-        .withLiteralRange(xsdAnyType.iri()),
-
-      // TODO: schema and type can be a literal or a nested type
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/schema")
-        .withName("schema")
-        .withEnum(Seq(
-          "string",
-          "number",
-          "integer",
-          "float",
-          "boolean",
-          "array",
-          "file",
-          "object",
-          "date",
-          "date-only",
-          "time-only",
-          "datetime-only",
-          "datetime",
-          "nil"
-        ))
-        .withNodePropertyMapping(ImplicitField)
-        .withLiteralRange(xsdString.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/type")
-        .withName("type")
-        .withEnum(Seq(
-          "string",
-          "number",
-          "integer",
-          "float",
-          "boolean",
-          "array",
-          "file",
-          "object",
-          "date",
-          "date-only",
-          "time-only",
-          "datetime-only",
-          "datetime",
-          "nil"
-        ))
-        .withNodePropertyMapping(ImplicitField)
-        .withLiteralRange(xsdString.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/inherits")
-        .withName("inherits")
-        .withNodePropertyMapping(ImplicitField)
-        .withAllowMultiple(true)
-        .withObjectRange(Seq(
-          DataTypeNodeId
-        )),
-
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/example")
-        .withName("example")
-        .withNodePropertyMapping(AnyShapeModel.Examples.value.iri())
-        .withObjectRange(Seq(
-          ExampleNode.id
-        )),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/examples")
-        .withName("examples")
-        .withNodePropertyMapping(AnyShapeModel.Examples.value.iri())
-        .withMapKeyProperty(ExampleModel.Name.value.iri())
-        .withObjectRange(Seq(
-          ExampleNode.id
-        )),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/displayName")
-        .withName("examples")
-        .withNodePropertyMapping(AnyShapeModel.DisplayName.value.iri())
-        .withLiteralRange(xsdString.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/description")
-        .withName("description")
-        .withNodePropertyMapping(AnyShapeModel.Description.value.iri())
-        .withLiteralRange(xsdString.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/facets")
-        .withName("facets")
-        .withNodePropertyMapping(AnyShapeModel.CustomShapePropertyDefinitions.value.iri())
-        .withLiteralRange(amlAnyNode.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/xml")
-        .withName("xml")
-        .withNodePropertyMapping(AnyShapeModel.XMLSerialization.value.iri())
-        .withObjectRange(Seq(
-          XmlNode.id
-        )),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/DataType/enum")
-        .withName("enum")
-        .withNodePropertyMapping(AnyShapeModel.XMLSerialization.value.iri())
-        .withAllowMultiple(true)
-        .withLiteralRange(amlAnyNode.iri()),
-
-      // Object Type
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ObjectTypeNode/properties")
-        .withName("properties")
-        .withNodePropertyMapping(NodeShapeModel.Properties.value.iri())
-        .withMapKeyProperty(PropertyShapeModel.Name.value.iri())
-        .withObjectRange(Seq(
-          DataTypeNodeId
-        )),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ObjectTypeNode/minProperties")
-        .withName("minProperties")
-        .withNodePropertyMapping(NodeShapeModel.MinProperties.value.iri())
-        .withLiteralRange(xsdInteger.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ObjectTypeNode/maxProperties")
-        .withName("maxProperties")
-        .withNodePropertyMapping(NodeShapeModel.MaxProperties.value.iri())
-        .withLiteralRange(xsdInteger.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ObjectTypeNode/addtionalProperties")
-        .withName("additionalProperties")
-        .withNodePropertyMapping(NodeShapeModel.AdditionalPropertiesSchema.value.iri())
-        .withLiteralRange(xsdBoolean.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ObjectTypeNode/discriminator")
-        .withName("discriminator")
-        .withNodePropertyMapping(NodeShapeModel.Discriminator.value.iri())
-        .withLiteralRange(xsdString.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ObjectTypeNode/discriminatorValue")
-        .withName("discriminatorValue")
-        .withNodePropertyMapping(NodeShapeModel.DiscriminatorValue.value.iri())
-        .withLiteralRange(xsdString.iri()),
-
-      // Array type
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ArrayTypeNode/items")
-        .withName("items")
-        .withNodePropertyMapping(ArrayShapeModel.Items.value.iri())
-        .withAllowMultiple(true)
-        .withObjectRange(Seq(
-          DataTypeNodeId
-        )),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ArrayTypeNode/minItems")
-        .withName("minItems")
-        .withNodePropertyMapping(ArrayShapeModel.MinItems.value.iri())
-        .withLiteralRange(xsdInteger.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ArrayTypeNode/maxItems")
-        .withName("minItems")
-        .withNodePropertyMapping(ArrayShapeModel.MaxItems.value.iri())
-        .withLiteralRange(xsdInteger.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ArrayTypeNode/uniqueItems")
-        .withName("uniqueItems")
-        .withNodePropertyMapping(ArrayShapeModel.UniqueItems.value.iri())
-        .withLiteralRange(xsdBoolean.iri()),
-
-      // Scalar type
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ScalarTypeNode/pattern")
-        .withName("pattern")
-        .withNodePropertyMapping(ScalarShapeModel.Pattern.value.iri())
-        .withLiteralRange(xsdString.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ScalarTypeNode/minLength")
-        .withName("minLength")
-        .withNodePropertyMapping(ScalarShapeModel.MinLength.value.iri())
-        .withLiteralRange(xsdInteger.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ScalarTypeNode/maxLength")
-        .withName("maxLength")
-        .withNodePropertyMapping(ScalarShapeModel.MaxLength.value.iri())
-        .withLiteralRange(xsdInteger.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ScalarTypeNode/minimum")
-        .withName("minimum")
-        .withNodePropertyMapping(ScalarShapeModel.Minimum.value.iri())
-        .withLiteralRange(amlNumber.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ScalarTypeNode/maximum")
-        .withName("maximum")
-        .withNodePropertyMapping(ScalarShapeModel.Maximum.value.iri())
-        .withLiteralRange(amlNumber.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ScalarTypeNode/format")
-        .withName("format")
-        .withNodePropertyMapping(ScalarShapeModel.Format.value.iri())
-        .withEnum(Seq(
-          "int8",
-          "int16",
-          "int32",
-          "int64",
-          "int",
-          "long",
-          "float",
-          "double"
-        ))
-        .withLiteralRange(xsdString.iri()),
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/ScalarTypeNode/multipleOf")
-        .withName("multipleOf")
-        .withNodePropertyMapping(ScalarShapeModel.MultipleOf.value.iri())
-        .withLiteralRange(amlNumber.iri()),
-
-      // file types
-
-      PropertyMapping()
-        .withId(DialectLocation + s"#/declarations/$nodeId/FileTypeNode/fileTypes")
-        .withName("fileTypes")
-        .withNodePropertyMapping(FileShapeModel.FileTypes.value.iri())
-        .withLiteralRange(amlNumber.iri()),
-    )
-
-    val XmlNode = NodeMapping()
+    val XmlNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/XmlNode")
       .withName("XmlNode")
       .withNodeTypeMapping(XMLSerializerModel.`type`.head.iri())
@@ -313,7 +60,7 @@ object RAML10Dialect {
 
       ))
 
-    val ExampleNode = NodeMapping()
+    val ExampleNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/ExampleNode")
       .withName("ExampleNode")
       .withNodeTypeMapping(ExampleModel.`type`.head.iri())
@@ -346,14 +93,7 @@ object RAML10Dialect {
       ))
 
 
-    val DataTypeNodeId = DialectLocation + "#/declarations/DataTypeNode"
-    val DataTypeNode = NodeMapping()
-      .withId(DataTypeNodeId)
-      .withName("DataTypeNode")
-      .withNodeTypeMapping(ParameterModel.`type`.head.iri())
-      .withPropertiesMapping(commonShapeProperties("DataTypeNode"))
-
-    val DocumentationNode = NodeMapping()
+    val DocumentationNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/DocumentationNode")
       .withName("DocumentationNode")
       .withNodeTypeMapping(CreativeWorkModel.`type`.head.iri())
@@ -375,7 +115,7 @@ object RAML10Dialect {
 
       ))
 
-    val PayloadNode = NodeMapping()
+    val PayloadNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/PayloadNode")
       .withName("PayloadNode")
       .withNodeTypeMapping(PayloadModel.`type`.head.iri())
@@ -386,12 +126,10 @@ object RAML10Dialect {
           .withId(DialectLocation + s"#/declarations/PayloadNode/mediaType")
           .withName("mediaType")
           .withNodePropertyMapping(PayloadModel.MediaType.value.iri())
-          .withObjectRange(Seq(
-            DataTypeNodeId
-          ))
-      ) ++ commonShapeProperties("PayloadNode"))
+          .withObjectRange(RAML10ParametersMappings.parametersDeclarationsIds)
+      ) ++ RAML10DataTypesMappings.shapeProperties) // todo same that in parameters? one for each type?
 
-    val ResourceTypeNode = NodeMapping()
+    val ResourceTypeNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/ResourceTypeNode")
       .withName("ResourceTypeNode")
       .withNodeTypeMapping(ResourceTypeModel.`type`.head.iri())
@@ -399,7 +137,7 @@ object RAML10Dialect {
 
       ))
 
-    val TraitNode = NodeMapping()
+    val TraitNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/TraitNode")
       .withName("TraitNode")
       .withNodeTypeMapping(TraitModel.`type`.head.iri())
@@ -407,7 +145,7 @@ object RAML10Dialect {
 
       ))
 
-    val ResponseNode = NodeMapping()
+    val ResponseNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/ResponseNode")
       .withName("ResponseNode")
       .withNodeTypeMapping(ResponseModel.`type`.head.iri())
@@ -424,9 +162,7 @@ object RAML10Dialect {
           .withName("headers")
           .withNodePropertyMapping(ResponseModel.Headers.value.iri())
           .withMapKeyProperty(ParameterModel.Name.value.iri())
-          .withObjectRange(Seq(
-            DataTypeNodeId
-          )),
+          .withObjectRange(RAML10ParametersMappings.parametersDeclarationsIds),
 
         PropertyMapping()
           .withId(DialectLocation + "#/declarations/ResponseNode/body")
@@ -438,7 +174,7 @@ object RAML10Dialect {
           ))
       ))
 
-    val MethodNode = NodeMapping()
+    val MethodNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/MethodNode")
       .withName("MethodNode")
       .withNodeTypeMapping(OperationModel.`type`.head.iri())
@@ -461,18 +197,14 @@ object RAML10Dialect {
           .withName("queryParameters")
           .withNodePropertyMapping(RequestModel.QueryParameters.value.iri())
           .withMapKeyProperty(ParameterModel.Name.value.iri())
-          .withObjectRange(Seq(
-            DataTypeNodeId
-          )),
+          .withObjectRange(RAML10ParametersMappings.parametersDeclarationsIds),
 
         PropertyMapping()
           .withId(DialectLocation + "#/declarations/MethodNode/Request/headers")
           .withName("headers")
           .withNodePropertyMapping(RequestModel.Headers.value.iri())
           .withMapKeyProperty(ParameterModel.Name.value.iri())
-          .withObjectRange(Seq(
-            DataTypeNodeId
-          )),
+          .withObjectRange(RAML10ParametersMappings.parametersDeclarationsIds),
 
         PropertyMapping()
           .withId(DialectLocation + "#/declarations/MethodNode/Request/queryString")
@@ -488,9 +220,7 @@ object RAML10Dialect {
           .withName("responses")
           .withNodePropertyMapping(OperationModel.Request.value.iri())
           .withMapKeyProperty(ParameterModel.Name.value.iri())
-          .withObjectRange(Seq(
-            DataTypeNodeId
-          )),
+          .withObjectRange(RAML10ParametersMappings.parametersDeclarationsIds),
 
         PropertyMapping()
           .withId(DialectLocation + "#/declarations/MethodNode/Request/body")
@@ -514,7 +244,7 @@ object RAML10Dialect {
           .withLiteralRange(xsdString.iri()),
       ))
 
-    val ResourceNode = NodeMapping()
+    val ResourceNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/ResourceNode")
       .withName("ResourceNode")
       .withNodeTypeMapping(EndPointModel.`type`.head.iri())
@@ -598,13 +328,11 @@ object RAML10Dialect {
           .withName("uriParameters")
           .withNodePropertyMapping(EndPointModel.Parameters.value.iri())
           .withMapKeyProperty(ParameterModel.Name.value.iri())
-          .withObjectRange(Seq(
-            DataTypeNodeId
-          ))
+          .withObjectRange(RAML10ParametersMappings.parametersDeclarationsIds)
 
       ))
 
-    val RootNode = NodeMapping()
+    val RootNode: NodeMapping = NodeMapping()
       .withId(DialectLocation + "#/declarations/RootNode")
       .withName("RootNode")
       .withNodeTypeMapping(WebApiModel.`type`.head.iri())
@@ -640,9 +368,7 @@ object RAML10Dialect {
           .withName("baseUriParameters")
           .withNodePropertyMapping(ServerModel.Variables.value.iri())
           .withMapKeyProperty(ParameterModel.Name.value.iri())
-          .withObjectRange(Seq(
-            DataTypeNodeId
-          )),
+          .withObjectRange(RAML10ParametersMappings.parametersDeclarationsIds),
 
         PropertyMapping()
           .withId(DialectLocation + "#/declarations/RootNode/protocols")
@@ -692,7 +418,7 @@ object RAML10Dialect {
   }
 
   // Dialect
-  val dialect = {
+  val dialect: Dialect = {
     val d = Dialect()
       .withId(DialectLocation)
       .withName("RAML")
@@ -700,9 +426,17 @@ object RAML10Dialect {
       .withLocation(DialectLocation)
       .withId(DialectLocation)
       .withDeclares(Seq(
-
-
-      ))
+        DialectNodes.XmlNode,
+        DialectNodes.ExampleNode,
+        DialectNodes.DocumentationNode,
+        DialectNodes.PayloadNode,
+        DialectNodes.ResourceTypeNode,
+        DialectNodes.TraitNode,
+        DialectNodes.ResponseNode,
+        DialectNodes.MethodNode,
+        DialectNodes.ResourceNode,
+        DialectNodes.RootNode
+      ) ++ RAML10DataTypesMappings.typesDeclarations ++ RAML10ParametersMappings.parametersDeclarations)
 
     d.withExternals(Seq(
 
