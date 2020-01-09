@@ -1,0 +1,38 @@
+{
+  "$comment": "this schema is not valid",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Father"
+        },
+        {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "integer"
+            }
+          },
+          "minProperties": 2
+        }
+      ]
+    },
+    "Father": {
+      "type": "object",
+      "required": [
+        "a"
+      ],
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      },
+      "minProperties": 4
+    }
+  }
+}

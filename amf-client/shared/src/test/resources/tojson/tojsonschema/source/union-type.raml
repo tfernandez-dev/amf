@@ -1,0 +1,20 @@
+#%RAML 1.0
+title: simple object
+types:
+  obj1:
+    type: object
+    properties:
+      a: string
+
+  obj2:
+    type: object
+    properties:
+      b: number
+
+  root:
+    type: obj1 | obj2
+
+
+
+
+

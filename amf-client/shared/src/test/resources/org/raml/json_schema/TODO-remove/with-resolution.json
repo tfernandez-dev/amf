@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "complex-inherits",
+        "simple-union",
+        "internalRef1",
+        "internalRef2",
+        "externalRef1",
+        "externalRef2"
+      ],
+      "properties": {
+        "complex-inherits": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "from-inlined"
+          ],
+          "properties": {
+            "from-inlined": {
+              "type": "number"
+            }
+          }
+        },
+        "simple-union": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "internalRef1": {
+          "type": "number"
+        },
+        "internalRef2": {
+          "type": "number"
+        },
+        "externalRef1": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "a",
+            "b"
+          ],
+          "properties": {
+            "a": {
+              "type": "string"
+            },
+            "b": {
+              "type": "integer"
+            }
+          }
+        },
+        "externalRef2": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "a",
+            "b"
+          ],
+          "properties": {
+            "a": {
+              "type": "string"
+            },
+            "b": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

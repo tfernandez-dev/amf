@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Number-above-2"
+        },
+        {
+          "type": "number",
+          "maximum": 4.0
+        }
+      ]
+    },
+    "Number-above-2": {
+      "type": "number",
+      "minimum": 2.0
+    }
+  }
+}

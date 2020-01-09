@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "$ref": "#/definitions/number-type"
+    },
+    "number-type": {
+      "type": "number"
+    }
+  }
+}

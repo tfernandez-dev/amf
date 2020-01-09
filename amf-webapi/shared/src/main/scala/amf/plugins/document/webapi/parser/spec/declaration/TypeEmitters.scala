@@ -6,33 +6,33 @@ import amf.core.emitter._
 import amf.core.metamodel.Field
 import amf.core.metamodel.Type.Bool
 import amf.core.metamodel.domain.extensions.PropertyShapeModel
-import amf.core.metamodel.domain.{ModelDoc, ShapeModel, ModelVocabularies}
+import amf.core.metamodel.domain.{ModelDoc, ModelVocabularies, ShapeModel}
 import amf.core.model.DataType
-import amf.core.model.document.{EncodesModel, ExternalFragment, BaseUnit}
+import amf.core.model.document.{BaseUnit, EncodesModel, ExternalFragment}
 import amf.core.model.domain._
 import amf.core.model.domain.extensions.PropertyShape
 import amf.core.parser.Position.ZERO
-import amf.core.parser.{Position, Value, FieldEntry, Annotations, Fields}
+import amf.core.parser.{Annotations, FieldEntry, Fields, Position, Value}
 import amf.core.remote.Vendor
 import amf.core.utils.AmfStrings
 import amf.core.vocabulary.Namespace
 import amf.plugins.document.webapi.annotations._
 import amf.plugins.document.webapi.contexts._
-import amf.plugins.document.webapi.contexts.emitter.oas.{JsonSchemaEmitterContext, OasSpecEmitterContext}
+import amf.plugins.document.webapi.contexts.emitter.oas.{JsonSchemaEmitterContext, NamedShape, OasSpecEmitterContext}
 import amf.plugins.document.webapi.contexts.emitter.raml.{RamlScalarEmitter, RamlSpecEmitterContext}
 import amf.plugins.document.webapi.parser.spec._
 import amf.plugins.document.webapi.parser.spec.domain.{MultipleExampleEmitter, SingleExampleEmitter}
 import amf.plugins.document.webapi.parser.spec.raml.CommentEmitter
-import amf.plugins.document.webapi.parser.{RamlTypeDefStringValueMatcher, OasTypeDefMatcher, RamlTypeDefMatcher}
+import amf.plugins.document.webapi.parser.{OasTypeDefMatcher, RamlTypeDefMatcher, RamlTypeDefStringValueMatcher}
 import amf.plugins.domain.shapes.metamodel._
 import amf.plugins.domain.shapes.models.TypeDef._
 import amf.plugins.domain.shapes.models._
-import amf.plugins.domain.shapes.parser.{TypeDefYTypeMapping, TypeDefXsdMapping, XsdTypeDefMapping}
+import amf.plugins.domain.shapes.parser.{TypeDefXsdMapping, TypeDefYTypeMapping, XsdTypeDefMapping}
 import amf.plugins.domain.webapi.annotations.TypePropertyLexicalInfo
 import amf.plugins.domain.webapi.metamodel.IriTemplateMappingModel
 import amf.plugins.features.validation.CoreValidations.ResolutionValidation
 import org.yaml.model.YDocument.{EntryBuilder, PartBuilder}
-import org.yaml.model.{YType, YScalar, YNode}
+import org.yaml.model.{YNode, YScalar, YType}
 
 import scala.collection.immutable.ListMap
 import scala.collection.mutable
@@ -79,16 +79,23 @@ case class RamlNamedTypeEmitter(shape: AnyShape,
 }
 
 case class OasNamedTypeEmitter(shape: Shape,
+                               customName: Option[String] = None,
                                ordering: SpecOrdering,
                                references: Seq[BaseUnit],
                                pointer: Seq[String] = Nil)(implicit spec: OasSpecEmitterContext)
     extends EntryEmitter {
   override def emit(b: EntryBuilder): Unit = {
-    val name = shape.name.option().getOrElse("schema") // this used to throw an exception, but with the resolution optimizacion, we use the father shape, so it could have not name (if it's from an endpoint for example, and you want to write a new single shape, like a json schema)
+    val name = customName.getOrElse(shape.name.option().getOrElse("schema")) // this used to throw an exception, but with the resolution optimizacion, we use the father shape, so it could have not name (if it's from an endpoint for example, and you want to write a new single shape, like a json schema)
     b.entry(name, OasTypePartEmitter(shape, ordering, references = references, pointer = pointer :+ name).emit(_))
   }
 
   override def position(): Position = pos(shape.annotations)
+}
+
+object OasNamedTypeEmitter {
+  def apply(shape: Shape, ordering: SpecOrdering, references: Seq[BaseUnit], pointer: Seq[String])(
+      implicit spec: OasSpecEmitterContext): OasNamedTypeEmitter =
+    new OasNamedTypeEmitter(shape, None, ordering, references, pointer)(spec)
 }
 
 case class Raml10TypePartEmitter(shape: Shape,
@@ -1327,7 +1334,7 @@ case class OasTypeEmitter(shape: Shape,
                           pointer: Seq[String] = Nil,
                           schemaPath: Seq[(String, String)] = Nil,
                           isHeader: Boolean = false)(implicit spec: OasSpecEmitterContext) {
-  def emitters(): Seq[Emitter] = {
+  def emitters(): Seq[EntryEmitter] = {
 
     // Adjusting JSON Schema  pointer
     val nextPointerStr = s"#${pointer.map(p => s"/$p").mkString}"
@@ -1343,7 +1350,16 @@ case class OasTypeEmitter(shape: Shape,
     }
 
     shape match {
-      case l: Linkable if l.isLink => Seq(OasTagToReferenceEmitter(shape, l.linkLabel.option(), Nil))
+      case l: Linkable if l.isLink =>
+        val element: DomainElement = l.effectiveLinkTarget()
+        val shape                  = element.asInstanceOf[Shape]
+        // TODO handle cases when linkLabel has '/'
+        val name: String = l.linkLabel.option().getOrElse(shape.name.option().getOrElse("default"))
+        spec.declarationQueue += NamedShape(name, shape)
+        val label = OasDefinitions.appendDefinitionsPrefix(name)
+        Seq(MapEntryEmitter("$ref", label))
+      case sibling: Shape if !ignored.contains(NodeShapeModel.Inherits) && sibling.inherits.nonEmpty =>
+        JsonSchemaInheritanceEmitter(sibling, ordering, references, pointer, schemaPath).emitters()
       case schema: SchemaShape =>
         val copiedNode = schema.copy(fields = schema.fields.filter(f => !ignored.contains(f._1))) // node (amf object) id get loses
         OasSchemaShapeEmitter(copiedNode, ordering).emitters()
@@ -1393,6 +1409,7 @@ case class OasTypeEmitter(shape: Shape,
     }
   }
 
+  //TODO este se puede borrar
   def entries(): Seq[EntryEmitter] = emitters() collect { case e: EntryEmitter => e }
 
   def nilUnion(union: UnionShape): Boolean =
@@ -1600,6 +1617,73 @@ case class OasAndConstraintEmitter(shape: Shape,
   }
 
   override def position(): Position = emitters.map(_.position()).sortBy(_.line).headOption.getOrElse(ZERO)
+}
+
+case class JsonSchemaInheritanceEmitter(
+    shape: Shape,
+    ordering: SpecOrdering,
+    references: Seq[BaseUnit],
+    pointer: Seq[String] = Nil,
+    schemaPath: Seq[(String, String)] = Nil)(implicit spec: OasSpecEmitterContext) {
+  def emitters(): Seq[EntryEmitter] = {
+    if (isSimpleInheritance) {
+      val inherited = shape.inherits.head
+      OasTypeEmitter(inherited, ordering, references = references, pointer = pointer, schemaPath = schemaPath)
+        .emitters()
+    } else {
+//      resolvingShapes() this is an alternative which would find a minShape from the shapes and its inherited shapes
+      allOfEmitter()
+    }
+  }
+
+//  def resolvingShapes(): Seq[EntryEmitter] = {
+//    var accShape = shape
+//    shape.inherits.foreach { superNode =>
+//      val effective = superNode match {
+//        case l: Linkable if l.isLink => l.effectiveLinkTarget().asInstanceOf[Shape]
+//        case _ => superNode
+//      }
+//      val newMinShape = MinShapeResolver.minShape(accShape, effective)
+//      accShape = newMinShape
+//    }
+//    accShape.fields.removeField(ShapeModel.Inherits)
+//    OasTypeEmitter(accShape, ordering, references = references, pointer = pointer, schemaPath = schemaPath)
+//      .emitters()
+//  }
+
+  def allOfEmitter(): Seq[EntryEmitter] = {
+    val emitters = ListBuffer[PartEmitter]()
+    emitters ++= shape.inherits.map(OasTypePartEmitter(_, ordering, references = references))
+    if (!isSimpleShape)
+      emitters += OasTypePartEmitter(shape, ordering, references = references, ignored = Seq(NodeShapeModel.Inherits))
+    Seq(OasAllOfEmitter(emitters, ordering))
+  }
+
+  def isSimpleInheritance: Boolean = shape.inherits.size == 1 && isSimpleShape
+
+  lazy val whitelist: Seq[Field] =
+    Seq(ShapeModel.Inherits, ShapeModel.Name, ScalarShapeModel.DataType, NodeShapeModel.Closed)
+  lazy val shapeFields: List[Field] = shape.fields.fieldsMeta()
+
+  /**
+    * shape has no information that is worth emitting, everything is contained in its inherited shapes
+    */
+  def isSimpleShape: Boolean = shapeFields.forall(whitelist.contains(_))
+}
+
+case class OasAllOfEmitter(emitters: Seq[PartEmitter], ordering: SpecOrdering)(implicit spec: OasSpecEmitterContext)
+    extends EntryEmitter {
+
+  override def emit(b: EntryBuilder): Unit = {
+    b.entry(
+      "allOf",
+      _.list { b =>
+        traverse(ordering.sorted(emitters), b)
+      }
+    )
+  }
+
+  override def position(): Position = emitters.headOption.map(_.position()).getOrElse(ZERO)
 }
 
 case class OasXoneConstraintEmitter(shape: Shape,
@@ -1928,7 +2012,8 @@ case class OasNodeShapeEmitter(node: NodeShape,
 
     fs.entry(NodeShapeModel.Dependencies).map(f => result += OasShapeDependenciesEmitter(f, ordering, properties))
 
-    fs.entry(NodeShapeModel.Inherits).map(f => result += OasShapeInheritsEmitter(f, ordering, references))
+    //TODO this is handled in the type emitter, as inheritance is present in all shapes
+//    fs.entry(NodeShapeModel.Inherits).map(f => result += OasShapeInheritsEmitter(f, ordering, references))
 
     result
   }

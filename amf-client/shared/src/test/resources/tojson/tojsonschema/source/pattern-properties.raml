@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: simple object
+types:
+  Father:
+    type: object
+    properties:
+      //: # force all additional properties to be a string
+        type: string
+
+  root:
+    type: Father
+    properties:
+      name: integer
+      dni: integer
+
+
+
+
+

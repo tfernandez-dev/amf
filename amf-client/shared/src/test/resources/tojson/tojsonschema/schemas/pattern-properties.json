@@ -1,0 +1,37 @@
+{
+  "$comment": "invalid schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Father"
+        },
+        {
+          "type": "object",
+          "required": [
+            "name",
+            "dni"
+          ],
+          "properties": {
+            "name": {
+              "type": "integer"
+            },
+            "dni": {
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "Father": {
+      "type": "object",
+      "patternProperties": {
+        "^.*$": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

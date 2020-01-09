@@ -54,7 +54,34 @@ case class OasDeclaredTypesEmitters(types: Seq[Shape], references: Seq[BaseUnit]
           _))
     )
   }
+}
 
+// TODO ver de meter en factory y que el context tambien sea propio de json schema
+case class JsonSchemaDeclaredTypesEmitters(types: Seq[Shape], references: Seq[BaseUnit], ordering: SpecOrdering)(
+    implicit spec: OasSpecEmitterContext)
+    extends DeclaredTypesEmitters(types, references, ordering) {
+  override def emitTypes(b: EntryBuilder): Unit = {
+    b.entry(
+      "definitions",
+      _.obj { entryBuilder =>
+        val declarationsQueue = spec.declarationQueue
+        types.foreach { s =>
+          declarationsQueue.registerEmittedShape(s.id)
+        }
+        traverse(
+          ordering.sorted(types.map(OasNamedTypeEmitter(_, ordering, references, pointer = Seq("definitions")))),
+          entryBuilder)
+        while (declarationsQueue.nonEmpty()) {
+          val namedShape = declarationsQueue.dequeue()
+          OasNamedTypeEmitter(namedShape.shape,
+                              Some(namedShape.name),
+                              ordering,
+                              references,
+                              pointer = Seq("definitions")).emit(entryBuilder)
+        }
+      }
+    )
+  }
 }
 
 abstract class DeclaredTypesEmitters(types: Seq[Shape], references: Seq[BaseUnit], ordering: SpecOrdering)(

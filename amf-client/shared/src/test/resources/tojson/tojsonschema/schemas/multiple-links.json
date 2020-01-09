@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "type": "object",
+      "required": [
+        "internalRef1",
+        "internalRef2",
+        "externalRef1",
+        "externalRef2",
+        "otherExtRef1",
+        "otherExtRef2"
+      ],
+      "properties": {
+        "internalRef1": {
+          "$ref": "#/definitions/number-type"
+        },
+        "internalRef2": {
+          "$ref": "#/definitions/number-type"
+        },
+        "externalRef1": {
+          "$ref": "#/definitions/data-type.raml"
+        },
+        "externalRef2": {
+          "$ref": "#/definitions/data-type.raml"
+        },
+        "otherExtRef1": {
+          "$ref": "#/definitions/other-data-type.raml"
+        },
+        "otherExtRef2": {
+          "$ref": "#/definitions/other-data-type.raml"
+        }
+      }
+    },
+    "number-type": {
+      "type": "number"
+    },
+    "data-type.raml": {
+      "type": "object",
+      "required": [
+        "a",
+        "b"
+      ],
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "integer"
+        }
+      }
+    },
+    "other-data-type.raml": {
+      "type": "object",
+      "required": [
+        "c"
+      ],
+      "properties": {
+        "c": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

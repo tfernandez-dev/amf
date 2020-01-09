@@ -26,6 +26,7 @@ import amf.core.remote.{Aml, Oas20, Raml10}
 import amf.core.resolution.pipelines.ResolutionPipeline
 import amf.core.vocabulary.Namespace
 import amf.core.vocabulary.Namespace.Xsd
+import amf.io.FileAssertionTest
 import amf.plugins.document.Vocabularies
 import org.mulesoft.common.io.{LimitReachedException, LimitedStringBuffer}
 import org.yaml.builder.JsonOutputBuilder
@@ -33,7 +34,7 @@ import org.yaml.parser.JsonParser
 
 import scala.concurrent.{ExecutionContext, Future}
 
-trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps {
+trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps with FileAssertionTest {
 
   override implicit val executionContext: ExecutionContext = ExecutionContext.Implicits.global
 
@@ -1940,6 +1941,133 @@ trait WrapperTests extends AsyncFunSuite with Matchers with NativeOps {
     } yield {
       println(report.toString())
       assert(!report.conforms)
+    }
+  }
+
+  test("Unresolved type to schema - multiple links") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/simple-refs/multiple-links.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/multiple-links.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - simple inheritance object") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/simple-inheritance-obj.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/simple-inheritance-obj.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - simple inheritance number") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/simple-inheritance-number.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/simple-inheritance-number.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - simple inheritance array") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/simple-inheritance-array.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/simple-inheritance-array.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - union type") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/union-type.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/union-type.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - type specialization with object type") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/type-specialization-obj.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/type-specialization-obj.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - type specialization with union") {
+    val file =
+      "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/type-specialization-with-union.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/type-specialization-with-union.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - type specialization with number type") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/type-specialization-number.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/type-specialization-number.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - multiple inheritance") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/multiple-inheritance.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/multiple-inheritance.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - multiple inheritance with union") {
+    val file =
+      "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/mulitple-inheritance-with-union.raml"
+    val golden =
+      "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/multiple-inheritance-with-union.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - recursive shape") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/recursive-shapes.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/recursive-shapes.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - nested links") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/nested-links.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/nested-links.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - defining additional properties") {
+    val file =
+      "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/defining-additional-properties.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/defining-additional-properties.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - pattern properties") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/pattern-properties.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/pattern-properties.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - min max properties") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/min-max-properties.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/min-max-properties.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - min max items") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/min-max-items.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/min-max-items.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  test("Unresolved type to schema - emission of enum values") {
+    val file   = "file://amf-client/shared/src/test/resources/tojson/tojsonschema/source/enums.raml"
+    val golden = "amf-client/shared/src/test/resources/tojson/tojsonschema/schemas/enums.json"
+    unresolvedTypeToSchema(file, golden)
+  }
+
+  private def unresolvedTypeToSchema(file: String, golden: String) = {
+    for {
+      _    <- AMF.init().asFuture
+      unit <- new Raml10Parser().parseFileAsync(file).asFuture
+      shape <- unit.asInstanceOf[DeclaresModel].declares.asSeq.collectFirst {
+        case s: AnyShape if s.name.is("root") => s
+      } match {
+        case Some(anyShape: AnyShape) =>
+          Future {
+            anyShape.toJsonSchema
+          }
+        case Some(_) => throw new AssertionError("Wrong type declared $other")
+        case None    => throw new AssertionError("Model with empty declarations")
+      }
+      assertion <- writeTemporaryFile(golden)(shape)
+        .flatMap(assertDifferences(_, s"$golden"))
+    } yield {
+      assertion
     }
   }
 

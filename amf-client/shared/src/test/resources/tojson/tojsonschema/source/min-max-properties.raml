@@ -1,0 +1,20 @@
+#%RAML 1.0
+title: simple object
+types:
+  Father:
+    type: object
+    properties:
+      a:
+        type: string
+    minProperties: 4
+
+  root:
+    type: Father
+    properties:
+      name: integer
+    minProperties: 2
+
+
+
+
+

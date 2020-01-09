@@ -1,0 +1,29 @@
+#%RAML 1.0
+title: simple object
+types:
+  obj-type:
+    type: object
+
+  number-type:
+    type: number
+
+  str-type:
+    type: string
+
+  root:
+    type: object
+    properties:
+      complex-inherits:
+        type: obj-type
+        properties:
+          from-inlined: number
+      simple-union:
+        type: number-type | str-type
+      internalRef1: number-type
+      internalRef2: number-type
+      externalRef1: !include data-type.raml
+      externalRef2: !include data-type.raml
+
+
+
+

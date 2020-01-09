@@ -21,6 +21,7 @@ import amf.plugins.domain.webapi.models.{EndPoint, Operation, Parameter, WebApi}
 import org.yaml.model.YDocument.PartBuilder
 
 import scala.collection.mutable
+import scala.collection.mutable.ListBuffer
 
 abstract class OasSpecEmitterFactory(implicit val spec: OasSpecEmitterContext) extends SpecEmitterFactory {
   override def tagToReferenceEmitter: (DomainElement, Option[String], Seq[BaseUnit]) => TagToReferenceEmitter =
@@ -59,7 +60,7 @@ abstract class OasSpecEmitterFactory(implicit val spec: OasSpecEmitterContext) e
   def headerEmitter: (Parameter, SpecOrdering, Seq[BaseUnit]) => EntryEmitter = OasHeaderEmitter.apply
 
   override def declaredTypesEmitter: (Seq[Shape], Seq[BaseUnit], SpecOrdering) => EntryEmitter =
-    OasDeclaredTypesEmitters.apply
+    JsonSchemaDeclaredTypesEmitters.apply // TODO esto puede quedar en un factory de json schema
 }
 
 case class Oas2SpecEmitterFactory(override val spec: OasSpecEmitterContext) extends OasSpecEmitterFactory()(spec) {
@@ -102,9 +103,11 @@ case class Oas3SpecEmitterFactory(override val spec: OasSpecEmitterContext) exte
     Oas3EndPointServersEmitter(endpoint, f, ordering, references)(spec)
 }
 
-abstract class OasSpecEmitterContext(eh: ErrorHandler,
-                                     refEmitter: RefEmitter = OasRefEmitter,
-                                     options: ShapeRenderOptions = ShapeRenderOptions())
+abstract class OasSpecEmitterContext(
+    eh: ErrorHandler,
+    refEmitter: RefEmitter = OasRefEmitter,
+    options: ShapeRenderOptions = ShapeRenderOptions(),
+    val declarationQueue: ShapeQueue = ShapeQueue()) // TODO this should be in JsonSchemaCtx
     extends SpecEmitterContext(eh, refEmitter, options) {
 
   def schemasDeclarationsPath: String
@@ -119,6 +122,20 @@ abstract class OasSpecEmitterContext(eh: ErrorHandler,
 
   val anyOfKey: String = "union".asOasExtension
 }
+case class NamedShape(name: String, shape: Shape)
+
+case class ShapeQueue(queue: mutable.Queue[NamedShape] = new mutable.Queue(),
+                      queuedIds: ListBuffer[String] = new ListBuffer()) {
+  def +=(named: NamedShape): Unit =
+    if (!queuedIds.contains(named.shape.id)) {
+      queue.+=(named)
+      queuedIds += named.shape.id
+    }
+  def registerEmittedShape(id: String): Unit = queuedIds += id
+  def nonEmpty(): Boolean                    = queue.nonEmpty
+  def dequeue(): NamedShape                  = queue.dequeue
+}
+
 final case class JsonSchemaEmitterContext(override val eh: ErrorHandler,
                                           override val options: ShapeRenderOptions = ShapeRenderOptions())
     extends Oas2SpecEmitterContext(eh = eh, options = options) {

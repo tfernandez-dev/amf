@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/obj1"
+        },
+        {
+          "$ref": "#/definitions/obj2"
+        }
+      ]
+    },
+    "obj1": {
+      "type": "object",
+      "required": [
+        "a"
+      ],
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      }
+    },
+    "obj2": {
+      "type": "object",
+      "required": [
+        "b"
+      ],
+      "properties": {
+        "b": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

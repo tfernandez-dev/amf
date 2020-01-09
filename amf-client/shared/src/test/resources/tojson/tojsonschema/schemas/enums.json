@@ -1,0 +1,28 @@
+{
+  "$comment": "invalid schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Father"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "three",
+            "four"
+          ]
+        }
+      ]
+    },
+    "Father": {
+      "type": "string",
+      "enum": [
+        "one",
+        "two"
+      ]
+    }
+  }
+}

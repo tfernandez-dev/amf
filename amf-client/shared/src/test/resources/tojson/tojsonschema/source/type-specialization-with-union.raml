@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: simple object
+types:
+  Person:
+    type: object
+    properties:
+      name:
+        type: string
+
+  Animal:
+    type: object
+    properties:
+      color: string
+
+  root:
+    type: Person | Animal
+    properties:
+      id:
+        type: string
+
+
+
+
+

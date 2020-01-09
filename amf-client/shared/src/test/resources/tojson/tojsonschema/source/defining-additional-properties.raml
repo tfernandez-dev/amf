@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: simple object
+types:
+  Father:
+    type: object
+    properties:
+      other: string
+
+  root:
+    type: Father
+    properties:
+      name: string
+      dni: integer
+    additionalProperties: false
+
+
+
+
+

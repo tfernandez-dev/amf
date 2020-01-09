@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/root",
+  "definitions": {
+    "root": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Father"
+        },
+        {
+          "type": "object",
+          "required": [
+            "name",
+            "dni"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "dni": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Father": {
+      "type": "object",
+      "required": [
+        "other"
+      ],
+      "properties": {
+        "other": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
