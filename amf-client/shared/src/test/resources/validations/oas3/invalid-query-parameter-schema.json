@@ -13,7 +13,12 @@
             "name": "filename",
             "required": true
           }
-        ]
+        ],
+        "responses": {
+          "default": {
+            "description": "asdasd"
+          }
+        }
       }
     }
   }
