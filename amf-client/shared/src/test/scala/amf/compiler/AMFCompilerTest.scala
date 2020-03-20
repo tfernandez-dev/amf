@@ -139,7 +139,7 @@ class AMFCompilerTest extends AsyncFunSuite with CompilerTestBuilder {
     amf.core.AMF.init()
     object FeaturePlugin extends AMFFeaturePlugin {
 
-      override def init(): Future[AMFPlugin] = Future { this }
+      override def init(): Future[AMFPlugin] = Future.successful(this)
 
       var invocations: mutable.ListBuffer[String] = mutable.ListBuffer()
 
@@ -193,7 +193,7 @@ class AMFCompilerTest extends AsyncFunSuite with CompilerTestBuilder {
       d.encodes.asInstanceOf[WebApi].name.value() should be("test")
   }
 
-  private def assertUses(uses: YMapEntry, references: Seq[BaseUnit]) = {
+  private def assertUses(uses: YMapEntry, references: Seq[BaseUnit]): Assertion = {
     uses.key.as[String] should include("uses")
 
     val libraries = uses.value.as[YMap]
@@ -206,7 +206,7 @@ class AMFCompilerTest extends AsyncFunSuite with CompilerTestBuilder {
     libraries.entries.length should be(references.count(!_.isInstanceOf[ExternalFragment]))
   }
 
-  private def assertCycles(syntax: Syntax, hint: Hint) = {
+  private def assertCycles(syntax: Syntax, hint: Hint): Future[Assertion] = {
     recoverToExceptionIf[Exception] {
       Validation(platform)
         .flatMap(v => {

@@ -40,5 +40,5 @@ object DataShapesDomainPlugin extends AMFDomainPlugin {
     ExampleModel
   )
 
-  override def init(): Future[AMFPlugin] = Future { this }
+  override def init(): Future[AMFPlugin] = Future.successful(this)
 }

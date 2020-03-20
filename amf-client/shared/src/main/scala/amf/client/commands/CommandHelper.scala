@@ -78,7 +78,7 @@ trait CommandHelper {
     } else if (config.resolve) {
       Future { RuntimeResolver.resolve(vendor, unit, ResolutionPipeline.DEFAULT_PIPELINE, UnhandledErrorHandler) }
     } else {
-      Future { unit }
+      Future.successful(unit)
     }
   }
 

@@ -233,10 +233,7 @@ object AMFValidatorPlugin
         val validations = computeValidations(profileName)
         domainPlugin
           .validationRequest(model, profileName, validations, platform, env, resolved)
-      case _ =>
-        Future {
-          profileNotFoundWarningReport(model, profileName)
-        }
+      case _ => Future.successful(profileNotFoundWarningReport(model, profileName))
     }
   }
 

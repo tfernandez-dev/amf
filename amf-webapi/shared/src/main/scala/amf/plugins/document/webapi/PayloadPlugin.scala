@@ -19,7 +19,6 @@ import amf.plugins.domain.webapi.WebAPIDomainPlugin
 import org.yaml.builder.{DocBuilder, YDocumentBuilder}
 import org.yaml.model.{YDocument, YMap, YScalar}
 
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 object PayloadPlugin extends AMFDocumentPlugin {
@@ -109,7 +108,7 @@ object PayloadPlugin extends AMFDocumentPlugin {
                        pipelineId: String = ResolutionPipeline.DEFAULT_PIPELINE): BaseUnit =
     new ValidationResolutionPipeline(AmfProfile, errorHandler).resolve(unit)
 
-  override def init(): Future[AMFPlugin] = Future { this }
+  override def init(): Future[AMFPlugin] = Future.successful(this)
 
   /**
     * Does references in this type of documents be recursive?
