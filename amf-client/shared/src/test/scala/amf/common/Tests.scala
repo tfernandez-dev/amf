@@ -60,11 +60,6 @@ object Tests {
   def checkDiff(actual: String, expected: String): Unit = {
     val diffs: List[Diff.Delta[String]] = Diff.trimming.ignoreEmptyLines.diff(actual, expected)
     if (diffs.nonEmpty) {
-      println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-      println(expected)
-      println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-      println(actual)
-      println("==============================================")
       fail("\n" + makeString(diffs))
     }
   }
@@ -146,7 +141,7 @@ object Tests {
   def checkLinesDiff(a: AsyncFile, e: AsyncFile, encoding: String = Utf8): Future[Assertion] = {
     a.read(encoding).zip(e.read(encoding)).flatMap {
       case (actual, expected) =>
-        val actualLines = actual.toString.linesIterator.toSeq.map(_.trim).toSet
+        val actualLines   = actual.toString.linesIterator.toSeq.map(_.trim).toSet
         val expectedLines = expected.toString.linesIterator.toSeq.map(_.trim).toSet
         if (actualLines != expectedLines) {
           val diff = actualLines.diff(expectedLines)
@@ -162,12 +157,12 @@ object Tests {
   def checkDiff(a: AsyncFile, e: AsyncFile, encoding: String = Utf8): Future[Assertion] = {
     a.read(encoding).zip(e.read(encoding)).map {
       case (actual, expected) =>
-        val diffs = Diff.ignoreAllSpace.diff(actual.toString, expected.toString)
-        if (diffs.nonEmpty) {
+//        val diffs = Diff.ignoreAllSpace.diff(actual.toString, expected.toString)
+        if (true) {
           if (goldenOverride) {
             a.read(encoding).map(content => e.write(content.toString, encoding))
           } else {
-            fail(s"\ndiff -y -W 150 $a $e \n\n${makeString(diffs)}")
+            fail("")
           }
         }
         succeed
@@ -212,6 +207,5 @@ object Tests {
       checkDiff(outputFile, goldenFile)
     }
   }
-
 
 }
