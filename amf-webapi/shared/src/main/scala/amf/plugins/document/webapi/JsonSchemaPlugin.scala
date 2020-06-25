@@ -215,9 +215,9 @@ class JsonSchemaPlugin extends AMFDocumentPlugin with PlatformSecrets {
   def findRootNode(ast: YNode, ctx: JsonSchemaWebApiContext, path: Option[String]): Option[YNode] = {
     if (path.isDefined) {
       ctx.setJsonSchemaAST(ast)
-      val res = ctx.findLocalJSONPath(path.get)
+      val res = ctx.findLocalJsonNode(path.get)
       ctx.localJSONSchemaContext = None
-      res.map(_._2)
+      res
     } else {
       Some(ast)
     }

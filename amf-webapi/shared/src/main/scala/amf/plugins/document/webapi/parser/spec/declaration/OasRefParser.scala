@@ -47,11 +47,9 @@ class OasRefParser(map: YMap,
       case Some(s) => createLinkToDeclaration(s)
       case _       => // Only enabled for JSON Schema, not OAS. In OAS local references can only point to the #/definitions (#/components in OAS 3) node
         // now we work with canonical JSON schema pointers, not local refs
-        val referencedShape = ctx.findLocalJSONPath(ref) match {
-          case Some((_, _)) =>
-            searchLocalJsonSchema(ref, if (!ctx.linkTypes) ref else text, e)
-          case _ =>
-            searchRemoteJsonSchema(ref, if (!ctx.linkTypes) ref else text, e)
+        val referencedShape = ctx.findLocalJsonNode(ref) match {
+          case Some(_) => searchLocalJsonSchema(ref, if (!ctx.linkTypes) ref else text, e)
+          case _       => searchRemoteJsonSchema(ref, if (!ctx.linkTypes) ref else text, e)
         }
         referencedShape.foreach(adopt(_))
         referencedShape
@@ -88,8 +86,8 @@ class OasRefParser(map: YMap,
             Some(shape)
           case _ =>
             ctx.registerJsonSchema(ref, tmpShape)
-            ctx.findLocalJSONPath(r) match {
-              case Some((_, shapeNode)) =>
+            ctx.findLocalJsonNode(r) match {
+              case Some(shapeNode) =>
                 OasTypeParser(YMapEntry(name, shapeNode), adopt, version)
                   .parse()
                   .map { shape =>

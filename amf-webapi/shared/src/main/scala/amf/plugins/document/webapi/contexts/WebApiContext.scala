@@ -152,13 +152,9 @@ abstract class WebApiContext(val loc: String,
       if (s.startsWith("/")) s.stripPrefix("/") else s
     }
   }
-  def findLocalJSONPath(path: String): Option[(String, YNode)] = {
+  def findLocalJsonNode(path: String): Option[YNode] = {
     // todo: past uri?
-    jsonSchemaIndex match {
-      case Some(jsi) => jsi.getNode(normalizeJsonPath(path)).map { (path, _) }
-      case _         => None
-
-    }
+    jsonSchemaIndex.flatMap(index => index.getNode(normalizeJsonPath(path)))
   }
 
   def link(node: YNode): Either[String, YNode]
