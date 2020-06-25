@@ -1,0 +1,8 @@
+{
+   "type": "object",
+   "properties": {
+      "petRef": {
+         "$ref": "api.json#/definitions/pet"
+      }
+   }
+}
