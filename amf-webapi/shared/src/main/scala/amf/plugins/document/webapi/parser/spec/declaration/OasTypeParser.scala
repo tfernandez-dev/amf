@@ -308,15 +308,7 @@ case class OasTypeParser(entryOrNode: Either[YMapEntry, YNode],
   }
 
   private def parseLinkType(): Option[AnyShape] = {
-    map
-      .key("$ref")
-      .flatMap { e =>
-        e.value.tagType match {
-          case YType.Null => Some(AnyShape(e))
-          case _ =>
-            findDeclarationAndParse(e)
-        }
-      }
+    new OasRefParser(map, ast, name, adopt, nameAnnotations, version).parse()
   }
 
   private def findDeclarationAndParse(e: YMapEntry) = {
