@@ -193,7 +193,7 @@ class JsonSchemaPlugin extends AMFDocumentPlugin with PlatformSecrets {
                         version = jsonSchemaContext.computeJsonSchemaVersion(rootAst))(jsonSchemaContext)
             .parse() match {
             case Some(shape) =>
-//              parentContext.futureDeclarations.addDeclarationsFrom(jsonSchemaContext)
+              parentContext.futureDeclarations.addDeclarationsFrom(jsonSchemaContext)
               shape
             case None =>
               jsonSchemaContext.eh.violation(UnableToParseJsonSchema,

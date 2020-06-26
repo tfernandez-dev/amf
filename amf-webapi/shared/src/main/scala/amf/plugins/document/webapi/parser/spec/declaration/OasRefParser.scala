@@ -119,7 +119,7 @@ class OasRefParser(map: YMap,
 
   private def searchRemoteJsonSchema(ref: String, text: String, e: YMapEntry) = {
     val fullRef = ctx.resolvedPath(ctx.rootContextDocument, ref)
-    ctx.findJsonSchema(fullRef) match {
+    ctx.findJsonSchema(fullRef).orElse(ctx.findJsonSchema(ref)) match {
       case Some(u: UnresolvedShape) => copyUnresolvedShape(ref, fullRef, e, u)
       case Some(shape)              => createLinkToParsedShape(ref, shape)
       case _ =>

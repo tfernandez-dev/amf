@@ -41,7 +41,7 @@ sealed trait OasPlugin extends OasLikePlugin {
   /**
     * Does references in this type of documents be recursive?
     */
-  override val allowRecursiveReferences: Boolean = false
+  override val allowRecursiveReferences: Boolean = true
 
   def context(loc: String,
               refs: Seq[ParsedReference],

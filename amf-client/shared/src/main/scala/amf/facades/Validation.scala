@@ -47,6 +47,7 @@ class Validation(platform: Platform) {
       amf.core.registries.AMFPluginsRegistry.registerDocumentPlugin(AMFGraphPlugin)
       amf.core.registries.AMFPluginsRegistry.registerDocumentPlugin(AMLPlugin)
       amf.core.registries.AMFPluginsRegistry.registerDocumentPlugin(JsonSchemaPlugin)
+      amf.core.registries.AMFPluginsRegistry.registerDocumentPlugin(ExternalJsonYamlRefsPlugin)
       amf.core.registries.AMFPluginsRegistry.registerDomainPlugin(WebAPIDomainPlugin)
       amf.core.registries.AMFPluginsRegistry.registerDomainPlugin(DataShapesDomainPlugin)
     }
