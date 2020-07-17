@@ -6,13 +6,8 @@
   },
   "paths": {
     "/organisation": {
-      "post": {
-        "description": "A post request",
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        }
+      "post": 
+      
       },
       "get": {
         "description": "A get request",
